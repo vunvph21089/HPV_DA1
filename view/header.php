@@ -70,6 +70,10 @@
         <script src="assets/plugins/iesupport/respond.min.js"></script>
 
         <![endif]-->
+
+        
+        <!-- link icon -->
+        <script src="https://kit.fontawesome.com/7e155ef984.js" crossorigin="anonymous"></script>
         
     <style>
         #box_bds {
@@ -201,6 +205,16 @@
             color:#000;
             font-size:18px
         
+        }
+        #ten_bds {
+            margin: 0 0 10px 0;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: none;
+            font-size: 16px;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            overflow: hidden;
         }
     </style>
 
