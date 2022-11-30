@@ -40,6 +40,10 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $ds_bds = loadall_bds($kyw, $id_loaibds);
             include 'view/batdongsan.php';
             break;
+        case 'home':         
+           
+            include 'view/home.php';
+            break;
         case 'detail':
             // code  vao day
 
@@ -147,6 +151,6 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
     }
 } else {
-
+    $ds_bds = loadall_bds();
     include "view/home.php";
 }

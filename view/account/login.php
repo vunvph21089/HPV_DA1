@@ -13,7 +13,7 @@
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="/view/assets/img/logo_sm.png">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <!-- Layout config Js -->
     <script src="assets/js/layout.js"></script>
     <!-- Bootstrap Css -->
@@ -36,9 +36,12 @@
 <body>
     <!-- auth-page wrapper -->
     <div class="auth-page-wrapper auth-bg-cover py-5 d-flex justify-content-center align-items-center min-vh-100">
-        <div class="bg-overlay"></div>
+        <div class="bg-overlay">   
+    </div>
+        
         <!-- auth-page content -->
         <div class="auth-page-content overflow-hidden pt-lg-5">
+       
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -49,6 +52,7 @@
                                         <div class="bg-overlay"></div>
                                         <div class="position-relative h-100 d-flex flex-column">
                                             <div class="mb-4">
+                                                
                                                 <a href="index.html" class="d-block">
                                                     <img src="assets/images/logo-light.png" alt="" height="18">
                                                 </a>
