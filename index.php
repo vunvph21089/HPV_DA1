@@ -72,7 +72,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include 'view/contact.php';
             break;
         case 'listtuvan':
-            $listtuvan = loadAll_bds_tuvan();
+            $listtuvan = loadAll_bds_tuvan($kyw = "");
             include 'view/batdongsantuvan.php';
             break;
 

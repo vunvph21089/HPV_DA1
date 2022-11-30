@@ -221,42 +221,36 @@
                                                 $del_anhmota = "index.php?act=delete_anhmota&id_anhmota=".$id;
                                                 echo '
                                                     <li class="li">
-                                                        <img src="'.$file_name.'" style="width: 100%;height:150px;object-fit:cover;" data-dz-thumbnail class="img-fluid rounded d-block"  alt="Product-Image" />
-                                                        <div style="width=100%">
-                                                            <a href="'.$up_anhmota.'" class="btn btn-sm btn-danger">Sửa</a>
-                                                            <a href="'.$del_anhmota.'" class="btn btn-sm btn-danger">Xoá</a>
+
+                                                    <div class="position-relative d-inline-block">
+                                                        <div class="position-absolute top-100 start-100 translate-middle">
+                                                            <label for="product-image-input" class="mb-0" data-bs-toggle="tooltip" data-bs-placement="right" title="Select Image">
+                                                                <div class="avatar-xs">
+                                                                    <div class="avatar-title bg-light border rounded-circle text-muted cursor-pointer">
+                                                                        <i class="ri-image-fill"></i>
+                                                                        
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </label>
+                                                            <input class="form-control d-none" name="anh" id="product-image-input" type="file" accept="image/png, image/gif, image/jpeg, image/jpg">
                                                         </div>
+                                                        
+                                                        <div class="avatar-lg">
+                                                            <div class="avatar-title bg-light rounded">
+                                                                <img src="'.$file_name.'" id="product-img" class="avatar-md h-auto" />
+                                                            </div>
+                                                            <a href="'.$del_anhmota.'"><i class="ri-delete-bin-5-fill fs-16"></i></a>
+                                                        </div>
+                                                        
+                                                    </div>
+
                                                     </li>
                                                 ';
                                             }
                                         ?>
                                         </ul>
                                     </div>
-
-                                    <ul class="list-unstyled mb-0" id="dropzone-preview">
-                                        <li class="mt-2" id="dropzone-preview-list">
-                                            <!-- This is used as the file preview template -->
-                                            <div class="border rounded">
-                                                <div class="d-flex p-2">
-                                                    <div class="flex-shrink-0 me-3">
-                                                        <div class="avatar-sm bg-light rounded">
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="flex-grow-1">
-                                                        <div class="pt-1">
-                                                            <h5 class="fs-14 mb-1" data-dz-name>&nbsp;</h5>
-                                                            <p class="fs-13 text-muted mb-0" data-dz-size></p>
-                                                            <strong class="error text-danger" data-dz-errormessage></strong>
-                                                        </div>
-                                                    </div>
-                                                    <div class="flex-shrink-0 ms-3">
-                                                        <button data-dz-remove class="btn btn-sm btn-danger">Xoá ảnh</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
                                     <!-- end dropzon-preview -->
                                 </div>
                             </div>

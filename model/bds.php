@@ -12,11 +12,11 @@ function delete_bds($id)
     $sql = "DELETE FROM bds WHERE id=" . $id;
     pdo_execute($sql);
 }
-function loadall_bds($keyword = "", $id_loaibds = 0)
+function loadall_bds($kyw = "", $id_loaibds = 0)
 {
     $sql = "SELECT * FROM bds WHERE 1";
-    if ($keyword != "") {
-        $sql .= " and name like '%" . $keyword . "%'";
+    if ($kyw != "") {
+        $sql .= " and name like '%" . $kyw . "%'";
     }
     if ($id_loaibds > 0) {
         $sql .= " and id_loaibds= '" . $id_loaibds . "' ";

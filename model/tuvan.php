@@ -26,9 +26,13 @@ function loadOne_bds_tuvan($id)
     return $bds_tuvan;
 }
 
-function loadAll_bds_tuvan()
+function loadAll_bds_tuvan($kyw = "")
 {
-    $sql = "SELECT * FROM bds_tuvan order by id";
+    $sql = "SELECT * FROM bds_tuvan WHERE 1";
+    if ($kyw != "") {
+        $sql .= " and name like '%" . $kyw . "%'";
+    }
+    $sql .= " ORDER BY id ";
     $list_bds_tuvan = pdo_query($sql);
     return $list_bds_tuvan;
 }
