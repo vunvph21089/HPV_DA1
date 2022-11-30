@@ -1,6 +1,7 @@
 <?php
 include "view/header.php";
 ?>
+
 <!-- PAGE WITH SIDEBAR -->
 <section class="page-section sub-page">
     <div class="container">
@@ -65,7 +66,7 @@ include "view/header.php";
 
 
 
-        
+
         <!-- Pagination -->
         <!-- <div class="pagination-wrapper">
             <ul class="pagination">
@@ -82,6 +83,7 @@ include "view/header.php";
     </div>
 </section>
 <!-- /PAGE WITH SIDEBAR -->
+
 <?php
 include "view/footer.php";
 ?>

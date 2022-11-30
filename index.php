@@ -52,7 +52,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
         case 'hotdeals':
             // code  vao day
-
+            $ds_bds = loadall_bds();
             include 'view/hotdeals.php';
             break;
 
@@ -72,7 +72,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include 'view/contact.php';
             break;
         case 'listtuvan':
-            $listtuvan = loadAll_bds_tuvan($kyw = "");
+            $listtuvan = loadAll_bds_tuvan();
             include 'view/batdongsantuvan.php';
             break;
 
@@ -89,10 +89,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 date_default_timezone_set("Asia/Ho_Chi_Minh");
                 $time_yeucau = date('h:i:sa d/m/Y');
                 insert_bds_tuvan($id_user,$username, $note_user, $id_bds,$name,$img,$time_yeucau, $email, $tel);
-                $thongbao = "Bạn đã gửi yêu cầu tư vấn thành công";
+                // $thongbao = "Bạn đã gửi yêu cầu tư vấn thành công";
+                header('location:index.php?act=listtuvan');
             }
-            $ds_bds = loadall_bds();
-            include 'view/batdongsan.php';
             break;
         case 'dangky':
             if (isset($_POST['dangky']) && ($_POST['dangky'])) {

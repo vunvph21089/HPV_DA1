@@ -673,22 +673,19 @@ include "view/header.php";
             <div class="tabs awesome wow fadeInUp" data-wow-offset="70" data-wow-delay="500ms">
 
                 <ul id="tabs1" class="nav">
-                    <!--
-
-                -->
-                    <li class=""><a href="#tab-x1" data-toggle="tab">Căn hộ chung cư</a></li>
-                    <!--
-
-                -->
-                    <li class="active"><a href="#tab-x2" data-toggle="tab">Nhà bán</a></li>
-                    <!--
-
-                -->
-                    <li class=""><a href="#tab-x3" data-toggle="tab">Đất</a></li>
-                    <!--
-
-                -->
-                    <li class=""><a href="#tab-x4" data-toggle="tab">Nhà cho thuê</a></li>
+                <?php
+                foreach ($loaibds as $dm) {
+                    extract($dm);
+                    $linkdm = "index.php?act=batdongsan&id_loaibds=" . $id;
+                    if (isset($linkdm)) {
+                        $current = "current";
+                    } else {
+                        $current = "";
+                    }
+                    echo '<li class="dress ' . $current . ' "><a href="' . $linkdm . '" data-filter="*">' . $name . '</a></li>';
+                }
+                ?>
+                    
 
                 </ul>
 
@@ -714,7 +711,7 @@ include "view/header.php";
                                         <!--
 
                                     -->
-                                        <li class=""><a href="#tab-x1x1" data-toggle="tab">Luxury Mansion</a></li>
+                                        <li class=""><a href="#tab-x1x1" data-toggle="tab">View Biển</a></li>
                                         <!--
 
                                     -->
@@ -774,7 +771,7 @@ include "view/header.php";
 
                                                             <div class="swiper-slide">
 
-                                                                <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
+                                                                <a class="btn btn-zoom" href="view/assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
                                                                 <a href="view/assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
 
@@ -782,7 +779,7 @@ include "view/header.php";
 
                                                             <div class="swiper-slide">
 
-                                                                <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
+                                                                <a class="btn btn-zoom" href="view/assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
                                                                 <a href="view/assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
 
@@ -812,7 +809,7 @@ include "view/header.php";
 
                                                         <div class="price">
 
-                                                            <strong>$275,000</strong> <i class="fa fa-info-circle"></i>
+                                                            <strong>Giá tốt</strong> <i class="fa fa-info-circle"></i>
 
                                                         </div>
 
@@ -820,17 +817,17 @@ include "view/header.php";
 
                                                             <ul>
 
-                                                                <li>Air Conditioning</li>
+                                                                <li>rộng </li>
 
-                                                                <li>Fully Furnished</li>
+                                                                <li>sạch sẽ</li>
 
-                                                                <li>Garage</li>
+                                                                <li>đầy đủ tiện nghi</li>
 
-                                                                <li>Balcony</li>
+                                                                <li>view siêu đẹp</li>
 
-                                                                <li>Storage</li>
+                                                                <li>nhiều cây xanh</li>
 
-                                                                <li>Security System</li>
+                                                                <li>mua bán uy tín</li>
 
                                                             </ul>
 
@@ -838,7 +835,7 @@ include "view/header.php";
 
                                                         <div class="button">
 
-                                                            <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">View Details</a>
+                                                            <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                         </div>
 
@@ -864,33 +861,33 @@ include "view/header.php";
 
                                                             <div class="swiper-slide">
 
-                                                                <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x1.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
+                                                                <a class="btn btn-zoom" href="view/assets/img/preview/property/cat1-1200x800x1.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                                <a href="assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
-
-                                                            </div>
-
-                                                            <div class="swiper-slide">
-
-                                                                <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
-
-                                                                <a href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
+                                                                <a href="view/assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
 
                                                             </div>
 
                                                             <div class="swiper-slide">
 
-                                                                <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
+                                                                <a class="btn btn-zoom" href="view/assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                                <a href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
+                                                                <a href="view/assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
 
                                                             </div>
 
                                                             <div class="swiper-slide">
 
-                                                                <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
+                                                                <a class="btn btn-zoom" href="view/assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                                <a href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
+                                                                <a href="view/assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
+
+                                                            </div>
+
+                                                            <div class="swiper-slide">
+
+                                                                <a class="btn btn-zoom" href="view/assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
+
+                                                                <a href="view/assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
 
                                                             </div>
 
@@ -910,7 +907,7 @@ include "view/header.php";
 
                                                         <div class="price">
 
-                                                            <strong>$275,000</strong> <i class="fa fa-info-circle"></i>
+                                                            <strong>Giá tốt</strong> <i class="fa fa-info-circle"></i>
 
                                                         </div>
 
@@ -918,17 +915,17 @@ include "view/header.php";
 
                                                             <ul>
 
-                                                                <li>Air Conditioning</li>
+                                                                <li>rộng </li>
 
-                                                                <li>Fully Furnished</li>
+                                                                <li>sạch sẽ</li>
 
-                                                                <li>Garage</li>
+                                                                <li>đầy đủ tiện nghi</li>
 
-                                                                <li>Balcony</li>
+                                                                <li>view siêu đẹp</li>
 
-                                                                <li>Storage</li>
+                                                                <li>nhiều cây xanh</li>
 
-                                                                <li>Security System</li>
+                                                                <li>mua bán uy tín</li>
 
                                                             </ul>
 
@@ -936,7 +933,7 @@ include "view/header.php";
 
                                                         <div class="button">
 
-                                                            <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">View Details</a>
+                                                            <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                         </div>
 
@@ -964,7 +961,7 @@ include "view/header.php";
 
                                                                 <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x1.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                                <a href="assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
+                                                                <a href="view/assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
 
                                                             </div>
 
@@ -972,7 +969,7 @@ include "view/header.php";
 
                                                                 <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                                <a href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
+                                                                <a href="view/assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
 
                                                             </div>
 
@@ -980,7 +977,7 @@ include "view/header.php";
 
                                                                 <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                                <a href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
+                                                                <a href="view/assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
 
                                                             </div>
 
@@ -988,7 +985,7 @@ include "view/header.php";
 
                                                                 <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                                <a href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
+                                                                <a href="view/assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
 
                                                             </div>
 
@@ -1008,7 +1005,7 @@ include "view/header.php";
 
                                                         <div class="price">
 
-                                                            <strong>$275,000</strong> <i class="fa fa-info-circle"></i>
+                                                            <strong>Giá tốt</strong> <i class="fa fa-info-circle"></i>
 
                                                         </div>
 
@@ -1016,17 +1013,17 @@ include "view/header.php";
 
                                                             <ul>
 
-                                                                <li>Air Conditioning</li>
+                                                                <li>rộng </li>
 
-                                                                <li>Fully Furnished</li>
+                                                                <li>sạch sẽ</li>
 
-                                                                <li>Garage</li>
+                                                                <li>đầy đủ tiện nghi</li>
 
-                                                                <li>Balcony</li>
+                                                                <li>view siêu đẹp</li>
 
-                                                                <li>Storage</li>
+                                                                <li>nhiều cây xanh</li>
 
-                                                                <li>Security System</li>
+                                                                <li>mua bán uy tín</li>
 
                                                             </ul>
 
@@ -1034,7 +1031,7 @@ include "view/header.php";
 
                                                         <div class="button">
 
-                                                            <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">View Details</a>
+                                                            <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                         </div>
 
@@ -1106,7 +1103,7 @@ include "view/header.php";
 
                                                         <div class="price">
 
-                                                            <strong>$275,000</strong> <i class="fa fa-info-circle"></i>
+                                                            <strong>Giá tốt</strong> <i class="fa fa-info-circle"></i>
 
                                                         </div>
 
@@ -1114,17 +1111,17 @@ include "view/header.php";
 
                                                             <ul>
 
-                                                                <li>Air Conditioning</li>
+                                                                <li>rộng </li>
 
-                                                                <li>Fully Furnished</li>
+                                                                <li>sạch sẽ</li>
 
-                                                                <li>Garage</li>
+                                                                <li>đầy đủ tiện nghi</li>
 
-                                                                <li>Balcony</li>
+                                                                <li>view siêu đẹp</li>
 
-                                                                <li>Storage</li>
+                                                                <li>nhiều cây xanh</li>
 
-                                                                <li>Security System</li>
+                                                                <li>mua bán uy tín</li>
 
                                                             </ul>
 
@@ -1132,7 +1129,7 @@ include "view/header.php";
 
                                                         <div class="button">
 
-                                                            <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">View Details</a>
+                                                            <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                         </div>
 
@@ -1204,7 +1201,7 @@ include "view/header.php";
 
                                                         <div class="price">
 
-                                                            <strong>$275,000</strong> <i class="fa fa-info-circle"></i>
+                                                            <strong>Giá tốt</strong> <i class="fa fa-info-circle"></i>
 
                                                         </div>
 
@@ -1212,17 +1209,17 @@ include "view/header.php";
 
                                                             <ul>
 
-                                                                <li>Air Conditioning</li>
+                                                                <li>rộng </li>
 
-                                                                <li>Fully Furnished</li>
+                                                                <li>sạch sẽ</li>
 
-                                                                <li>Garage</li>
+                                                                <li>đầy đủ tiện nghi</li>
 
-                                                                <li>Balcony</li>
+                                                                <li>view siêu đẹp</li>
 
-                                                                <li>Storage</li>
+                                                                <li>nhiều cây xanh</li>
 
-                                                                <li>Security System</li>
+                                                                <li>mua bán uy tín</li>
 
                                                             </ul>
 
@@ -1230,7 +1227,7 @@ include "view/header.php";
 
                                                         <div class="button">
 
-                                                            <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">View Details</a>
+                                                            <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                         </div>
 
@@ -1282,23 +1279,23 @@ include "view/header.php";
                                         <!--
 
                                     -->
-                                        <li class=""><a href="#tab-x2x1" data-toggle="tab">Luxury Mansion</a></li>
+                                        <li class=""><a href="#tab-x2x1" data-toggle="tab">View Biển</a></li>
                                         <!--
 
                                     -->
-                                        <li class="active"><a href="#tab-x2x2" data-toggle="tab">Elegant Apartment</a></li>
+                                        <li class="active"><a href="#tab-x2x2" data-toggle="tab">Ban công rộng </a></li>
                                         <!--
 
                                     -->
-                                        <li class=""><a href="#tab-x2x3" data-toggle="tab">Sophisticated Residence</a></li>
+                                        <li class=""><a href="#tab-x2x3" data-toggle="tab">Đất mặt đường</a></li>
                                         <!--
 
                                     -->
-                                        <li class=""><a href="#tab-x2x4" data-toggle="tab">Futuristic Apartment</a></li>
+                                        <li class=""><a href="#tab-x2x4" data-toggle="tab">Đất trồng trọt</a></li>
                                         <!--
 
                                     -->
-                                        <li class=""><a href="#tab-x2x5" data-toggle="tab">Stylish Apartment</a></li>
+                                        <li class=""><a href="#tab-x2x5" data-toggle="tab">Khu nhà giàu</a></li>
 
                                     </ul>
 
@@ -1376,7 +1373,7 @@ include "view/header.php";
 
                                                     <div class="price">
 
-                                                        <strong>$275,000</strong> <i class="fa fa-info-circle"></i>
+                                                        <strong>Giá tốt</strong> <i class="fa fa-info-circle"></i>
 
                                                     </div>
 
@@ -1384,17 +1381,17 @@ include "view/header.php";
 
                                                         <ul>
 
-                                                            <li>Air Conditioning</li>
+                                                            <li>rộng </li>
 
-                                                            <li>Fully Furnished</li>
+                                                            <li>sạch sẽ</li>
 
-                                                            <li>Garage</li>
+                                                            <li>đầy đủ tiện nghi</li>
 
-                                                            <li>Balcony</li>
+                                                            <li>view siêu đẹp</li>
 
-                                                            <li>Storage</li>
+                                                            <li>nhiều cây xanh</li>
 
-                                                            <li>Security System</li>
+                                                            <li>mua bán uy tín</li>
 
                                                         </ul>
 
@@ -1402,7 +1399,7 @@ include "view/header.php";
 
                                                     <div class="button">
 
-                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">View Details</a>
+                                                        <a href="index.php?act=batdongsan" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                     </div>
 
@@ -1474,7 +1471,7 @@ include "view/header.php";
 
                                                     <div class="price">
 
-                                                        <strong>$275,000</strong> <i class="fa fa-info-circle"></i>
+                                                        <strong>Giá tốt</strong> <i class="fa fa-info-circle"></i>
 
                                                     </div>
 
@@ -1482,17 +1479,17 @@ include "view/header.php";
 
                                                         <ul>
 
-                                                            <li>Air Conditioning</li>
+                                                            <li>rộng </li>
 
-                                                            <li>Fully Furnished</li>
+                                                            <li>sạch sẽ</li>
 
-                                                            <li>Garage</li>
+                                                            <li>đầy đủ tiện nghi</li>
 
-                                                            <li>Balcony</li>
+                                                            <li>view siêu đẹp</li>
 
-                                                            <li>Storage</li>
+                                                            <li>nhiều cây xanh</li>
 
-                                                            <li>Security System</li>
+                                                            <li>mua bán uy tín</li>
 
                                                         </ul>
 
@@ -1500,7 +1497,7 @@ include "view/header.php";
 
                                                     <div class="button">
 
-                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">View Details</a>
+                                                        <a href="index.php?act=batdongsan" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                     </div>
 
@@ -1572,7 +1569,7 @@ include "view/header.php";
 
                                                     <div class="price">
 
-                                                        <strong>$275,000</strong> <i class="fa fa-info-circle"></i>
+                                                        <strong>Giá tốt</strong> <i class="fa fa-info-circle"></i>
 
                                                     </div>
 
@@ -1580,17 +1577,17 @@ include "view/header.php";
 
                                                         <ul>
 
-                                                            <li>Air Conditioning</li>
+                                                            <li>rộng </li>
 
-                                                            <li>Fully Furnished</li>
+                                                            <li>sạch sẽ</li>
 
-                                                            <li>Garage</li>
+                                                            <li>đầy đủ tiện nghi</li>
 
-                                                            <li>Balcony</li>
+                                                            <li>view siêu đẹp</li>
 
-                                                            <li>Storage</li>
+                                                            <li>nhiều cây xanh</li>
 
-                                                            <li>Security System</li>
+                                                            <li>mua bán uy tín</li>
 
                                                         </ul>
 
@@ -1598,7 +1595,7 @@ include "view/header.php";
 
                                                     <div class="button">
 
-                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">View Details</a>
+                                                        <a href="index.php?act=batdongsan" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                     </div>
 
@@ -1670,7 +1667,7 @@ include "view/header.php";
 
                                                     <div class="price">
 
-                                                        <strong>$275,000</strong> <i class="fa fa-info-circle"></i>
+                                                        <strong>Giá tốt</strong> <i class="fa fa-info-circle"></i>
 
                                                     </div>
 
@@ -1678,17 +1675,17 @@ include "view/header.php";
 
                                                         <ul>
 
-                                                            <li>Air Conditioning</li>
+                                                            <li>rộng </li>
 
-                                                            <li>Fully Furnished</li>
+                                                            <li>sạch sẽ</li>
 
-                                                            <li>Garage</li>
+                                                            <li>đầy đủ tiện nghi</li>
 
-                                                            <li>Balcony</li>
+                                                            <li>view siêu đẹp</li>
 
-                                                            <li>Storage</li>
+                                                            <li>nhiều cây xanh</li>
 
-                                                            <li>Security System</li>
+                                                            <li>mua bán uy tín</li>
 
                                                         </ul>
 
@@ -1696,7 +1693,7 @@ include "view/header.php";
 
                                                     <div class="button">
 
-                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">View Details</a>
+                                                        <a href="index.php?act=batdongsan" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                     </div>
 
@@ -1768,7 +1765,7 @@ include "view/header.php";
 
                                                     <div class="price">
 
-                                                        <strong>$275,000</strong> <i class="fa fa-info-circle"></i>
+                                                        <strong>Giá tốt</strong> <i class="fa fa-info-circle"></i>
 
                                                     </div>
 
@@ -1776,17 +1773,17 @@ include "view/header.php";
 
                                                         <ul>
 
-                                                            <li>Air Conditioning</li>
+                                                            <li>rộng </li>
 
-                                                            <li>Fully Furnished</li>
+                                                            <li>sạch sẽ</li>
 
-                                                            <li>Garage</li>
+                                                            <li>đầy đủ tiện nghi</li>
 
-                                                            <li>Balcony</li>
+                                                            <li>view siêu đẹp</li>
 
-                                                            <li>Storage</li>
+                                                            <li>nhiều cây xanh</li>
 
-                                                            <li>Security System</li>
+                                                            <li>mua bán uy tín</li>
 
                                                         </ul>
 
@@ -1794,7 +1791,7 @@ include "view/header.php";
 
                                                     <div class="button">
 
-                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">View Details</a>
+                                                        <a href="index.php?act=batdongsan" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                     </div>
 
@@ -1938,7 +1935,7 @@ include "view/header.php";
 
                                                     <div class="price">
 
-                                                        <strong>$275,000</strong> <i class="fa fa-info-circle"></i>
+                                                        <strong>Giá tốt</strong> <i class="fa fa-info-circle"></i>
 
                                                     </div>
 
@@ -1946,17 +1943,17 @@ include "view/header.php";
 
                                                         <ul>
 
-                                                            <li>Air Conditioning</li>
+                                                            <li>rộng </li>
 
-                                                            <li>Fully Furnished</li>
+                                                            <li>sạch sẽ</li>
 
-                                                            <li>Garage</li>
+                                                            <li>đầy đủ tiện nghi</li>
 
-                                                            <li>Balcony</li>
+                                                            <li>view siêu đẹp</li>
 
-                                                            <li>Storage</li>
+                                                            <li>nhiều cây xanh</li>
 
-                                                            <li>Security System</li>
+                                                            <li>mua bán uy tín</li>
 
                                                         </ul>
 
@@ -1964,7 +1961,7 @@ include "view/header.php";
 
                                                     <div class="button">
 
-                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">View Details</a>
+                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                     </div>
 
@@ -2036,7 +2033,7 @@ include "view/header.php";
 
                                                     <div class="price">
 
-                                                        <strong>$275,000</strong> <i class="fa fa-info-circle"></i>
+                                                        <strong>Giá tốt</strong> <i class="fa fa-info-circle"></i>
 
                                                     </div>
 
@@ -2044,17 +2041,17 @@ include "view/header.php";
 
                                                         <ul>
 
-                                                            <li>Air Conditioning</li>
+                                                            <li>rộng </li>
 
-                                                            <li>Fully Furnished</li>
+                                                            <li>sạch sẽ</li>
 
-                                                            <li>Garage</li>
+                                                            <li>đầy đủ tiện nghi</li>
 
-                                                            <li>Balcony</li>
+                                                            <li>view siêu đẹp</li>
 
-                                                            <li>Storage</li>
+                                                            <li>nhiều cây xanh</li>
 
-                                                            <li>Security System</li>
+                                                            <li>mua bán uy tín</li>
 
                                                         </ul>
 
@@ -2062,7 +2059,7 @@ include "view/header.php";
 
                                                     <div class="button">
 
-                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">View Details</a>
+                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                     </div>
 
@@ -2134,7 +2131,7 @@ include "view/header.php";
 
                                                     <div class="price">
 
-                                                        <strong>$275,000</strong> <i class="fa fa-info-circle"></i>
+                                                        <strong>Giá tốt</strong> <i class="fa fa-info-circle"></i>
 
                                                     </div>
 
@@ -2142,17 +2139,17 @@ include "view/header.php";
 
                                                         <ul>
 
-                                                            <li>Air Conditioning</li>
+                                                            <li>rộng </li>
 
-                                                            <li>Fully Furnished</li>
+                                                            <li>sạch sẽ</li>
 
-                                                            <li>Garage</li>
+                                                            <li>đầy đủ tiện nghi</li>
 
-                                                            <li>Balcony</li>
+                                                            <li>view siêu đẹp</li>
 
-                                                            <li>Storage</li>
+                                                            <li>nhiều cây xanh</li>
 
-                                                            <li>Security System</li>
+                                                            <li>mua bán uy tín</li>
 
                                                         </ul>
 
@@ -2160,7 +2157,7 @@ include "view/header.php";
 
                                                     <div class="button">
 
-                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">View Details</a>
+                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                     </div>
 
@@ -2232,7 +2229,7 @@ include "view/header.php";
 
                                                     <div class="price">
 
-                                                        <strong>$275,000</strong> <i class="fa fa-info-circle"></i>
+                                                        <strong>Giá tốt</strong> <i class="fa fa-info-circle"></i>
 
                                                     </div>
 
@@ -2240,17 +2237,17 @@ include "view/header.php";
 
                                                         <ul>
 
-                                                            <li>Air Conditioning</li>
+                                                            <li>rộng </li>
 
-                                                            <li>Fully Furnished</li>
+                                                            <li>sạch sẽ</li>
 
-                                                            <li>Garage</li>
+                                                            <li>đầy đủ tiện nghi</li>
 
-                                                            <li>Balcony</li>
+                                                            <li>view siêu đẹp</li>
 
-                                                            <li>Storage</li>
+                                                            <li>nhiều cây xanh</li>
 
-                                                            <li>Security System</li>
+                                                            <li>mua bán uy tín</li>
 
                                                         </ul>
 
@@ -2258,7 +2255,7 @@ include "view/header.php";
 
                                                     <div class="button">
 
-                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">View Details</a>
+                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                     </div>
 
@@ -2330,7 +2327,7 @@ include "view/header.php";
 
                                                     <div class="price">
 
-                                                        <strong>$275,000</strong> <i class="fa fa-info-circle"></i>
+                                                        <strong>Giá tốt</strong> <i class="fa fa-info-circle"></i>
 
                                                     </div>
 
@@ -2338,17 +2335,17 @@ include "view/header.php";
 
                                                         <ul>
 
-                                                            <li>Air Conditioning</li>
+                                                            <li>rộng </li>
 
-                                                            <li>Fully Furnished</li>
+                                                            <li>sạch sẽ</li>
 
-                                                            <li>Garage</li>
+                                                            <li>đầy đủ tiện nghi</li>
 
-                                                            <li>Balcony</li>
+                                                            <li>view siêu đẹp</li>
 
-                                                            <li>Storage</li>
+                                                            <li>nhiều cây xanh</li>
 
-                                                            <li>Security System</li>
+                                                            <li>mua bán uy tín</li>
 
                                                         </ul>
 
@@ -2356,7 +2353,7 @@ include "view/header.php";
 
                                                     <div class="button">
 
-                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">View Details</a>
+                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                     </div>
 
@@ -2500,7 +2497,7 @@ include "view/header.php";
 
                                                     <div class="price">
 
-                                                        <strong>$275,000</strong> <i class="fa fa-info-circle"></i>
+                                                        <strong>Giá tốt</strong> <i class="fa fa-info-circle"></i>
 
                                                     </div>
 
@@ -2508,17 +2505,17 @@ include "view/header.php";
 
                                                         <ul>
 
-                                                            <li>Air Conditioning</li>
+                                                            <li>rộng </li>
 
-                                                            <li>Fully Furnished</li>
+                                                            <li>sạch sẽ</li>
 
-                                                            <li>Garage</li>
+                                                            <li>đầy đủ tiện nghi</li>
 
-                                                            <li>Balcony</li>
+                                                            <li>view siêu đẹp</li>
 
-                                                            <li>Storage</li>
+                                                            <li>nhiều cây xanh</li>
 
-                                                            <li>Security System</li>
+                                                            <li>mua bán uy tín</li>
 
                                                         </ul>
 
@@ -2526,7 +2523,7 @@ include "view/header.php";
 
                                                     <div class="button">
 
-                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">View Details</a>
+                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                     </div>
 
@@ -2598,7 +2595,7 @@ include "view/header.php";
 
                                                     <div class="price">
 
-                                                        <strong>$275,000</strong> <i class="fa fa-info-circle"></i>
+                                                        <strong>Giá tốt</strong> <i class="fa fa-info-circle"></i>
 
                                                     </div>
 
@@ -2606,17 +2603,17 @@ include "view/header.php";
 
                                                         <ul>
 
-                                                            <li>Air Conditioning</li>
+                                                            <li>rộng </li>
 
-                                                            <li>Fully Furnished</li>
+                                                            <li>sạch sẽ</li>
 
-                                                            <li>Garage</li>
+                                                            <li>đầy đủ tiện nghi</li>
 
-                                                            <li>Balcony</li>
+                                                            <li>view siêu đẹp</li>
 
-                                                            <li>Storage</li>
+                                                            <li>nhiều cây xanh</li>
 
-                                                            <li>Security System</li>
+                                                            <li>mua bán uy tín</li>
 
                                                         </ul>
 
@@ -2624,7 +2621,7 @@ include "view/header.php";
 
                                                     <div class="button">
 
-                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">View Details</a>
+                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                     </div>
 
@@ -2696,7 +2693,7 @@ include "view/header.php";
 
                                                     <div class="price">
 
-                                                        <strong>$275,000</strong> <i class="fa fa-info-circle"></i>
+                                                        <strong>Giá tốt</strong> <i class="fa fa-info-circle"></i>
 
                                                     </div>
 
@@ -2704,17 +2701,17 @@ include "view/header.php";
 
                                                         <ul>
 
-                                                            <li>Air Conditioning</li>
+                                                            <li>rộng </li>
 
-                                                            <li>Fully Furnished</li>
+                                                            <li>sạch sẽ</li>
 
-                                                            <li>Garage</li>
+                                                            <li>đầy đủ tiện nghi</li>
 
-                                                            <li>Balcony</li>
+                                                            <li>view siêu đẹp</li>
 
-                                                            <li>Storage</li>
+                                                            <li>nhiều cây xanh</li>
 
-                                                            <li>Security System</li>
+                                                            <li>mua bán uy tín</li>
 
                                                         </ul>
 
@@ -2722,7 +2719,7 @@ include "view/header.php";
 
                                                     <div class="button">
 
-                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">View Details</a>
+                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                     </div>
 
@@ -2794,7 +2791,7 @@ include "view/header.php";
 
                                                     <div class="price">
 
-                                                        <strong>$275,000</strong> <i class="fa fa-info-circle"></i>
+                                                        <strong>Giá tốt</strong> <i class="fa fa-info-circle"></i>
 
                                                     </div>
 
@@ -2802,17 +2799,17 @@ include "view/header.php";
 
                                                         <ul>
 
-                                                            <li>Air Conditioning</li>
+                                                            <li>rộng </li>
 
-                                                            <li>Fully Furnished</li>
+                                                            <li>sạch sẽ</li>
 
-                                                            <li>Garage</li>
+                                                            <li>đầy đủ tiện nghi</li>
 
-                                                            <li>Balcony</li>
+                                                            <li>view siêu đẹp</li>
 
-                                                            <li>Storage</li>
+                                                            <li>nhiều cây xanh</li>
 
-                                                            <li>Security System</li>
+                                                            <li>mua bán uy tín</li>
 
                                                         </ul>
 
@@ -2820,7 +2817,7 @@ include "view/header.php";
 
                                                     <div class="button">
 
-                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">View Details</a>
+                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                     </div>
 
@@ -2892,7 +2889,7 @@ include "view/header.php";
 
                                                     <div class="price">
 
-                                                        <strong>$275,000</strong> <i class="fa fa-info-circle"></i>
+                                                        <strong>Giá tốt</strong> <i class="fa fa-info-circle"></i>
 
                                                     </div>
 
@@ -2900,17 +2897,17 @@ include "view/header.php";
 
                                                         <ul>
 
-                                                            <li>Air Conditioning</li>
+                                                            <li>rộng </li>
 
-                                                            <li>Fully Furnished</li>
+                                                            <li>sạch sẽ</li>
 
-                                                            <li>Garage</li>
+                                                            <li>đầy đủ tiện nghi</li>
 
-                                                            <li>Balcony</li>
+                                                            <li>view siêu đẹp</li>
 
-                                                            <li>Storage</li>
+                                                            <li>nhiều cây xanh</li>
 
-                                                            <li>Security System</li>
+                                                            <li>mua bán uy tín</li>
 
                                                         </ul>
 
@@ -2918,7 +2915,7 @@ include "view/header.php";
 
                                                     <div class="button">
 
-                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">View Details</a>
+                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                     </div>
 

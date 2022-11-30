@@ -1,3 +1,7 @@
+<?php
+include "view/header.php";
+?>
+
 <div class="row mb box">
     <div class="box_left">
         <div class="mb">
@@ -23,11 +27,11 @@
                     </div>
                     <div>
                         Address
-                        <input type="text" name="address" value="<?=$diachi?>">
+                        <input type="text" name="address" value="<?=$tel?>">
                     </div>
                     <div>
                         Điện thoại
-                        <input type="text" name="tel" value="<?=$tel?>">
+                        <input type="text" name="tel" value="<?=$address?>">
                     </div>
                     <div class="mt">
                         <input type="hidden" name="id" id="" value="<?=$id?>">
@@ -47,3 +51,7 @@
     </div>
     
 </div>
+
+<?php
+include "view/footer.php";
+?>
