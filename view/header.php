@@ -23,7 +23,7 @@
 
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="view/assets/ico/apple-touch-icon-144-precomposed.png">
 
-    <link rel="shortcut icon" href="view/assets/ico/favicon.ico">
+    <link rel="shortcut icon" href="/view/assets/img/logo_sm.png">
 
 
 
@@ -180,6 +180,10 @@
         strong {
             font-size: 14px;
             margin-top: 5px;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            overflow: hidden;
         }
 
         .header {
@@ -216,6 +220,10 @@
             display: -webkit-box;
             overflow: hidden;
         }
+        .isotope-item{
+            z-index: 0 !important;
+        }
+        
     </style>
 
 

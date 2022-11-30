@@ -6452,7 +6452,6 @@ ul.team-details li {
 /* ========================================================================== */
 /* Isotope Filtering */
 .isotope-item {
-    z-index: 2;
     margin-left: -1px;
 }
 .isotope-hidden.isotope-item {

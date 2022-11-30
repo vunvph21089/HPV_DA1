@@ -44,10 +44,9 @@ include "view/header.php";
                             <div id="box_bds" class="caption" >
                                 <h3 id="ten_bds" class="caption-title"><a href="' . $linkbds . '">' . $name . '</a></h3>
                                 <div class="info_bds">
-                                    <strong>' . $price . ' tỷ &nbsp;&nbsp;&nbsp;&nbsp; <span>' . $dientich . ' m²</span></strong> 
+                                    <strong>' . $price . '&nbsp;&nbsp;&nbsp;&nbsp; <span>' . $dientich . ' m²</span></strong> 
                                     <p style="text-transform:capitalize;">' . $location . '</p>
                                 </div>
-                                <a class="hobbie" href=""><i style="color:#000;" class="fa-regular fa-heart"></i></a>
                             </div>
                         </div>
                         <div style="clear:both;"></div>

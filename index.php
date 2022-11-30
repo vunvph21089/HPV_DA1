@@ -18,7 +18,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $onebds = loadone_bds($id);
                 extract($onebds);
                 $anhmota = load_anhmota($id);
-                // $user = loadOne_user($id_user);
+                $oneuser=loadOne_user($id_user);
                 $bds_cungloai = load_bds_cungloai($id, $id_loaibds);
                 include "view/bds_chitiet.php";
             } else {
@@ -69,28 +69,22 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
         case 'listtuvan':
             $listtuvan = loadAll_bds_tuvan();
-           
-            
-            
             include 'view/batdongsantuvan.php';
             break;
 
         case 'tuvan':
             if (isset($_POST['tuvan']) && $_POST['tuvan']) {
                 $id_user = $_POST['id_user'];
-                // $oneuser=loadOne_user($id_user);
                 $id_bds = $_POST['id_bds'];
-                
                 $name = $_POST['name'];
                 $img = $_POST['img'];
-
-                $user = $_POST['user'];
+                $username = $_POST['user'];
                 $email = $_POST['email'];
                 $tel = $_POST['tel'];
                 $note_user = $_POST['note_user'];
                 date_default_timezone_set("Asia/Ho_Chi_Minh");
                 $time_yeucau = date('h:i:sa d/m/Y');
-                insert_bds_tuvan($user, $note_user, $id_bds,$name,$img,$time_yeucau, $email, $tel);
+                insert_bds_tuvan($id_user,$username, $note_user, $id_bds,$name,$img,$time_yeucau, $email, $tel);
                 // $thongbao = "Bạn đã gửi yêu cầu tư vấn thành công";
                 header('location:index.php?act=listtuvan');
             }
@@ -104,7 +98,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 insert_account($email, $user, $pass);
                 $thongbao = "Đăng ký thành công.Đăng nhập để sử dụng chức năng !";
             }
-            include "view/account/register.php";
+            include "view/account/login.php";
             break;
         case 'dangnhap':
             if (isset($_POST['dangnhap'])) {

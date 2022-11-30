@@ -7,12 +7,12 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Sign In | Velzon - Admin & Dashboard Template</title>
+    <title>Đăng nhập | HPV</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" href="/view/assets/img/logo_sm.png">
 
     <!-- Layout config Js -->
     <script src="assets/js/layout.js"></script>
@@ -86,32 +86,32 @@
                                 <div class="col-lg-6">
                                     <div class="p-lg-5 p-4">
                                         <div>
-                                            <h5 class="text-primary">Welcome Back !</h5>
-                                            <p class="text-muted">Sign in to continue to Velzon.</p>
+                                            <h5 class="text-primary">Xin chào !</h5>
+                                            <p class="text-muted">Đăng nhập để tiếp tục truy cập vào HPV</p>
                                         </div>
 
                                         <div class="mt-4">
                                             <form action="index.php?act=dangnhap" method="POST">
 
                                                 <div class="mb-3">
-                                                    <label for="username" class="form-label">Username</label>
-                                                    <input type="text"  name="user" class="form-control" id="username" placeholder="Enter username">
+                                                    <label for="username" class="form-label">Tên đăng nhập</label>
+                                                    <input type="text"  name="user" class="form-control" id="username" placeholder="Nhập vào tên đăng nhập">
                                                 </div>
 
                                                 <div class="mb-3">
                                                     <div class="float-end">
-                                                        <a href="index.php?act=quenmk" class="text-muted">Forgot password?</a>
+                                                        <a href="index.php?act=quenmk" class="text-muted">Quên mật khẩu?</a>
                                                     </div>
-                                                    <label class="form-label" for="password-input">Password</label>
+                                                    <label class="form-label" for="password-input">Mật khẩu</label>
                                                     <div class="position-relative auth-pass-inputgroup mb-3">
-                                                        <input type="password" name="pass" class="form-control pe-5 password-input" placeholder="Enter password" id="password-input">
+                                                        <input type="password" name="pass" class="form-control pe-5 password-input" placeholder="Nhập vào mật khẩu" id="password-input">
                                                         <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon" type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i></button>
                                                     </div>
                                                 </div>
 
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="" id="auth-remember-check">
-                                                    <label class="form-check-label" for="auth-remember-check">Remember me</label>
+                                                    <label class="form-check-label" for="auth-remember-check">Ghi nhớ tài khoản</label>
                                                 </div>
 
                                                 <div class="mt-4">
@@ -122,12 +122,12 @@
                                                     }?>
                                                 </h6>
                                                     <!-- <button class="btn btn-success w-100"  name="dangnhap" type="submit">Sign In</button> -->
-                                                    <input class="btn btn-success w-100" type="submit" name="dangnhap" value="Sign In">
+                                                    <input class="btn btn-success w-100" type="submit" name="dangnhap" value="Đăng nhập">
                                                 </div>
 
                                                 <div class="mt-4 text-center">
                                                     <div class="signin-other-title">
-                                                        <h5 class="fs-13 mb-4 title">Sign In with</h5>
+                                                        <h5 class="fs-13 mb-4 title">Đăng nhập bằng</h5>
                                                     </div>
 
                                                     <div>
@@ -142,7 +142,7 @@
                                         </div>
 
                                         <div class="mt-5 text-center">
-                                            <p class="mb-0">Don't have an account ? <a href="index.php?act=dangky" class="fw-semibold text-primary text-decoration-underline"> Signup</a> </p>
+                                            <p class="mb-0">Không có tài khoản ? Hãy <a href="index.php?act=dangky" class="fw-semibold text-primary text-decoration-underline">Đăng ký</a> </p>
                                         </div>
                                     </div>
                                 </div>

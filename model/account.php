@@ -23,6 +23,11 @@
             $listtaikhoan = pdo_query($sql);
             return $listtaikhoan;
         }
+        function loadOne_user($id){
+            $sql="SELECT * FROM account where id=".$id;
+            $user=pdo_query_one($sql);
+            return $user;
+        }
         function delete_taikhoan($id){
             $sql = "DELETE FROM  account WHERE id=".$id;
             pdo_execute($sql);

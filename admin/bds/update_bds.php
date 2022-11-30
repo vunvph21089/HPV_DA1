@@ -77,7 +77,7 @@
                                                     <label class="form-label" for="product-price-input">Giá</label>
                                                     <div class="input-group has-validation mb-3">
                                                         <span class="input-group-text" id="product-price-addon">$</span>
-                                                        <input type="number" name="gia" value="<?= $price ?>" class="form-control" id="product-price-input" placeholder="Nhập vào giá" aria-label="Price" aria-describedby="product-price-addon" required>
+                                                        <input type="text" name="gia" value="<?= $price ?>" class="form-control" id="product-price-input" placeholder="Nhập vào giá" aria-label="Price" aria-describedby="product-price-addon" required>
                                                     </div>
                                                 </div>
                                             </div>

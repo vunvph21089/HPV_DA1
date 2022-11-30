@@ -49,8 +49,7 @@ if (isset($_GET['act'])) {
 
                         if (move_uploaded_file($_FILES["files"]["tmp_name"][$key], $targetFilePath)) {
                             // Image db insert sql 
-                            $upload_img = '/DA1_HPV/uploads/' . $fileName;
-                            var_dump($upload_img);
+                            $upload_img = '/HPV_DA1/uploads/' . $fileName;
                             insert_anhmota($upload_img, $id);
                         }
                     }
@@ -62,8 +61,13 @@ if (isset($_GET['act'])) {
             include "bds/add_bds.php";
             break;
         case 'listbds':
+            if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
+                $kyw = $_POST['kyw'];
+            } else {
+                $kyw = "";
+            }
             $listloaibds = loadAll_danhmuc();
-            $listbds = loadall_bds();
+            $listbds = loadall_bds($kyw);
             include "bds/list_bds.php";
             break;
         case 'deletebds':
@@ -150,7 +154,7 @@ if (isset($_GET['act'])) {
                 $id = $_GET['id_anhmota'];
                 delete_anhmota($id);
             }
-            include 'index.php?act=fixbds=';
+            
             break;
             // Controller loai bat dong san
         case "addloaibds": {

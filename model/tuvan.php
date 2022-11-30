@@ -1,7 +1,7 @@
 <?php
-function insert_bds_tuvan($user, $note_user, $id_bds,$name,$img, $time_yeucau, $email, $tel)
+function insert_bds_tuvan($id_user,$username, $note_user, $id_bds,$name,$img, $time_yeucau, $email, $tel)
 {
-    $sql = "INSERT INTO `bds_tuvan`(`name_kh`, `note_user`, `id_bds`,`name`,`img`, `time_yeucau`, `email`, `tel`) VALUES ('$user','$note_user','$id_bds','$name','$img' ,'$time_yeucau','$email','$tel')";
+    $sql = "INSERT INTO `bds_tuvan`(`id_user`,`name_kh`, `note_user`, `id_bds`,`name`,`img`, `time_yeucau`, `email`, `tel`) VALUES ('$id_user','$username','$note_user','$id_bds','$name','$img' ,'$time_yeucau','$email','$tel')";
     pdo_execute($sql);
 }
 

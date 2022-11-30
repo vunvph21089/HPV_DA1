@@ -30,17 +30,17 @@
             line-height: 5px;
             font-family: Arial, Helvetica, sans-serif;
         }
-        
-        .li{
+
+        .li {
             display: grid;
             grid-template-columns: 9fr 3fr;
             gap: 5px;
             margin-top: 10px;
         }
-        .li div a{
+
+        .li div a {
             margin-bottom: 10px;
         }
-        
     </style>
 </head>
 
@@ -124,7 +124,7 @@
                     <ul class="nav nav-sm flex-column">
 
                         <li class="nav-item">
-                        <!-- <i class="fa-solid fa-house"></i> -->
+                            <!-- <i class="fa-solid fa-house"></i> -->
                             <a href="#sidebarEcommerce" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEcommerce" data-key="t-ecommerce" style=" color: #ffff;">
                                 Bất động sản
                             </a>
@@ -166,11 +166,11 @@
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
                                         <a href="index.php?act=addtintuc" class="nav-link" data-key="t-kanbanboard" style=" color: #ffff;">
-                                           - Thêm tin mới </a>
+                                            - Thêm tin mới </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="index.php?act=listtintuc" class="nav-link" data-key="t-list-view" style=" color: #ffff;">
-                                           - Danh sách tin tức</a>
+                                            - Danh sách tin tức</a>
                                     </li>
 
                                 </ul>
@@ -185,11 +185,11 @@
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
                                         <a href="index.php?act=add_dm_tintuc" class="nav-link" data-key="t-contacts" style=" color: #ffff;">
-                                           - Thêm mới danh mục </a>
+                                            - Thêm mới danh mục </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="index.php?act=list_dmtintuc" style=" color: #ffff;" class="nav-link" data-key="t-companies" style=" color: #ffff;">
-                                           - Danh sách danh mục</a>
+                                            - Danh sách danh mục</a>
                                     </li>
 
                                 </ul>
@@ -197,34 +197,21 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="#sidebarCrypto" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarCrypto" data-key="t-crypto" style=" color: #ffff;"> Người dùng
+                            <a href="index.php?act=listuser" class="nav-link" style=" color: #ffff;"> Người dùng
                             </a>
-                            <div class="collapse menu-dropdown" id="sidebarCrypto">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="index.php?act=listuser" class="nav-link" data-key="t-buy-sell" style=" color: #ffff;">
-                                            Danh sách người dùng </a>
-                                    </li>
-                                </ul>
-                            </div>
                         </li>
 
-                        <!-- <li class="nav-item">
+                        <li class="nav-item">
                             <a href="bds_tuvan.html" class="nav-link" style=" color: #ffff;">
                                 Bất động sản tư vấn
-                            </a> -->
-                        <!-- </li> -->
+                            </a>
+                        </li>
                     </ul>
                 </div>
-                </li>
-
-                </ul>
             </div>
-            <!-- Sidebar -->
-        </div>
 
-        <div class="sidebar-background"></div>
-    </div>
-    <!-- Left Sidebar End -->
-    <!-- Vertical Overlay-->
-    <div class="vertical-overlay"></div>
+            <div class="sidebar-background"></div>
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- Vertical Overlay-->
+        <div class="vertical-overlay"></div>

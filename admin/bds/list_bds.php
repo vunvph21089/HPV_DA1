@@ -34,29 +34,54 @@
                                 </div>
                                 <div class="col-sm-auto">
                                     <div>
-                                        <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn"><i class="ri-add-line align-bottom me-1"></i><a style="color:#fff" href="index.php?act=addbds">Thêm mới</a></button>
+                                        <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn"><i class="ri-add-line align-bottom me-1"></i>
+                                        <a style="color:#fff" href="index.php?act=addbds">Thêm mới</a></button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+                        <div class="card-body border-bottom-dashed border-bottom">
+                                    <form action="index.php?act=listbds" method="POST">
+                                        <div class="row g-3">
+                                            <div class="col-xl-6">
+                                                <div class="search-box">
+                                                    <input type="text" name="kyw" class="form-control search" placeholder="Nhập tên bất động sản cần tìm">
+                                                    <i class="ri-search-line search-icon"></i>
+                                                </div>
+                                            </div>
+                                            <!--end col-->
+                                            <div class="col-xl-6">
+                                                <div class="row g-3">
+                                                    <div class="col-sm-4">
+                                                        <div class="">
+                                                            <button type="submit" name="search" class="btn btn-success add-btn">Tìm kiếm</button>
+                                                        </div>
+                                                    </div>
+                                                    <!--end col-->
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end row-->
+                                    </form>
+                                </div>
                         <div class="card-body">
                             <div>
                                 <div class="table-responsive table-card mb-1">
                                     <table class="table align-middle" id="customerTable">
                                         <thead class="table-light text-muted">
                                             <tr>
-                                                <th class="sort" data-sort="eamil">ID</th>
-                                                <th class="sort" data-sort="customer_name">Tên</th>
-                                                <th class="sort" data-sort="email">Ảnh</th>
-                                                <th class="sort" data-sort="phone">Giá($)</th>
-                                                <th class="sort" data-sort="date">Địa chỉ</th>
-                                                <th class="sort" data-sort="status">Diện tích(m2)</th>
-                                                <th class="sort" data-sort="action">Số phòng</th>
-                                                <th class="sort" data-sort="action">Lượt xem</th>
-                                                <th class="sort" data-sort="email">Loại</th>
-                                                <th class="sort" data-sort="action">Người đăng</th>
-                                                <th class="sort" data-sort="action">Action</th>
+                                                <th>ID</th>
+                                                <th>Tên</th>
+                                                <th>Ảnh</th>
+                                                <th>Giá(VND)</th>
+                                                <th>Địa chỉ</th>
+                                                <th>Diện tích(m2)</th>
+                                                <th>Số phòng</th>
+                                                <th>Lượt xem</th>
+                                                <th>Loại</th>
+                                                <th>Người đăng</th>
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody class="list form-check-all">
@@ -67,16 +92,16 @@
                                                     $upbds = "index.php?act=fixbds&id=" . $id;
                                                     $image = "../" . $bds['img'];
                                                     echo  '<tr>
-                                                            <td class="customer_name">' . $id . '</td>
-                                                            <td class="customer_name">' . $name . '</td>
-                                                            <td class="customer_name"><img src="' . $image . '" width="60" height="60"></td>
-                                                            <td class="customer_name">' . $price . '</td>
-                                                            <td class="customer_name">' . $location . '</td>
-                                                            <td class="customer_name">' . $dientich . '</td>
-                                                            <td class="customer_name">' . $sophong . '</td>
-                                                            <td class="customer_name">' . $luotxem . '</td>
-                                                            <td class="customer_name">' . $id_loaibds . '</td>
-                                                            <td class="customer_name">' . $id_user . '</td>
+                                                            <td>' . $id . '</td>
+                                                            <td>' . $name . '</td>
+                                                            <td><img src="' . $image . '" width="60" height="60"></td>
+                                                            <td>' . $price . '</td>
+                                                            <td>' . $location . '</td>
+                                                            <td>' . $dientich . '</td>
+                                                            <td>' . $sophong . '</td>
+                                                            <td>' . $luotxem . '</td>
+                                                            <td>' . $id_loaibds . '</td>
+                                                            <td>' . $id_user . '</td>
                                                             <td>
                                                                 <ul class="list-inline hstack gap-2 mb-0">
                                                                  <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Edit">
@@ -84,7 +109,6 @@
                                                                          <i class="ri-pencil-fill fs-16"></i>
                                                                      </a>
                                                                  </li>
-                                                                 
                                                              </ul>
                                                             </td>
                                                             </tr>';
@@ -101,7 +125,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </div>
                             <div class="modal fade" id="showModal" tabindex="-1" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">

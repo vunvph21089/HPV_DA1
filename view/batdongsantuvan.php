@@ -1,7 +1,7 @@
 <?php
 include "view/header.php";
 ?>
-
+<div>
 <table class="table align-middle" id="customerTable">
     <thead class="table-light text-muted">
         <tr>
@@ -41,6 +41,7 @@ include "view/header.php";
         </tr>
     </tbody>
 </table>
+</div>
 <?php
 include "view/footer.php";
 ?>
