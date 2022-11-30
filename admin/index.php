@@ -7,6 +7,7 @@ include "../model/role.php";
 include "../model/tintuc.php";
 include "../model/danhmuc_tintuc.php";
 include "../model/dbConfig.php";
+include "../model/tuvan.php";
 
 include "header.php";
 
@@ -154,7 +155,7 @@ if (isset($_GET['act'])) {
                 $id = $_GET['id_anhmota'];
                 delete_anhmota($id);
             }
-            
+            $anhmota = load_anhmota($id_bds);
             break;
             // Controller loai bat dong san
         case "addloaibds": {
@@ -353,12 +354,16 @@ if (isset($_GET['act'])) {
             include "tintuc/list.php";
             break;
             // Tu van
-        case 'them_bds_tuvan':
-            
-            break;
         case 'delete_bds_tuvan':
             break;
         case 'list_bds_tuvan':
+            if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
+                $kyw = $_POST['kyw'];
+            } else {
+                $kyw = "";
+            }
+            $listtuvan = loadAll_bds_tuvan($kyw);
+            include 'tuvan/list.php';
             break;
         case 'sua_bds_tuvan':
             break;

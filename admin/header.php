@@ -31,15 +31,12 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        .li {
-            display: grid;
-            grid-template-columns: 9fr 3fr;
-            gap: 5px;
-            margin-top: 10px;
+        
+        ul{
+            display: flex;
         }
-
-        .li div a {
-            margin-bottom: 10px;
+        .li {
+            margin: 10px 20px;
         }
     </style>
 </head>
@@ -202,7 +199,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="bds_tuvan.html" class="nav-link" style=" color: #ffff;">
+                            <a href="index.php?act=list_bds_tuvan" class="nav-link" style=" color: #ffff;">
                                 Bất động sản tư vấn
                             </a>
                         </li>
