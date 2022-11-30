@@ -569,7 +569,7 @@ include "view/header.php";
 
                     <div class="media">
 
-                        <span class="p-price">' . $price . ' tỷ</span>
+                        <span class="p-price">' . $price . ' </span>
 
                         <a class="media-link" data-gal="prettyPhoto" href="' . $linkbds . '">
 
@@ -3059,7 +3059,8 @@ include "view/header.php";
 
                         <div class="media">
 
-                            <img src="view/assets/img/preview/team/team-270x270x1.jpg" alt="" />
+                            
+                            <img src="view/assets/img/preview/team/team-270x270x2.jpg" alt="" />
 
                         </div>
 
@@ -3095,7 +3096,7 @@ include "view/header.php";
 
                         <div class="media">
 
-                            <img src="view/assets/img/preview/team/team-270x270x2.jpg" alt="" />
+                        <img src="view/assets/img/preview/team/team-270x270x4.jpg" alt="" />
 
                         </div>
 
@@ -3131,7 +3132,7 @@ include "view/header.php";
 
                         <div class="media">
 
-                            <img src="view/assets/img/preview/team/team-270x270x4.jpg" alt="" />
+                        <img src="view/assets/img/preview/team/team-270x270x4.jpg" alt="" />
 
                         </div>
 

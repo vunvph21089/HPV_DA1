@@ -362,6 +362,7 @@ if (isset($_GET['act'])) {
             } else {
                 $kyw = "";
             }
+            $listnhanvien = loadAll_nhanvien();
             $listtuvan = loadAll_bds_tuvan($kyw);
             include 'tuvan/list.php';
             break;

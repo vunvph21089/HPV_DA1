@@ -68,35 +68,40 @@
                                             <tr>
                                                 <th>Mã tư vấn</th>
                                                 <th>Tên bất động sản</th>
-                                                <th>Ảnh</th>
                                                 <th>Tên khách hàng</th>
                                                 <th>Email</th>
                                                 <th>Sđt</th>
                                                 <th>Lời nhắn</th>
                                                 <th>Thời gian yêu cầu</th>
                                                 <th>Trạng thái</th>
+                                                <th>Nhân viên</th>
+
                                             </tr>
                                         </thead>
                                         <tbody class="list form-check-all">
                                             <tr>
                                                 <?php
-                                                foreach ($listtuvan as $tuvan) {
-                                                    extract($tuvan);
-                                                    echo  '<tr>
-                                                                <td class="customer_name">' . $id . '</td>
-                                                                <td class="customer_name">' . $name . '</td>
-                                                                <td class="customer_name"><img src="HPV_DA1/' . $img . '" width="60" height="60"></td>
-                                                                <td class="customer_name">' . $name_kh . '</td>
-                                                                <td class="customer_name">' . $email . '</td>
-                                                                <td class="customer_name">' . $tel . '</td>
-                                                                <td class="customer_name">' . $note_user . '</td>
-                                                                <td class="customer_name">' . $time_yeucau . '</td>
-                                                                <td class="customer_name">' . $trangthai . '</td>
-
-                                                            </tr>';
-                                                }
-                                                ?>
+                                                foreach ($listtuvan as $tuvan) : {extract($tuvan);}?>
+                                            <tr>
+                                                <td class="customer_name"><?= $tuvan['id'] ?></td>
+                                                <td class="customer_name"><?= $tuvan['name'] ?></td>
+                                                <td class="customer_name"><?= $tuvan['name_kh'] ?></td>
+                                                <td class="customer_name"><?= $tuvan['email'] ?></td>
+                                                <td class="customer_name"><?= $tuvan['tel'] ?></td>
+                                                <td class="customer_name"><?= $tuvan['note_user'] ?></td>
+                                                <td class="customer_name"><?= $tuvan['time_yeucau'] ?></td>
+                                                <td class="customer_name"><?= $tuvan['trangthai'] ?></td>
+                                                <td>
+                                                    <select name="nguoidang" class="form-control" id="product-discount-input" aria-label="discount" aria-describedby="product-discount-addon">
+                                                    <option value="0">Chọn nhân viên</option>    
+                                                        <?php foreach ($listnhanvien as $index => $user) : ?>
+                                                            <option name="user" value="<?= $user['id'] ?>"><?= $user['user'] ?></option>
+                                                        <?php endforeach ?>
+                                                    </select>
+                                                </td>
                                             </tr>
+                                            <?php endforeach ?>
+                                        </tr>
                                         </tbody>
                                     </table>
                                 </div>

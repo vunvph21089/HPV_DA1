@@ -44,9 +44,9 @@ include "view/header.php";
                     <div class="caption">
                         <h3 class="block-title"><span>Người đăng</span></h3>
                         <ul class="team-details">
-                            <li style="text-transform: capitalize;"><i class="fa fa-user">&nbsp;&nbsp;</i><?= $oneuser['user']?></li>
-                            <li><i class="fa fa-phone">&nbsp;&nbsp;</i><?= $oneuser['tel']?></li>
-                            <li><i class="fa fa-envelope">&nbsp;&nbsp;</i> <a href="#"><?= $oneuser['email']?></a></li>
+                            <li style="text-transform: capitalize;"><i class="fa fa-user">&nbsp;&nbsp;</i><?= $oneuser['user'] ?></li>
+                            <li><i class="fa fa-phone">&nbsp;&nbsp;</i><?= $oneuser['tel'] ?></li>
+                            <li><i class="fa fa-envelope">&nbsp;&nbsp;</i> <a href="#"><?= $oneuser['email'] ?></a></li>
                         </ul>
                     </div>
 
@@ -69,6 +69,10 @@ include "view/header.php";
                         </dl>
 
                         <div class="button">
+                            <?php
+                            if (isset($thongbao) && ($thongbao != "")) {
+                                echo $thongbao;
+                            } ?>
                             <a href="#" class="btn btn-block btn-theme btn-theme-dark" onclick="modal()">Tư vấn ngay</a>
                             <div class="modal-content" id="modal">
                                 <div class="modal-header bg-light p-3">

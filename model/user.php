@@ -9,6 +9,11 @@
         $listuser=pdo_query($sql);
         return $listuser;
     }
+    function loadAll_nhanvien(){
+        $sql = "SELECT * FROM account where id_role=2";
+        $listnhanvien=pdo_query($sql);
+        return $listnhanvien;
+    }
     function loadOne_user($id){
         $sql="SELECT * FROM account where id=".$id;
         $user=pdo_query_one($sql);
