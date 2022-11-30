@@ -113,10 +113,13 @@ include "view/header.php";
                                         <div class="hstack gap-2 justify-content-end">
                                             <!-- <button type="submit" name="tuvan" class="btn btn-block btn-theme btn-theme-dark" id="add-btn">Gửi</button> -->
 
-                                            <input type="submit" name="tuvan" class="btn btn-block btn-theme btn-theme-dark" id="add-btn" value="gui">
+                                           <a href=""> <input type="submit" name="tuvan" class="btn btn-block btn-theme btn-theme-dark"  id="add-btn" value="gui"></a>
                                         </div>
 
                                     </div>
+                                    <?php 
+                                     $idbds = $_GET['idbds'];                   
+                                    ?>
                                 </form>
 
                             </div>
