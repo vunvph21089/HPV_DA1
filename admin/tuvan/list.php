@@ -75,13 +75,18 @@
                                                 <th>Thời gian yêu cầu</th>
                                                 <th>Trạng thái</th>
                                                 <th>Nhân viên</th>
-
+                                                <th>Thời gian tư vấn</th>
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody class="list form-check-all">
                                             <tr>
                                                 <?php
-                                                foreach ($listtuvan as $tuvan) : {extract($tuvan);}?>
+                                                foreach ($listtuvan as $tuvan) : {
+                                                        extract($tuvan);
+                                                        $uptuvan = "index.php?act=sua_bds_tuvan&id=" . $id;
+                                                    } ?>
+
                                             <tr>
                                                 <td class="customer_name"><?= $tuvan['id'] ?></td>
                                                 <td class="customer_name"><?= $tuvan['name'] ?></td>
@@ -91,16 +96,11 @@
                                                 <td class="customer_name"><?= $tuvan['note_user'] ?></td>
                                                 <td class="customer_name"><?= $tuvan['time_yeucau'] ?></td>
                                                 <td class="customer_name"><?= $tuvan['trangthai'] ?></td>
-                                                <td>
-                                                    <select name="nguoidang" class="form-control" id="product-discount-input" aria-label="discount" aria-describedby="product-discount-addon">
-                                                    <option value="0">Chọn nhân viên</option>    
-                                                        <?php foreach ($listnhanvien as $index => $user) : ?>
-                                                            <option name="user" value="<?= $user['id'] ?>"><?= $user['user'] ?></option>
-                                                        <?php endforeach ?>
-                                                    </select>
-                                                </td>
+                                                <td class="customer_name"><?= $tuvan['id_nhanvien'] ?></td>
+                                                <td class="customer_name"><?= $tuvan['time_tuvan'] ?></td>
+                                                <td><a href="<?= $uptuvan ?>"><input type="submit" value="Giao việc" class="btn btn-success add-btn"></a></td>
                                             </tr>
-                                            <?php endforeach ?>
+                                        <?php endforeach ?>
                                         </tr>
                                         </tbody>
                                     </table>

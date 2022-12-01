@@ -203,6 +203,12 @@
                                 Bất động sản tư vấn
                             </a>
                         </li>
+
+                        <li class="nav-item">
+                            <a href="index.php?act=list_nhanvien" class="nav-link" style=" color: #ffff;">
+                                Nhân viên
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
