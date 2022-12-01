@@ -73,7 +73,7 @@
                                                 <th>Sđt</th>
                                                 <th>Lời nhắn</th>
                                                 <th>Thời gian yêu cầu</th>
-                                                <th>Trạng thái</th>
+                                                <th>Trạng thái<br>(0.Đang chờ, 1.Đã giao việc)</th>
                                                 <th>Nhân viên</th>
                                                 <th>Thời gian tư vấn</th>
                                                 <th>Action</th>
