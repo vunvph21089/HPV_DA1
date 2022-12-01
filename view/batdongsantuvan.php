@@ -3,6 +3,7 @@ include "view/header.php";
 ?>
 <div class="card-body">
     <div>
+        <h6 id="ten_bds_chitiet">danh sách khách hàng nhân viên cần tư vấn</h6>
         <div class="table-responsive table-card mb-1">
             <table class="table align-middle" id="customerTable">
                 <thead class="table-light text-muted">
@@ -35,6 +36,7 @@ include "view/header.php";
                             <td class="customer_name">' . $tel . '</td>
                             <td class="customer_name">' . $note_user . '</td>
                             <td class="customer_name">' . $time_yeucau . '</td>
+                            <td class="customer_name">' . $trangthai . '</td>
                             <td class="customer_name"></td>
 
                             </tr>';
