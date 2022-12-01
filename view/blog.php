@@ -8,12 +8,12 @@ include "view/header.php";
 <section class="page-section breadcrumbs text-right">
     <div class="container">
         <div class="page-header">
-            <h1>Blog Post Page</h1>
+            <h1>Tin tức</h1>
         </div>
         <ul class="breadcrumb">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Blog</a></li>
-            <li class="active">Blog With Right Sidebar</li>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Tin tức</a></li>
+            
         </ul>
     </div>
 </section>
