@@ -19,7 +19,7 @@ include "view/header.php";
                 <div class="thumbnail no-border no-padding thumbnail-property-card clearfix">
                 <div class="media">
                     <a class="media-link" data-gal="prettyPhoto" href="' . $img . '">
-                        <img src="' . $img . '" alt=""/>
+                        <img style="width:300px;height:auto;" src="' . $img . '" alt=""/>
                         <span class="icon-view"><strong><i class="fa fa-eye"></i></strong></span>
                     </a>
                 </div>
@@ -36,7 +36,7 @@ include "view/header.php";
                             <td><i class="fa fa-bed"></i> 1 Bedroom</td>
                             <td><i class="fa fa-tint"></i> 1 Bathroom</td>
 
-                            <td class="buttons"><a class="btn btn-theme" href="">tư vấn</a></td>
+                            <td class="buttons"><a class="btn btn-theme" href="'.$linkbds.'">tư vấn</a></td>
                         </tr>
                     </table>
                 </div>

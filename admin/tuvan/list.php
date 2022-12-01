@@ -68,35 +68,40 @@
                                             <tr>
                                                 <th>Mã tư vấn</th>
                                                 <th>Tên bất động sản</th>
-                                                <th>Ảnh</th>
                                                 <th>Tên khách hàng</th>
                                                 <th>Email</th>
                                                 <th>Sđt</th>
                                                 <th>Lời nhắn</th>
                                                 <th>Thời gian yêu cầu</th>
-                                                <th>Trạng thái</th>
+                                                <th>Trạng thái<br>(0.Đang chờ, 1.Đã giao việc)</th>
+                                                <th>Nhân viên</th>
+                                                <th>Thời gian tư vấn</th>
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody class="list form-check-all">
                                             <tr>
                                                 <?php
-                                                foreach ($listtuvan as $tuvan) {
-                                                    extract($tuvan);
-                                                    echo  '<tr>
-                                                                <td class="customer_name">' . $id . '</td>
-                                                                <td class="customer_name">' . $name . '</td>
-                                                                <td class="customer_name"><img src="HPV_DA1/' . $img . '" width="60" height="60"></td>
-                                                                <td class="customer_name">' . $name_kh . '</td>
-                                                                <td class="customer_name">' . $email . '</td>
-                                                                <td class="customer_name">' . $tel . '</td>
-                                                                <td class="customer_name">' . $note_user . '</td>
-                                                                <td class="customer_name">' . $time_yeucau . '</td>
-                                                                <td class="customer_name">' . $trangthai . '</td>
+                                                foreach ($listtuvan as $tuvan) : {
+                                                        extract($tuvan);
+                                                        $uptuvan = "index.php?act=sua_bds_tuvan&id=" . $id;
+                                                    } ?>
 
-                                                            </tr>';
-                                                }
-                                                ?>
+                                            <tr>
+                                                <td class="customer_name"><?= $tuvan['id'] ?></td>
+                                                <td class="customer_name"><?= $tuvan['name'] ?></td>
+                                                <td class="customer_name"><?= $tuvan['name_kh'] ?></td>
+                                                <td class="customer_name"><?= $tuvan['email'] ?></td>
+                                                <td class="customer_name"><?= $tuvan['tel'] ?></td>
+                                                <td class="customer_name"><?= $tuvan['note_user'] ?></td>
+                                                <td class="customer_name"><?= $tuvan['time_yeucau'] ?></td>
+                                                <td class="customer_name"><?= $tuvan['trangthai'] ?></td>
+                                                <td class="customer_name"><?= $tuvan['id_nhanvien'] ?></td>
+                                                <td class="customer_name"><?= $tuvan['time_tuvan'] ?></td>
+                                                <td><a href="<?= $uptuvan ?>"><input type="submit" value="Giao việc" class="btn btn-success add-btn"></a></td>
                                             </tr>
+                                        <?php endforeach ?>
+                                        </tr>
                                         </tbody>
                                     </table>
                                 </div>

@@ -362,13 +362,45 @@ if (isset($_GET['act'])) {
             } else {
                 $kyw = "";
             }
+            $listnhanvien = loadAll_nhanvien();
             $listtuvan = loadAll_bds_tuvan($kyw);
             include 'tuvan/list.php';
             break;
         case 'sua_bds_tuvan':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $tuvan = loadOne_bds_tuvan($_GET['id']);
+                if (is_array($tuvan)) {
+                    extract($tuvan);
+                }
+            }
+            $listnhanvien = loadAll_nhanvien();
+            $list_tintuc = loadAll_danhmuctintuc();
+            include "tuvan/update.php";
             break;
         case 'update_bds_tuvan':
+            if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
+                $kyw = $_POST['kyw'];
+            } else {
+                $kyw = "";
+            }
+            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                $id = $_POST["id"];
+                $nhanvien = $_POST['user'];
+                $trangthai = $_POST['trangthai'];
+                
+                date_default_timezone_set("Asia/Ho_Chi_Minh");
+                $time_tuvan = date('h:i:sa d/m/Y');
+                update_bds_tuvan($id,$nhanvien,$trangthai,$time_tuvan);
+            }
+            
+            $listtuvan = loadAll_bds_tuvan($kyw);
+            include 'tuvan/list.php';
             break;
+            // Nhan vien
+            case 'list_nhanvien':
+                $listnhanvien = loadAll_nhanvien();
+                include 'nhanvien/list.php';
+                break;
         default:
             include "home.php";
             break;

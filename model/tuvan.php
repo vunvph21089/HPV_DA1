@@ -11,10 +11,10 @@ function delete_tuvan($id)
     pdo_query($sql);
 }
 
-function update_bds_tuvan($id)
+function update_bds_tuvan($id,$nhanvien,$trangthai,$time_tuvan)
 {
     $sql = "UPDATE `bds_tuvan` 
-        SET `trangthai`='[value-2]',`id_user`='[value-3]',`id_nhanvien`='[value-4]',`note_user`='[value-5]',`id_bds`='[value-6]',`time_yeucau`='[value-7]',`time_tuvan`='[value-8]' 
+        SET `id_nhanvien`='$nhanvien',`trangthai`='$trangthai',`time_tuvan`='$time_tuvan' 
         WHERE `id`=" . $id;
     pdo_execute($sql);
 }
@@ -36,4 +36,18 @@ function loadAll_bds_tuvan($kyw = "")
     $list_bds_tuvan = pdo_query($sql);
     return $list_bds_tuvan;
 }
-
+function trangthai($n)
+{
+    switch ($n) {
+        case '0':
+            $tt = "Đang chờ";
+            break;
+        case '1':
+            $tt = "Đã giao việc";
+            break;
+        default:
+            $tt = "Đơn hàng mới";
+            break;
+    }
+    return $tt;
+}

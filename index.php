@@ -90,7 +90,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $time_yeucau = date('h:i:sa d/m/Y');
                 insert_bds_tuvan($id_user,$username, $note_user, $id_bds,$name,$img,$time_yeucau, $email, $tel);
                 // $thongbao = "Bạn đã gửi yêu cầu tư vấn thành công";
-                header('location:index.php?act=batdongsanchitiet&idbds='.$idbds.'');
+                header('location:index.php?act=listtuvan');
             }
             break;
         case 'dangky':
@@ -101,7 +101,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 insert_account($email, $user, $pass);
                 $thongbao = "Đăng ký thành công.Đăng nhập để sử dụng chức năng !";
             }
-            include "view/account/login.php";
+            include "view/account/register.php";
             break;
         case 'dangnhap':
             if (isset($_POST['dangnhap'])) {

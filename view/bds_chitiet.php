@@ -44,9 +44,9 @@ include "view/header.php";
                     <div class="caption">
                         <h3 class="block-title"><span>Người đăng</span></h3>
                         <ul class="team-details">
-                            <li style="text-transform: capitalize;"><i class="fa fa-user">&nbsp;&nbsp;</i><?= $oneuser['user']?></li>
-                            <li><i class="fa fa-phone">&nbsp;&nbsp;</i><?= $oneuser['tel']?></li>
-                            <li><i class="fa fa-envelope">&nbsp;&nbsp;</i> <a href="#"><?= $oneuser['email']?></a></li>
+                            <li style="text-transform: capitalize;"><i class="fa fa-user">&nbsp;&nbsp;</i><?= $oneuser['user'] ?></li>
+                            <li><i class="fa fa-phone">&nbsp;&nbsp;</i><?= $oneuser['tel'] ?></li>
+                            <li><i class="fa fa-envelope">&nbsp;&nbsp;</i> <a href="#"><?= $oneuser['email'] ?></a></li>
                         </ul>
                     </div>
 
@@ -59,7 +59,7 @@ include "view/header.php";
                         <h3 class="block-title"><span>Thông tin chi tiết</span></h3>
                         <dl class="dl-horizontal">
                             <dt>Giá</dt>
-                            <dd><?= $price ?></dd>
+                            <dd><?= $price ?> VND</dd>
                             <dt>Diện tích</dt>
                             <dd><?= $dientich ?> m²</dd>
                             <dt>Số phòng</dt>
@@ -69,60 +69,71 @@ include "view/header.php";
                         </dl>
 
                         <div class="button">
+                            <?php
+                            if (isset($thongbao) && ($thongbao != "")) {
+                                echo $thongbao;
+                            } ?>
+
                             <a href="#" class="btn btn-block btn-theme btn-theme-dark" onclick="modal()">Tư vấn ngay</a>
-                            <div class="modal-content" id="modal">
-                                <div class="modal-header bg-light p-3">
-                                    <a href="" id="hidemodal" onclick="hidemodal()">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </a>
+                            <?php
+                            if (isset($_SESSION['user'])) {
+                            ?>
+                                <div class="modal-content" id="modal">
+                                    <div class="modal-header bg-light p-3">
+                                        <a href="" id="hidemodal" onclick="hidemodal()">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </a>
+                                    </div>
+                                    <form action="index.php?act=tuvan" id="form_modal" method="POST">
+
+                                        <div class="modal-body">
+                                            <input type="hidden" id="id-field" />
+                                            <div class="mb-3" id="modal-id" style="display: none;">
+                                                <label for="id-field1" class="form-label"></label>
+                                                <input type="hidden" id="id-field1" name="id_bds" class="form-control" placeholder="ID" readonly value="<?= $id ?>" />
+                                                <input type="hidden" id="id-field1" name="name" class="form-control" placeholder="ID" readonly value="<?= $name ?>" />
+                                                <input type="hidden" id="id-field1" name="img" class="form-control" placeholder="ID" readonly value="<?= $img ?>" />
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="customername-field" class="form-label">Họ và tên</label>
+                                                <input type="text" name="user" id="customername-field" class="form-control" placeholder="Nhập vào họ tên" value="" />
+
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="email-field" class="form-label">Email</label>
+                                                <input type="email" name="email" id="email-field" class="form-control" placeholder="Nhập vào email" required />
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="phone-field" class="form-label">Số điện thoại</label>
+                                                <input type="text" name="tel" id="phone-field" class="form-control" placeholder="Nhập vào số điện thoại" required />
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="phone-field" class="form-label">Lời nhắn</label>
+                                                <textarea name="note_user" class="form-control " cols="30" rows="10">Tôi quan tâm đến bất động sản này</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <div class="hstack gap-2 justify-content-end">
+                                                <!-- <button type="submit" name="tuvan" class="btn btn-block btn-theme btn-theme-dark" id="add-btn">Gửi</button> -->
+
+                                                <a href=""> <input type="submit" name="tuvan" class="btn btn-block btn-theme btn-theme-dark" id="add-btn" value="gui"></a>
+                                            </div>
+
+                                        </div>
+                                        <?php
+                                        $idbds = $_GET['idbds'];
+                                        ?>
+                                    </form>
                                 </div>
-                                <form action="index.php?act=tuvan" id="form_modal" method="POST">
-
-                                    <div class="modal-body">
-                                        <input type="hidden" id="id-field" />
-                                        <div class="mb-3" id="modal-id" style="display: none;">
-                                            <label for="id-field1" class="form-label"></label>
-
-                                            <input type="hidden" name="id_user" value="<?= $oneuser['id'] ?>">
-                                            <input type="hidden" id="id-field1" name="id_bds" class="form-control" placeholder="ID" readonly value="<?= $id ?>" />
-                                            <input type="hidden" id="id-field1" name="name" class="form-control" placeholder="ID" readonly value="<?= $name ?>" />
-                                            <input type="hidden" id="id-field1" name="img" class="form-control" placeholder="ID" readonly value="<?= $img ?>" />
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="customername-field" class="form-label">Họ và tên</label>
-                                            <input type="text" name="user" id="customername-field" class="form-control" value="" />
-
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="email-field" class="form-label">Email</label>
-                                            <input type="email" name="email" id="email-field" class="form-control" placeholder="Nhập vào email" required />
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="phone-field" class="form-label">Số điện thoại</label>
-                                            <input type="text" name="tel" id="phone-field" class="form-control" placeholder="Nhập vào số điện thoại" required />
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="phone-field" class="form-label">Lời nhắn</label>
-                                            <textarea name="note_user" class="form-control " cols="30" rows="10">Tôi quan tâm đến bất động sản này</textarea>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <div class="hstack gap-2 justify-content-end">
-                                            <!-- <button type="submit" name="tuvan" class="btn btn-block btn-theme btn-theme-dark" id="add-btn">Gửi</button> -->
-
-                                           <a href=""> <input type="submit" name="tuvan" class="btn btn-block btn-theme btn-theme-dark"  id="add-btn" value="gui"></a>
-                                        </div>
-
-                                    </div>
-                                    <?php 
-                                     $idbds = $_GET['idbds'];                   
-                                    ?>
-                                </form>
-
-                            </div>
+                            <?php
+                            }else {
+                                echo '
+                                <div align="center"><p style="color:red;font-size:18px;margin-top:10px">Bạn cần đăng nhập để đăng ký tư vấn !</p></div>';
+                            }
+                            ?>
                         </div>
 
                     </div>
