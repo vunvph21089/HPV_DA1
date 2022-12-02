@@ -78,26 +78,26 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
         case 'tuvan':
             if (isset($_POST['tuvan']) && $_POST['tuvan']) {
-                $id_user = $_POST['id_user'];
-                $id_bds = $_POST['id_bds'];
-                $name = $_POST['name'];
-                $img = $_POST['img'];
-                $username = $_POST['user'];
+                $id_user = $_POST['id_login'];
+                $fullname = $_POST['fullname'];
                 $email = $_POST['email'];
                 $tel = $_POST['tel'];
                 $note_user = $_POST['note_user'];
+                $id_bds = $_POST['id_bds'];
+                $name = $_POST['name'];
+                $img = $_POST['img'];
                 date_default_timezone_set("Asia/Ho_Chi_Minh");
                 $time_yeucau = date('h:i:sa d/m/Y');
-                insert_bds_tuvan($id_user,$username, $note_user, $id_bds,$name,$img,$time_yeucau, $email, $tel);
-                // $thongbao = "Bạn đã gửi yêu cầu tư vấn thành công";
-                header('location:index.php?act=listtuvan');
+                insert_bds_tuvan($id_user,$fullname, $note_user, $id_bds,$name,$img,$time_yeucau, $email, $tel);
+                $thongbao = "Bạn đã gửi yêu cầu tư vấn thành công";
+                header('location:index.php?act=batdongsan');
             }
             break;
         case 'dangky':
             if (isset($_POST['dangky']) && ($_POST['dangky'])) {
                 $email = $_POST['email'];
                 $user = $_POST['user'];
-                $pass = $_POST['pass'];
+                $pass = md5($_POST['pass']);
                 insert_account($email, $user, $pass);
                 $thongbao = "Đăng ký thành công.Đăng nhập để sử dụng chức năng !";
             }

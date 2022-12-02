@@ -30,10 +30,8 @@
             line-height: 5px;
             font-family: Arial, Helvetica, sans-serif;
         }
-
-        
         ul{
-            display: flex;
+            display: inline-flex;
         }
         .li {
             margin: 10px 20px;

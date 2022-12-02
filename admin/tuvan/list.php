@@ -76,7 +76,7 @@
                                                 <th>Trạng thái<br>(0.Đang chờ, 1.Đã giao việc)</th>
                                                 <th>Nhân viên</th>
                                                 <th>Thời gian tư vấn</th>
-                                                <th>Action</th>
+                                                <!-- <th>Action</th> -->
                                             </tr>
                                         </thead>
                                         <tbody class="list form-check-all">
@@ -86,7 +86,6 @@
                                                         extract($tuvan);
                                                         $uptuvan = "index.php?act=sua_bds_tuvan&id=" . $id;
                                                     } ?>
-
                                             <tr>
                                                 <td class="customer_name"><?= $tuvan['id'] ?></td>
                                                 <td class="customer_name"><?= $tuvan['name'] ?></td>
@@ -95,15 +94,42 @@
                                                 <td class="customer_name"><?= $tuvan['tel'] ?></td>
                                                 <td class="customer_name"><?= $tuvan['note_user'] ?></td>
                                                 <td class="customer_name"><?= $tuvan['time_yeucau'] ?></td>
-                                                <td class="customer_name"><?= $tuvan['trangthai'] ?></td>
-                                                <td class="customer_name"><?= $tuvan['id_nhanvien'] ?></td>
+                                                <td>
+                                                    <?php if ($tuvan['trangthai'] == 1) : ?>
+                                                        <a href="index.php?act=update_bds_tuvan&id=<?= $tuvan['id'] ?>&trangthai=0" class="btn btn-danger">Đang chờ</a>
+                                                    <?php else : ?>
+                                                        <a href="index.php?act=update_bds_tuvan&id=<?= $tuvan['id'] ?>&trangthai=1" class="btn btn-success">Đã giao việc</a>
+                                                    <?php endif ?>
+                                                </td>
+                                                <td class="customer_name">
+                                                    <select onchange="get_ID_Nhanvien()" name="user" class="form-control" id="product-discount-input" aria-label="discount" aria-describedby="product-discount-addon">
+                                                        <option value="">Chọn nhân viên</option>
+                                                        <?php foreach ($listnhanvien as $index => $user) : ?>
+                                                            <option name="user" value="<?= $user['id'] ?>"><?= $user['user'] ?></option>
+                                                        <?php endforeach ?>
+                                                    </select>
+                                                </td>
                                                 <td class="customer_name"><?= $tuvan['time_tuvan'] ?></td>
-                                                <td><a href="<?= $uptuvan ?>"><input type="submit" value="Giao việc" class="btn btn-success add-btn"></a></td>
+                                                <!-- <td><a href="<?= $uptuvan ?>"><input type="submit" value="Giao việc" class="btn btn-success add-btn"></a></td> -->
                                             </tr>
                                         <?php endforeach ?>
                                         </tr>
+
+                                        <?php if (isset($_COOKIE["id"])) :die(); ?>
+                                            
+                                        
+
+                                        <?php endif ?>
+
                                         </tbody>
                                     </table>
+                                    <script>
+                                        function get_ID_Nhanvien() {
+                                            const option = document.querySelector('#product-discount-input');
+                                            console.log(option.value);
+                                            document.cookie = `id=${option.value}`
+                                        }
+                                    </script>
                                 </div>
 
                             </div>

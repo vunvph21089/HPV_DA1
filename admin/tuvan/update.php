@@ -28,7 +28,7 @@
                                 <div class="mb-3">
                                     <label class="form-label" for="product-title-input">Chọn nhân viên tư vấn</label>
                                     <select name="user" class="form-control" id="product-discount-input" aria-label="discount" aria-describedby="product-discount-addon">
-                                        <option value="0">Chọn nhân viên</option>
+                                        <option value="">Chọn nhân viên</option>
                                         <?php foreach ($listnhanvien as $index => $user) : print_r($user); ?>
                                             <option name="user" value="<?= $user['id'] ?>"><?= $user['user'] ?></option>
                                         <?php endforeach ?>

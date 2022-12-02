@@ -7,12 +7,12 @@ include "view/header.php";
     <section class="page-section breadcrumbs text-center">
         <div class="container">
             <div class="page-header">
-                <h1>Portfolio</h1>
+                <h1>HPV</h1>
             </div>
             <ul class="breadcrumb">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Pages</a></li>
-                <li class="active">Portfolio</li>
+                <li><a href="#">Bất động sản</a></li>
+                <li><a href="#">Chi tiết</a></li>
+                <!-- <li class="active">Portfolio</li> -->
             </ul>
         </div>
     </section>
@@ -77,6 +77,7 @@ include "view/header.php";
                             <a href="#" class="btn btn-block btn-theme btn-theme-dark" onclick="modal()">Tư vấn ngay</a>
                             <?php
                             if (isset($_SESSION['user'])) {
+                                $id_login = $_SESSION['user'];
                             ?>
                                 <div class="modal-content" id="modal">
                                     <div class="modal-header bg-light p-3">
@@ -85,24 +86,29 @@ include "view/header.php";
                                         </a>
                                     </div>
                                     <form action="index.php?act=tuvan" id="form_modal" method="POST">
-
+                                        <input type="hidden" name="id_login" value="<?=$id_login['id']?>">
                                         <div class="modal-body">
                                             <input type="hidden" id="id-field" />
                                             <div class="mb-3" id="modal-id" style="display: none;">
                                                 <label for="id-field1" class="form-label"></label>
-                                                <input type="hidden" id="id-field1" name="id_bds" class="form-control" placeholder="ID" readonly value="<?= $id ?>" />
-                                                <input type="hidden" id="id-field1" name="name" class="form-control" placeholder="ID" readonly value="<?= $name ?>" />
-                                                <input type="hidden" id="id-field1" name="img" class="form-control" placeholder="ID" readonly value="<?= $img ?>" />
+                                                <input type="hidden" id="id-field1" name="id_bds" class="form-control" placeholder="ID" readonly value="<?= $onebds['id'] ?>" />
+                                                <input type="hidden" id="id-field1" name="name" class="form-control" placeholder="ID" readonly value="<?= $onebds['name'] ?>" />
+                                                <input type="hidden" id="id-field1" name="img" class="form-control" placeholder="ID" readonly value="<?= $onebds['img'] ?>" />
                                             </div>
 
                                             <div class="mb-3">
-                                                <label for="customername-field" class="form-label">Họ và tên</label>
-                                                <input type="text" name="user" id="customername-field" class="form-control" placeholder="Nhập vào họ tên" value="" />
+                                                <label for="customername-field" class="form-label">Tên đăng nhập</label>
+                                                <input type="text" name="user" value="<?=$id_login['user']?>" id="customername-field" class="form-control" placeholder="Nhập vào họ tên"  />
 
                                             </div>
                                             <div class="mb-3">
                                                 <label for="email-field" class="form-label">Email</label>
-                                                <input type="email" name="email" id="email-field" class="form-control" placeholder="Nhập vào email" required />
+                                                <input type="email" name="email" value="<?=$id_login['email']?>" id="email-field" class="form-control" placeholder="Nhập vào email" required />
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="email-field" class="form-label">Họ và tên</label>
+                                                <input type="text" name="fullname" value="" id="email-field" class="form-control" placeholder="Nhập vào tên của bạn" required />
                                             </div>
 
                                             <div class="mb-3">
@@ -119,7 +125,7 @@ include "view/header.php";
                                             <div class="hstack gap-2 justify-content-end">
                                                 <!-- <button type="submit" name="tuvan" class="btn btn-block btn-theme btn-theme-dark" id="add-btn">Gửi</button> -->
 
-                                                <a href=""> <input type="submit" name="tuvan" class="btn btn-block btn-theme btn-theme-dark" id="add-btn" value="gui"></a>
+                                                <a href=""> <input type="submit" name="tuvan" class="btn btn-block btn-theme btn-theme-dark" id="add-btn" value="gửi"></a>
                                             </div>
 
                                         </div>
