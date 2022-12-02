@@ -69,11 +69,11 @@ function update_bds($id, $tenbds, $imgValue, $price, $diachi, $dientich, $info, 
         `id_user`='$id_user' WHERE `id`='$id' ";
     pdo_execute($sql);
 }
-function tang_view($id)
-{
-    $sql = "UPDATE bds SET luotxem = luotxem + 1 WHERE id=" . $id;
-    pdo_query($sql);
-}
+// function tang_view($id)
+// {
+//     $sql = "UPDATE bds SET luotxem = luotxem + 1 WHERE id=" . $id;
+//     pdo_query($sql);
+// }
 function loadAll_bds_top5()
 {
     $sql = "Select * from bds WHERE 1 order by luotxem desc limit 0,5";

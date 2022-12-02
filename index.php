@@ -9,6 +9,7 @@ include "model/danhmuc_tintuc.php";
 // include "model/user.php";
 $bds_new = loadall_bds_home();
 $loaibds = loadAll_danhmuc();
+$danhmuctt = loadAll_danhmuctintuc();
 session_start();
 
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
