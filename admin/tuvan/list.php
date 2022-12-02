@@ -73,10 +73,9 @@
                                                 <th>Sđt</th>
                                                 <th>Lời nhắn</th>
                                                 <th>Thời gian yêu cầu</th>
-                                                <th>Trạng thái<br>(0.Đang chờ, 1.Đã giao việc)</th>
+                                                <th>Trạng thái</th>
                                                 <th>Nhân viên</th>
                                                 <th>Thời gian tư vấn</th>
-                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody class="list form-check-all">
@@ -95,10 +94,15 @@
                                                 <td class="customer_name"><?= $tuvan['tel'] ?></td>
                                                 <td class="customer_name"><?= $tuvan['note_user'] ?></td>
                                                 <td class="customer_name"><?= $tuvan['time_yeucau'] ?></td>
-                                                <td class="customer_name"><?= $tuvan['trangthai'] ?></td>
+                                                <td>
+                                                    <?php if ($tuvan['trangthai'] == 1) : ?>
+                                                        <?php echo '<a class="btn btn-success">Đã giao việc</a>' ?>
+                                                <?php else : ?>
+                                                    <?php echo '<a class="btn btn-danger" href="' . $uptuvan . '&trangthai">Đang chờ</a>' ?>
+                                                <?php endif ?>
+                                                </td>
                                                 <td class="customer_name"><?= $tuvan['id_nhanvien'] ?></td>
                                                 <td class="customer_name"><?= $tuvan['time_tuvan'] ?></td>
-                                                <td><a href="<?= $uptuvan ?>"><input type="submit" value="Giao việc" class="btn btn-success add-btn"></a></td>
                                             </tr>
                                         <?php endforeach ?>
                                         </tr>

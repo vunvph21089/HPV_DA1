@@ -1,3 +1,4 @@
+
 <div class="main-content">
 
     <div class="page-content">
@@ -28,23 +29,19 @@
                                 <div class="mb-3">
                                     <label class="form-label" for="product-title-input">Chọn nhân viên tư vấn</label>
                                     <select name="user" class="form-control" id="product-discount-input" aria-label="discount" aria-describedby="product-discount-addon">
-                                        <option value="0">Chọn nhân viên</option>
                                         <?php foreach ($listnhanvien as $index => $user) : print_r($user); ?>
                                             <option name="user" value="<?= $user['id'] ?>"><?= $user['user'] ?></option>
                                         <?php endforeach ?>
                                     </select>
                                 </div>
-                                <div class="mb-3">
-                                    <label class="form-label" for="product-title-input">Trạng thái</label>
-                                    <input type="text" name="trangthai" value="<?= trangthai($tuvan['trangthai']) ?>" class="form-control">
-                                </div>
+                                    <input hidden name="trangthai" value="1">
                             </div>
                         </div>
 
                         <!-- end card -->
                         <div class="text-end mb-3">
                             <input type="hidden" name="id" value="<?php if (isset($id) && ($id > 0)) echo $id; ?>">
-                            <input type="submit" name="capnhat" class="btn btn-success w-sm" value="Cập nhật">
+                            <input type="submit" name="capnhat" class="btn btn-success w-sm" value="Giao việc">
                             <!-- <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Remove">
                                 <a class="text-danger d-inline-block remove-item-btn" data-bs-toggle="modal" href="#deleteRecordModal">
                                     <input type="button" class="btn btn-success w-sm" value="Xóa"></a>

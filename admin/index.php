@@ -387,7 +387,6 @@ if (isset($_GET['act'])) {
                 $id = $_POST["id"];
                 $nhanvien = $_POST['user'];
                 $trangthai = $_POST['trangthai'];
-                
                 date_default_timezone_set("Asia/Ho_Chi_Minh");
                 $time_tuvan = date('h:i:sa d/m/Y');
                 update_bds_tuvan($id,$nhanvien,$trangthai,$time_tuvan);
