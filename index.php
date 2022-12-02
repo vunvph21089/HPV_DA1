@@ -54,6 +54,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
         case 'hotdeals':
             // code  vao day
+            // $id_loaibds = $_POST['loaibds'];
             $ds_bds = loadall_bds();
             include 'view/hotdeals.php';
             break;

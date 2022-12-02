@@ -12,14 +12,14 @@ include "view/header.php";
 
 
                 <?php
-                foreach ($dstop5 as $index => $sp5) :?>
-                    <?php
+                foreach ($dstop5 as $index => $sp5) : ?>
+                <?php
                     $linkbds = "index.php?act=batdongsanchitiet&idbds=" . $sp5['id'];
                     echo '
                 <div class="thumbnail no-border no-padding thumbnail-property-card clearfix">
                 <div class="media">
                     <a class="media-link" data-gal="prettyPhoto" href="' . $sp5['img'] . '">
-                        <img style="width:300px;height:auto;" src="' . $sp5['img']. '" alt=""/>
+                        <img style="width:300px;height:auto;" src="' . $sp5['img'] . '" alt=""/>
                         <span class="icon-view"><strong><i class="fa fa-eye"></i></strong></span>
                     </a>
                 </div>
@@ -32,11 +32,9 @@ include "view/header.php";
                     <div class="caption-text">' . $sp5['location'] . '</div>
                     <table class="table">
                         <tr>
-                            <td><i class="fa fa-expand"></i> 250 sq ft </td>
-                            <td><i class="fa fa-bed"></i> 1 Bedroom</td>
-                            <td><i class="fa fa-tint"></i> 1 Bathroom</td>
+                            <td></td>
 
-                            <td class="buttons"><a class="btn btn-theme" href="'.$linkbds.'">tư vấn</a></td>
+                            <td class="buttons"><a class="btn btn-theme" href="' . $linkbds . '">tư vấn</a></td>
                         </tr>
                     </table>
                 </div>
@@ -75,71 +73,31 @@ include "view/header.php";
             <aside class="col-md-3 sidebar" id="sidebar">
                 <!-- widget -->
                 <div class="widget shadow widget-find-property">
-                    <h4 class="widget-title">Find Best Properties</h4>
+                    <h4 class="widget-title">Tìm kiếm bất động sản</h4>
                     <div class="widget-content">
                         <!-- Search form -->
                         <div class="form-search light">
                             <form action="#">
 
                                 <div class="form-group has-icon has-label">
-                                    <label for="formSearchUpLocation3">Enter Location</label>
+                                    <label for="formSearchUpLocation3">Vị trí</label>
                                     <input type="text" class="form-control" id="formSearchUpLocation3" placeholder="City">
                                     <span class="form-control-icon"><i class="fa fa-map-marker"></i></span>
                                 </div>
 
-                                <div class="form-group has-label">
-                                    <label>Property For</label>
-                                    <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
-                                        <option>Property For</option>
-                                        <option>Sale</option>
-                                        <option>Rent</option>
-                                    </select>
-                                </div>
+
 
                                 <div class="form-group has-label">
-                                    <label>Property Type</label>
-                                    <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
-                                        <option>Flat</option>
-                                        <option>House</option>
-                                        <option>Villa</option>
-                                    </select>
-
+                                    <label>Danh mục</label>
+                                    <!-- <select class="form-select" name="loaibds" id="choices-category-input" data-choices data-choices-search-false>
+                                        <?php foreach ($listloaibds as $index => $dm) : ?>
+                                            <option name="loaibds" value="<?= $dm['id'] ?>"><?= $dm['name'] ?></option>
+                                        <?php endforeach ?>
+                                    </select> -->
                                 </div>
 
-                                <div class="form-group has-label selectpicker-wrapper">
-                                    <label>Budget</label>
-                                    <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
-                                        <option> Budget </option>
-                                        <option>
-                                            < 5Lac </option>
-                                        <option>
-                                            < 10Lac </option>
-                                    </select>
 
-                                </div>
-
-                                <div class="form-group selectpicker-wrapper">
-                                    <label>BHK</label>
-                                    <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
-                                        <option> 1 BHK </option>
-                                        <option> 2 BHK </option>
-                                        <option> 3 BHK </option>
-                                    </select>
-
-                                </div>
-
-                                <div class="form-group selectpicker-wrapper">
-                                    <label>Posted By</label>
-                                    <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
-                                        <option> Posted By </option>
-                                        <option> Owners </option>
-                                        <option> Brokers </option>
-                                        <option> Builders </option>
-                                    </select>
-
-                                </div>
-
-                                <button type="submit" id="formSearchSubmit3" class="btn btn-submit btn-theme btn-theme-dark btn-block">Find Property</button>
+                                <button type="submit" id="formSearchSubmit3" class="btn btn-submit btn-theme btn-theme-dark btn-block">Tìm kiếm</button>
 
                             </form>
                         </div>
@@ -148,7 +106,7 @@ include "view/header.php";
                 </div>
                 <!-- /widget -->
                 <!-- widget price filter -->
-                
+
                 <!-- /widget price filter -->
                 <!-- widget testimonials -->
                 <div class="widget shadow">

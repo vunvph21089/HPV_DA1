@@ -165,6 +165,9 @@
             object-fit: cover;
             border-radius: 5px;
         }
+        .property-listing .thumbnail-property-card .table td.buttons{
+            width:28%;
+        }
 
         #ten_bds {
             margin: 0 0 10px 0;
