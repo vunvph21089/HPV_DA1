@@ -368,7 +368,7 @@
 
                                         <ul class="nav sf-menu">
 
-                                            <li class="megamenu sale"><a href="index.php?act=blog">Blog</a>
+                                            <li class="megamenu sale"><a href="index.php?act=blog">Tin tức</a>
                                             </li>
 
                                             <li><a href="index.php?act=contact">Liên hệ</a>

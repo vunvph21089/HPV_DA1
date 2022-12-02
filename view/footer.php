@@ -14,7 +14,7 @@
 
                 <h2 class="section-title wow fadeInDown text-left" data-wow-offset="200" data-wow-delay="100ms">
 
-                    <span>Get in Touch With Us</span>
+                    <span>LIÊN HỆ VỚI CHÚNG TÔI</span>
 
                 </h2>
 
@@ -36,7 +36,7 @@
 
                                 <div class="form-group af-inner has-icon">
 
-                                    <label class="sr-only" for="name">Name</label>
+                                    <label class="sr-only" for="name">Tên</label>
 
                                     <input
 
@@ -112,7 +112,7 @@
 
                     <div class="form-group af-inner has-icon">
 
-                        <label class="sr-only" for="input-message">Message</label>
+                        <label class="sr-only" for="input-message">Lời nhắn</label>
 
                         <textarea
 
@@ -132,7 +132,7 @@
 
                         <div class="form-group af-inner">
 
-                            <input type="submit" name="submit" class="form-button form-button-submit btn btn-block btn-theme ripple-effect btn-theme-dark" id="submit_btn" value="Send message" />
+                            <input type="submit" name="submit" class="form-button form-button-submit btn btn-block btn-theme ripple-effect btn-theme-dark" id="submit_btn" value="Gửi" />
 
                         </div>
 
@@ -152,11 +152,11 @@
 
                 <h2 class="section-title wow fadeInDown text-left" data-wow-offset="200" data-wow-delay="100ms">
 
-                        <span>Come visit us</span>
+                        <span>Đến thăm chúng tôi</span>
 
                 </h2>
 
-                <p>We invite you to any of our 5 offices for a chat. Feel free to come, we have great coffee and comfy sofas. Looking forward to have you here.</p>
+                <p>Chúng tôi mời bạn đến bất kỳ văn phòng nào trong số 5 văn phòng của chúng tôi để trò chuyện. Hãy đến, chúng tôi có cà phê tuyệt vời và ghế sofa thoải mái. Mong có bạn ở đây.</p>
 
 
 
@@ -166,7 +166,7 @@
 
                         <div class="media-left"><i class="fa fa-home"></i></div>
 
-                        <div class="media-body">Adress: 1600 Pennsylvania Ave NW, Washington, D.C.</div>
+                        <div class="media-body">Địa chỉ: 27 Trịnh Văn Bô</div>
 
                     </li>
 
@@ -174,7 +174,7 @@
 
                         <div class="media-left"><i class="fa fa-phone"></i></div>
 
-                        <div class="media-body">Support Phone: 01865 339665</div>
+                        <div class="media-body">Liên hệ: 0793-576-765</div>
 
                     </li>
 
@@ -182,7 +182,7 @@
 
                         <div class="media-left"><i class="fa fa-envelope"></i></div>
 
-                        <div class="media-body">E mails: info@example.com</div>
+                        <div class="media-body">Emails: vunvph21089@example.com</div>
 
                     </li>
 
@@ -190,7 +190,7 @@
 
                         <div class="media-left"><i class="fa fa-clock-o"></i></div>
 
-                        <div class="media-body">Working Hours: 09:30-21:00 except on Sundays</div>
+                        <div class="media-body">Giờ hàm việc: 09:30-21:00 trừ ngày chủ nhật</div>
 
                     </li>
 
@@ -198,7 +198,7 @@
 
                         <div class="media-left"><i class="fa fa-map-marker"></i></div>
 
-                        <div class="media-body">View on The Map</div>
+                        <div class="media-body">Xem trên bản đồ</div>
 
                     </li>
 
@@ -251,7 +251,7 @@
 
                 </p>
 
-                <div class="copyright">&copy; 2015 Real Estate — Real Estate Theme made with passion by jThemes Studio</div>
+                <div class="copyright">&copy; 2022 HPV — Dự án 1 lớp VIE103.87</div>
 
             </div>
 

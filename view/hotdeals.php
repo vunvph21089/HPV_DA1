@@ -149,14 +149,7 @@ include "view/header.php";
                 </div>
                 <!-- /widget -->
                 <!-- widget price filter -->
-                <div class="widget shadow widget-filter-price">
-                    <h4 class="widget-title">Price</h4>
-                    <div class="widget-content">
-                        <div id="slider-range"></div>
-                        <input type="text" id="amount" readonly />
-                        <button class="btn btn-theme btn-theme-dark">Filter</button>
-                    </div>
-                </div>
+                
                 <!-- /widget price filter -->
                 <!-- widget testimonials -->
                 <div class="widget shadow">

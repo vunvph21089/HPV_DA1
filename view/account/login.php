@@ -121,6 +121,7 @@
                                                 <div class="mt-4">
                                                 <h6>
                                                     <?php
+                                                    
                                                     if (isset($thongbao) && ($thongbao != "")) {
                                                         echo $thongbao;
                                                     }?>

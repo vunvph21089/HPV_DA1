@@ -43,7 +43,7 @@ include "view/header.php";
 
                                                         <i class="fa fa-home"></i>
 
-                                                        <h2>Find Property You'll Love</h2>
+                                                        <h2>Tìm tài sản bạn sẽ yêu thích</h2>
 
                                                     </div>
 
@@ -57,7 +57,7 @@ include "view/header.php";
 
                                                                 <div class="form-group has-icon has-label">
 
-                                                                    <label for="formSearchUpLocation5">Enter Location</label>
+                                                                    <label for="formSearchUpLocation5">Nhập vị trí</label>
 
                                                                     <input type="text" class="form-control" id="formSearchUpLocation5" placeholder="City">
 
@@ -81,15 +81,15 @@ include "view/header.php";
 
                                                                 <div class="form-group has-icon has-label">
 
-                                                                    <label>Property For</label>
+                                                                    <label>Tài sản </label>
 
                                                                     <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
 
-                                                                        <option>Property For</option>
+                                                                        <option>Tài sản </option>
 
                                                                         <option>Sale</option>
 
-                                                                        <option>Rent</option>
+                                                                        <option>Thuê</option>
 
                                                                     </select>
 
@@ -103,13 +103,13 @@ include "view/header.php";
 
                                                                 <div class="form-group has-icon has-label">
 
-                                                                    <label>Property Type</label>
+                                                                    <label>Loại tài sản</label>
 
                                                                     <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
 
-                                                                        <option>Flat</option>
+                                                                        <option>Bằng phẳng</option>
 
-                                                                        <option>House</option>
+                                                                        <option>Nhà</option>
 
                                                                         <option>Villa</option>
 
@@ -135,15 +135,15 @@ include "view/header.php";
 
                                                                 <div class="form-group has-icon has-label">
 
-                                                                    <label>Budget</label>
+                                                                    <label>Ngân sách</label>
 
                                                                     <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
 
-                                                                        <option> Budget </option>
+                                                                        <option> Ngân sách </option>
 
-                                                                        <option> &lt; 5Lac </option>
+                                                                        <option> &lt; trên 1 tỷ </option>
 
-                                                                        <option> &lt; 10Lac </option>
+                                                                        <option> &lt; trên 5 tỷ </option>
 
                                                                     </select>
 
@@ -157,15 +157,15 @@ include "view/header.php";
 
                                                                 <div class="form-group has-icon has-label selectpicker-wrapper">
 
-                                                                    <label>Nearest</label>
+                                                                    <label>Gần nhất</label>
 
                                                                     <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
 
-                                                                        <option>Nearest</option>
+                                                                        <option>Gần nhất</option>
 
-                                                                        <option>commercial Area</option>
+                                                                        <option>khu vực thương mại</option>
 
-                                                                        <option>residential Area</option>
+                                                                        <option>khu dân cư</option>
 
                                                                     </select>
 
@@ -187,9 +187,9 @@ include "view/header.php";
 
                                                             <div class="inner">
 
-                                                                <i class="fa fa-plus-circle"></i> <a href="#">Advanced Search</a>
+                                                                <i class="fa fa-plus-circle"></i> <a href="#">Tìm kiếm nâng cao</a>
 
-                                                                <button type="submit" id="formSearchSubmit3" class="btn btn-submit ripple-effect btn-theme pull-right">Search</button>
+                                                                <button type="submit" id="formSearchSubmit3" class="btn btn-submit ripple-effect btn-theme pull-right">Tìm kiếm</button>
 
                                                             </div>
 
@@ -238,209 +238,47 @@ include "view/header.php";
 
                     <!-- /Slide 2 -->
 
+                    <div class="item slide2 ver2">
 
+<div class="caption">
 
-                    <!-- Slide 3 -->
+    <div class="container">
 
-                    <div class="item slide3 ver3">
+        <div class="div-table">
 
-                        <div class="caption">
+            <div class="div-cell">
 
-                            <div class="container">
+                <div class="caption-content">
 
-                                <div class="div-table">
+                    <!-- Search form -->
 
-                                    <div class="div-cell">
+                    <div class="form-search light">
 
-                                        <div class="caption-content">
+                        <form action="#">
 
-                                            <!-- Search form -->
+                            <div class="form-title">
 
-                                            <div class="form-search light">
+                                <i class="fa fa-home"></i>
 
-                                                <form action="#">
+                                <h2>Tìm tài sản bạn sẽ yêu thích</h2>
 
-                                                    <div class="form-title">
+                            </div>
 
-                                                        <i class="fa fa-home"></i>
 
-                                                        <h2>Find Property You'll Love</h2>
 
-                                                    </div>
+                            <div class="row row-inputs">
 
+                                <div class="container-fluid">
 
+                                    <div class="col-sm-12">
 
-                                                    <div class="row row-inputs">
+                                        <div class="form-group has-icon has-label">
 
-                                                        <div class="container-fluid">
+                                            <label for="formSearchUpLocation5">Nhập vị trí</label>
 
-                                                            <div class="col-sm-12">
+                                            <input type="text" class="form-control" id="formSearchUpLocation5" placeholder="City">
 
-                                                                <div class="form-group has-icon has-label">
-
-                                                                    <label for="formSearchUpLocation3">Enter Location</label>
-
-                                                                    <input type="text" class="form-control" id="formSearchUpLocation3" placeholder="City">
-
-                                                                    <span class="form-control-icon"><i class="fa fa-map-marker"></i></span>
-
-                                                                </div>
-
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-
-
-
-                                                    <div class="row row-inputs">
-
-                                                        <div class="container-fluid">
-
-                                                            <div class="col-sm-7">
-
-                                                                <div class="form-group has-icon has-label">
-
-                                                                    <label>Property For</label>
-
-                                                                    <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
-
-                                                                        <option>Property For</option>
-
-                                                                        <option>Sale</option>
-
-                                                                        <option>Rent</option>
-
-                                                                    </select>
-
-                                                                    <span class="form-control-icon"><i class="fa  fa-caret-down"></i></span>
-
-                                                                </div>
-
-                                                            </div>
-
-                                                            <div class="col-sm-5">
-
-                                                                <div class="form-group has-icon has-label">
-
-                                                                    <label>Property Type</label>
-
-                                                                    <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
-
-                                                                        <option>Flat</option>
-
-                                                                        <option>House</option>
-
-                                                                        <option>Villa</option>
-
-                                                                    </select>
-
-                                                                    <span class="form-control-icon"><i class="fa  fa-caret-down"></i></span>
-
-                                                                </div>
-
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-
-
-
-                                                    <div class="row row-inputs">
-
-                                                        <div class="container-fluid">
-
-                                                            <div class="col-sm-7">
-
-                                                                <div class="form-group has-icon has-label">
-
-                                                                    <label>Budget</label>
-
-                                                                    <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
-
-                                                                        <option> Budget </option>
-
-                                                                        <option> &lt; 5Lac </option>
-
-                                                                        <option> &lt; 10Lac </option>
-
-                                                                    </select>
-
-                                                                    <span class="form-control-icon"><i class="fa  fa-caret-down"></i></span>
-
-                                                                </div>
-
-                                                            </div>
-
-                                                            <div class="col-sm-5">
-
-                                                                <div class="form-group has-icon has-label selectpicker-wrapper">
-
-                                                                    <label>Nearest</label>
-
-                                                                    <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
-
-                                                                        <option>Nearest</option>
-
-                                                                        <option>commercial Area</option>
-
-                                                                        <option>residential Area</option>
-
-                                                                    </select>
-
-                                                                    <span class="form-control-icon"><i class="fa  fa-caret-down"></i></span>
-
-                                                                </div>
-
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-
-
-
-                                                    <div class="row row-submit">
-
-                                                        <div class="container-fluid">
-
-                                                            <div class="inner">
-
-                                                                <i class="fa fa-plus-circle"></i> <a href="#">Advanced Search</a>
-
-                                                                <button type="submit" id="formSearchSubmit4" class="btn btn-submit ripple-effect btn-theme pull-right">Search</button>
-
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-
-                                                </form>
-
-                                            </div>
-
-                                            <!-- /Search form -->
-
-
-
-                                            <h2 class="caption-title">For Property</h2>
-
-                                            <h3 class="caption-subtitle">Best Deals</h3>
-
-                                            <p class="caption-text">
-
-                                                Vivamus in est sit amet risus rutrum facilisis sed ut mauris. Aenean aliquam ex ut sem aliquet, eget vestibulum erat pharetra. Maecenas vel urna nulla. Mauris non risus pulvinar.
-
-                                            </p>
-
-                                            <p class="caption-text">
-
-                                                <a class="btn btn-theme ripple-effect btn-theme-md" href="#">See All properties</a>
-
-                                            </p>
+                                            <span class="form-control-icon"><i class="fa fa-map-marker"></i></span>
 
                                         </div>
 
@@ -450,9 +288,173 @@ include "view/header.php";
 
                             </div>
 
-                        </div>
+
+
+                            <div class="row row-inputs">
+
+                                <div class="container-fluid">
+
+                                    <div class="col-sm-7">
+
+                                        <div class="form-group has-icon has-label">
+
+                                            <label>Tài sản </label>
+
+                                            <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
+
+                                                <option>Tài sản </option>
+
+                                                <option>Sale</option>
+
+                                                <option>Thuê</option>
+
+                                            </select>
+
+                                            <span class="form-control-icon"><i class="fa  fa-caret-down"></i></span>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-sm-5">
+
+                                        <div class="form-group has-icon has-label">
+
+                                            <label>Loại tài sản</label>
+
+                                            <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
+
+                                                <option>Bằng phẳng</option>
+
+                                                <option>Nhà</option>
+
+                                                <option>Villa</option>
+
+                                            </select>
+
+                                            <span class="form-control-icon"><i class="fa  fa-caret-down"></i></span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="row row-inputs">
+
+                                <div class="container-fluid">
+
+                                    <div class="col-sm-7">
+
+                                        <div class="form-group has-icon has-label">
+
+                                            <label>Ngân sách</label>
+
+                                            <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
+
+                                                <option> Ngân sách </option>
+
+                                                <option> &lt; trên 1 tỷ </option>
+
+                                                <option> &lt; trên 5 tỷ </option>
+
+                                            </select>
+
+                                            <span class="form-control-icon"><i class="fa  fa-caret-down"></i></span>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-sm-5">
+
+                                        <div class="form-group has-icon has-label selectpicker-wrapper">
+
+                                            <label>Gần nhất</label>
+
+                                            <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
+
+                                                <option>Gần nhất</option>
+
+                                                <option>khu vực thương mại</option>
+
+                                                <option>khu dân cư</option>
+
+                                            </select>
+
+                                            <span class="form-control-icon"><i class="fa  fa-caret-down"></i></span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="row row-submit">
+
+                                <div class="container-fluid">
+
+                                    <div class="inner">
+
+                                        <i class="fa fa-plus-circle"></i> <a href="#">Tìm kiếm nâng cao</a>
+
+                                        <button type="submit" id="formSearchSubmit3" class="btn btn-submit ripple-effect btn-theme pull-right">Tìm kiếm</button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </form>
 
                     </div>
+
+                    <!-- /Search form -->
+
+
+
+                    <h2 class="caption-subtitle">
+
+                        <span class="span-caption">Chúng tôi sẽ theo trong suốt quá trình</span>
+                        Tìm ngôi nhà mơ ước của bạn
+
+                    </h2>
+
+                    <p class="caption-text">
+
+                        Duy nhất trong tháng 12, HPV chính thức triển khai chương trình khuyến mại và hoàn tiền cực khủng chưa từng có. Đặc biệt, khi nạp tiền trong thời gian diễn ra chương trình, Quý khách sẽ được nhận ngay các quà tặng hấp dẫn và giá trị.
+
+                    </p>
+
+                    <p class="caption-text">
+
+                        <a class="btn btn-theme ripple-effect btn-theme-md" href="index.php?act=batdongsan"><i class="fa fa-list">&nbsp;</i> Xem tất cả bất động sản</a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+                    <!-- Slide 3 -->
+
 
                     <!-- /Slide 3 -->
 
@@ -472,19 +474,19 @@ include "view/header.php";
 
                                         <div class="caption-content">
 
-                                            <h2 class="caption-title">Irresistible properties</h2>
+                                            <h2 class="caption-title">Chất lượng không thể cưỡng lại</h2>
 
-                                            <h3 class="caption-subtitle"><span>Offering the best deals</span></h3>
+                                            <h3 class="caption-subtitle"><span>Cung cấp các giao dịch tốt nhất</span></h3>
 
                                             <p class="caption-text">
 
-                                                Vivamus in est sit amet risus rutrum facilisis sed ut mauris. Aenean aliquam ex ut sem aliquet, eget vestibulum erat pharetra. Maecenas vel urna nulla. Mauris non risus pulvinar.
+                                            Duy nhất trong tháng 12, HPV chính thức triển khai chương trình khuyến mại và hoàn tiền cực khủng chưa từng có. Đặc biệt, khi nạp tiền trong thời gian diễn ra chương trình, Quý khách sẽ được nhận ngay các quà tặng hấp dẫn và giá trị.
 
                                             </p>
 
                                             <p class="caption-text">
 
-                                                <a class="btn btn-theme ripple-effect btn-theme-md" href="#">See All properties</a>
+                                                <a class="btn btn-theme ripple-effect btn-theme-md" href="index.php?act=batdongsan">Xem bất động sản</a>
 
                                             </p>
 
@@ -715,19 +717,19 @@ include "view/header.php";
                                         <!--
 
                                     -->
-                                        <li class="active"><a href="#tab-x1x2" data-toggle="tab">Elegant Apartment</a></li>
+                                        <li class="active"><a href="#tab-x1x2" data-toggle="tab">Căn hộ</a></li>
                                         <!--
 
                                     -->
-                                        <li class=""><a href="#tab-x1x3" data-toggle="tab">Sophisticated Residence</a></li>
+                                        <li class=""><a href="#tab-x1x3" data-toggle="tab">Khu dân cư cao cấp</a></li>
                                         <!--
 
                                     -->
-                                        <li class=""><a href="#tab-x1x4" data-toggle="tab">Futuristic Apartment</a></li>
+                                        <li class=""><a href="#tab-x1x4" data-toggle="tab">Căn hộ tương lai</a></li>
                                         <!--
 
                                     -->
-                                        <li class=""><a href="#tab-x1x4" data-toggle="tab">Stylish Apartment</a></li>
+                                        <li class=""><a href="#tab-x1x4" data-toggle="tab">Căn hộ phong cách</a></li>
 
                                     </ul>
 
@@ -1031,7 +1033,7 @@ include "view/header.php";
 
                                                         <div class="button">
 
-                                                            <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
+                                                            <a href="index.php?act=batdongsan" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                         </div>
 
@@ -1059,7 +1061,7 @@ include "view/header.php";
 
                                                                 <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x1.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                                <a href="assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
+                                                                <a href="view/assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
 
                                                             </div>
 
@@ -1067,7 +1069,7 @@ include "view/header.php";
 
                                                                 <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                                <a href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
+                                                                <a href="view/assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
 
                                                             </div>
 
@@ -1075,7 +1077,7 @@ include "view/header.php";
 
                                                                 <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                                <a href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
+                                                                <a href="view/assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
 
                                                             </div>
 
@@ -1083,7 +1085,7 @@ include "view/header.php";
 
                                                                 <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                                <a href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
+                                                                <a href="view/assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
 
                                                             </div>
 
@@ -1155,9 +1157,9 @@ include "view/header.php";
 
                                                             <div class="swiper-slide">
 
-                                                                <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x1.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
+                                                                <a class="btn btn-zoom" href="view/assets/img/preview/property/cat1-1200x800x1.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                                <a href="assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
+                                                                <a href="view/assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
 
                                                             </div>
 
@@ -1165,7 +1167,7 @@ include "view/header.php";
 
                                                                 <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                                <a href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
+                                                                <a href="view/assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
 
                                                             </div>
 
@@ -1173,7 +1175,7 @@ include "view/header.php";
 
                                                                 <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                                <a href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
+                                                                <a href="view/assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
 
                                                             </div>
 
@@ -1181,7 +1183,7 @@ include "view/header.php";
 
                                                                 <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                                <a href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
+                                                                <a href="view/assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
 
                                                             </div>
 
@@ -1329,7 +1331,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x1.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -1621,9 +1623,9 @@ include "view/header.php";
 
                                                         <div class="swiper-slide">
 
-                                                            <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x1.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
+                                                            <a class="btn btn-zoom" href="view/assets/img/preview/property/cat1-1200x800x1.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
+                                                            <a href="assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -1631,7 +1633,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -1639,7 +1641,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -1647,7 +1649,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -1721,7 +1723,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x1.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -1729,7 +1731,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -1737,7 +1739,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -1745,7 +1747,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -1891,7 +1893,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x1.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -1899,7 +1901,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -1907,7 +1909,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -1915,7 +1917,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -1989,7 +1991,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x1.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -1997,7 +1999,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2005,7 +2007,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2013,7 +2015,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2087,7 +2089,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x1.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2095,7 +2097,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2103,7 +2105,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2111,7 +2113,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2185,7 +2187,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x1.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2193,7 +2195,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2201,7 +2203,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2209,7 +2211,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2255,7 +2257,7 @@ include "view/header.php";
 
                                                     <div class="button">
 
-                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
+                                                        <a href="index.php?act=batdongsan" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                     </div>
 
@@ -2283,7 +2285,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x1.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2291,7 +2293,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2299,7 +2301,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2307,7 +2309,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2353,7 +2355,7 @@ include "view/header.php";
 
                                                     <div class="button">
 
-                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
+                                                        <a href="index.php?act=batdongsan" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                     </div>
 
@@ -2403,23 +2405,23 @@ include "view/header.php";
                                         <!--
 
                                     -->
-                                        <li class=""><a href="#tab-x4x1" data-toggle="tab">Luxury Mansion</a></li>
+                                        <li class=""><a href="#tab-x4x1" data-toggle="tab">biệt thự sang trọng</a></li>
                                         <!--
 
                                     -->
-                                        <li class="active"><a href="#tab-x4x2" data-toggle="tab">Elegant Apartment</a></li>
+                                        <li class="active"><a href="#tab-x4x2" data-toggle="tab">Căn hộ thanh lịch</a></li>
                                         <!--
 
                                     -->
-                                        <li class=""><a href="#tab-x4x3" data-toggle="tab">Sophisticated Residence</a></li>
+                                        <li class=""><a href="#tab-x4x3" data-toggle="tab">Khu dân cư cao cấp</a></li>
                                         <!--
 
                                     -->
-                                        <li class=""><a href="#tab-x4x4" data-toggle="tab">Futuristic Apartment</a></li>
+                                        <li class=""><a href="#tab-x4x4" data-toggle="tab">Căn hộ tương lai</a></li>
                                         <!--
 
                                     -->
-                                        <li class=""><a href="#tab-x4x5" data-toggle="tab">Stylish Apartment</a></li>
+                                        <li class=""><a href="#tab-x4x5" data-toggle="tab"> Căn hộ phong cách</a></li>
 
                                     </ul>
 
@@ -2453,7 +2455,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x1.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2461,7 +2463,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2469,7 +2471,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2477,7 +2479,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2523,7 +2525,7 @@ include "view/header.php";
 
                                                     <div class="button">
 
-                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
+                                                        <a href="index.php?act=batdongsan" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                     </div>
 
@@ -2551,7 +2553,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x1.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2559,7 +2561,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2567,7 +2569,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2575,7 +2577,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2621,7 +2623,7 @@ include "view/header.php";
 
                                                     <div class="button">
 
-                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
+                                                        <a href="index.php?act=batdongsan" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                     </div>
 
@@ -2649,7 +2651,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x1.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2657,7 +2659,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2665,7 +2667,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2673,7 +2675,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2719,7 +2721,7 @@ include "view/header.php";
 
                                                     <div class="button">
 
-                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
+                                                        <a href="index.php?act=batdongsan" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                     </div>
 
@@ -2747,7 +2749,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x1.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2755,7 +2757,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2763,7 +2765,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
+                                                            <a href=view/assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2771,7 +2773,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2817,7 +2819,7 @@ include "view/header.php";
 
                                                     <div class="button">
 
-                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
+                                                        <a href="index.php?act=batdongsan" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                     </div>
 
@@ -2845,7 +2847,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x1.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-70x70x1.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x1.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2853,7 +2855,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x2.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x2.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2861,7 +2863,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x3.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x3.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2869,7 +2871,7 @@ include "view/header.php";
 
                                                             <a class="btn btn-zoom" href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><i class="fa fa-arrows-alt"></i></a>
 
-                                                            <a href="assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
+                                                            <a href="view/assets/img/preview/property/cat1-1200x800x4.jpg" data-gal="prettyPhoto"><img class="img-responsive" src="view/assets/img/preview/property/cat1-600x450x4.jpg" alt="" /></a>
 
                                                         </div>
 
@@ -2915,7 +2917,7 @@ include "view/header.php";
 
                                                     <div class="button">
 
-                                                        <a href="#" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
+                                                        <a href="index.php?act=batdongsan" class="btn btn-theme ripple-effect btn-theme-dark btn-block">Xem ngay</a>
 
                                                     </div>
 
@@ -3415,7 +3417,7 @@ include "view/header.php";
 
             <h2 class="section-title wow fadeInDown" data-wow-offset="200" data-wow-delay="100ms">
 
-                <small>The most frequent asked questions</small>
+                <small>Những câu hỏi thường gặp nhất</small>
 
                 <span>FAQS</span>
 
@@ -3441,7 +3443,7 @@ include "view/header.php";
 
                                     <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
 
-                                        <span class="dot"></span> What are the other charges I will have to pay?
+                                        <span class="dot"></span> Các khoản phí khác  sẽ phải trả là gì?
 
                                     </a>
 
@@ -3453,7 +3455,7 @@ include "view/header.php";
 
                                 <div class="panel-body">
 
-                                    Duis bibendum diam non erat facilaisis tincidunt. Fusce leo neque, lacinia at tempor vitae, porta at arcu. Vestibulum varius non dui at pulvinar. Ut egestas orci in quam sollicitudin aliquet.
+                                    Bạn sẽ không chả bất cứ phí phát sinh khác đến chúng tôi sẽ hướng dân mua đất 
 
                                 </div>
 
@@ -3473,7 +3475,7 @@ include "view/header.php";
 
                                     <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
 
-                                        <span class="dot"></span> Where can I contact your agent?
+                                        <span class="dot"></span> Tôi có thể liên hệ với đại lý của bạn ở đâu?
 
                                     </a>
 
@@ -3485,7 +3487,7 @@ include "view/header.php";
 
                                 <div class="panel-body">
 
-                                    Duis bibendum diam non erat facilaisis tincidunt. Fusce leo neque, lacinia at tempor vitae, porta at arcu. Vestibulum varius non dui at pulvinar. Ut egestas orci in quam sollicitudin aliquet.
+                                    Bạn có thể đến cao đẳng fpt là địa chỉ chính của chúng tôi
 
                                 </div>
 
@@ -3505,7 +3507,7 @@ include "view/header.php";
 
                                     <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
 
-                                        <span class="dot"></span> When will I get the property possession?
+                                        <span class="dot"></span> Khi nào tôi sẽ nhận được quyền sở hữu tài sản?
 
                                     </a>
 
@@ -3517,7 +3519,7 @@ include "view/header.php";
 
                                 <div class="panel-body">
 
-                                    Duis bibendum diam non erat facilaisis tincidunt. Fusce leo neque, lacinia at tempor vitae, porta at arcu. Vestibulum varius non dui at pulvinar. Ut egestas orci in quam sollicitudin aliquet.
+                                    Khi bạn đã làm mọi giấy tờ và trả tiền đất đai và nhận sổ đỏ lúc đấy bạn đã sở hữu
 
                                 </div>
 
@@ -3549,7 +3551,7 @@ include "view/header.php";
 
                                     <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse21" aria-expanded="false" aria-controls="collapse21">
 
-                                        <span class="dot"></span> What are the other charges I will have to pay?
+                                        <span class="dot"></span> Các khoản phí khác tôi sẽ phải trả là gì?
 
                                     </a>
 
@@ -3561,7 +3563,7 @@ include "view/header.php";
 
                                 <div class="panel-body">
 
-                                    Duis bibendum diam non erat facilaisis tincidunt. Fusce leo neque, lacinia at tempor vitae, porta at arcu. Vestibulum varius non dui at pulvinar. Ut egestas orci in quam sollicitudin aliquet.
+                                  Bạn phải trả tiền đặt cọc , và đến ngay trụ sở làm việc tiền trao rồi nhận đất
 
                                 </div>
 
@@ -3581,7 +3583,7 @@ include "view/header.php";
 
                                     <a data-toggle="collapse" data-parent="#accordion2" href="#collapse22" aria-expanded="true" aria-controls="collapse22">
 
-                                        <span class="dot"></span> Where can I contact your agent?
+                                        <span class="dot"></span> Web có uy tín hay không?
 
                                     </a>
 
@@ -3593,7 +3595,7 @@ include "view/header.php";
 
                                 <div class="panel-body">
 
-                                    Duis bibendum diam non erat facilaisis tincidunt. Fusce leo neque, lacinia at tempor vitae, porta at arcu. Vestibulum varius non dui at pulvinar. Ut egestas orci in quam sollicitudin aliquet.
+                                    Đây là web chính thức của chúng tôi và không phải giả mạo
 
                                 </div>
 
@@ -3613,7 +3615,7 @@ include "view/header.php";
 
                                     <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse23" aria-expanded="false" aria-controls="collapse23">
 
-                                        <span class="dot"></span> When will I get the property possession?
+                                        <span class="dot"></span> Giá có phải đắt quá không ?
 
                                     </a>
 
@@ -3625,7 +3627,7 @@ include "view/header.php";
 
                                 <div class="panel-body">
 
-                                    Duis bibendum diam non erat facilaisis tincidunt. Fusce leo neque, lacinia at tempor vitae, porta at arcu. Vestibulum varius non dui at pulvinar. Ut egestas orci in quam sollicitudin aliquet.
+                                    Chúng tôi sẽ đảm bảo cho bạn là bất động sản giá chuẩn rẻ hơn ở nơi khác nhấn vào tư vấn ngay đi nào
 
                                 </div>
 
@@ -3655,143 +3657,7 @@ include "view/header.php";
 
     <!-- PAGE -->
 
-    <div class="page-section find-property dark">
-
-        <div class="container">
-
-
-
-            <form action="#" class="form-find-property">
-
-                <div class="row">
-
-                    <div class="col-md-2 wow fadeInDown" data-wow-offset="200" data-wow-delay="200ms">
-
-                        <div class="form-group has-icon has-label">
-
-                            <label for="formSearchUpLocation4">Enter Location</label>
-
-                            <input type="text" class="form-control" id="formSearchUpLocation4" placeholder="City">
-
-                            <span class="form-control-icon"><i class="fa fa-map-marker"></i></span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-2 col-sm-4 wow fadeInDown" data-wow-offset="200" data-wow-delay="100ms">
-
-                        <div class="form-group has-icon has-label">
-
-                            <label>Property For</label>
-
-                            <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
-
-                                <option>Property For</option>
-
-                                <option>Sale</option>
-
-                                <option>Rent</option>
-
-                            </select>
-
-                            <span class="form-control-icon"><i class="fa  fa-caret-down"></i></span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-2 col-sm-4 wow fadeInDown" data-wow-offset="200" data-wow-delay="400ms">
-
-                        <div class="form-group has-icon has-label">
-
-                            <label>Property Type</label>
-
-                            <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
-
-                                <option>Flat</option>
-
-                                <option>House</option>
-
-                                <option>Villa</option>
-
-                            </select>
-
-                            <span class="form-control-icon"><i class="fa  fa-caret-down"></i></span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-2 col-sm-3 wow fadeInDown" data-wow-offset="200" data-wow-delay="300ms">
-
-                        <div class="form-group has-icon has-label">
-
-                            <label>Budget</label>
-
-                            <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
-
-                                <option> Budget </option>
-
-                                <option> &lt; 5Lac </option>
-
-                                <option> &lt; 10Lac </option>
-
-                            </select>
-
-                            <span class="form-control-icon"><i class="fa  fa-caret-down"></i></span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-2 col-sm-3 wow fadeInDown" data-wow-offset="200" data-wow-delay="300ms">
-
-                        <div class="form-group has-icon has-label">
-
-                            <label>Area</label>
-
-                            <select class="selectpicker input-price" data-live-search="true" data-width="100%" data-toggle="tooltip" title="Select">
-
-                                <option> Area </option>
-
-                                <option> >500Sq Ft </option>
-
-                                <option> >1500 Ft </option>
-
-                                <option> >2500 Ft</option>
-
-                            </select>
-
-                            <span class="form-control-icon"><i class="fa  fa-caret-down"></i></span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="col-md-2 col-sm-3 wow fadeInDown" data-wow-offset="200" data-wow-delay="500ms">
-
-                        <div class="form-group">
-
-                            <button type="submit" id="formFindCarSubmit" class="btn btn-block btn-submit ripple-effect btn-theme">Search</button>
-
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-
-            </form>
-
-
-
-        </div>
-
-    </div>
+    
 
     <!-- /PAGE -->
 
@@ -3835,9 +3701,9 @@ include "view/header.php";
 
             <h2 class="section-title wow fadeInDown" data-wow-offset="200" data-wow-delay="100ms">
 
-                <small>Latest property news on our blog</small>
+                <small>Tin tức bất động sản mới nhất trên blog của chúng tôi</small>
 
-                <span>Recent Blog Posts</span>
+                <span>Bài viết blog gần đây</span>
 
             </h2>
 
@@ -3853,7 +3719,7 @@ include "view/header.php";
 
                             <a class="media-link" href="#">
 
-                                <div class="badge type">For Sale</div>
+                                <div class="badge type">Giao bán</div>
 
                                 <div class="badge post"><i class="fa fa-video-camera"></i></div>
 
@@ -3869,7 +3735,7 @@ include "view/header.php";
 
                                     <div class="day">21</div>
 
-                                    <div class="month">Dec</div>
+                                    <div class="month">Tháng mười hai</div>
 
                                 </div>
 
@@ -3879,7 +3745,7 @@ include "view/header.php";
 
                                 <div class="media-meta">
 
-                                    By isamercan
+                                    By Ngô Văn Vụ
 
                                     <a href="#"><i class="fa fa-comment"></i>13</a>
 
@@ -3889,13 +3755,13 @@ include "view/header.php";
 
                                 </div>
 
-                                <h4 class="media-heading"><a href="#">Modern Residence</a></h4>
+                                <h4 class="media-heading"><a href="#">Khu dân cư hiện đại</a></h4>
 
-                                <div class="media-excerpt">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</div>
+                                <div class="media-excerpt">Khu biệt thự gần chung tâm thành phố</div>
 
                                 <br />
 
-                                <a href="#" class="btn btn-theme"><i class="fa fa-chevron-right">&nbsp;</i> Continue reading</a>
+                                <a href="index.php?act=batdongsan" class="btn btn-theme"><i class="fa fa-chevron-right">&nbsp;</i> xem ngay</a>
 
                             </div>
 
@@ -3913,7 +3779,7 @@ include "view/header.php";
 
                             <a class="media-link" href="#">
 
-                                <div class="badge type">Buy Now</div>
+                                <div class="badge type">Mua ngay</div>
 
                                 <div class="badge post"><i class="fa fa-image"></i></div>
 
@@ -3929,7 +3795,7 @@ include "view/header.php";
 
                                     <div class="day">21</div>
 
-                                    <div class="month">Dec</div>
+                                    <div class="month">Tháng 12</div>
 
                                 </div>
 
@@ -3939,7 +3805,7 @@ include "view/header.php";
 
                                 <div class="media-meta">
 
-                                    By isamercan
+                                    Phạm Hoàng
 
                                     <a href="#"><i class="fa fa-comment"></i>13</a>
 
@@ -3949,13 +3815,13 @@ include "view/header.php";
 
                                 </div>
 
-                                <h4 class="media-heading"><a href="#">Elegant Apartment</a></h4>
+                                <h4 class="media-heading"><a href="#">Căn hộ thanh lịch</a></h4>
 
-                                <div class="media-excerpt">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</div>
+                                <div class="media-excerpt">Căn hộ trong mơ cho bạn nào cần lãng mạng </div>
 
                                 <br />
 
-                                <a href="#" class="btn btn-theme"><i class="fa fa-chevron-right">&nbsp;</i> Continue reading</a>
+                                <a href="index.php?act=batdongsan" class="btn btn-theme"><i class="fa fa-chevron-right">&nbsp;</i> xem ngay</a>
 
                             </div>
 
@@ -3971,7 +3837,7 @@ include "view/header.php";
 
             <div class="text-center margin-top wow fadeInDown" data-wow-offset="200" data-wow-delay="100ms">
 
-                <a href="#" class="btn btn-theme ripple-effect btn-theme-light btn-more-posts">See all posts</a>
+                <a href="#" class="btn btn-theme ripple-effect btn-theme-light btn-more-posts">Xem tất cả</a>
 
             </div>
 
@@ -3995,9 +3861,9 @@ include "view/header.php";
 
             <h2 class="section-title wow fadeInDown" data-wow-offset="200" data-wow-delay="100ms">
 
-                <small>Get the best prices right in your email</small>
+                <small>Nhận giá tốt nhất ngay trong email của bạn</small>
 
-                <span>10% Off if you subscribe now</span>
+                <span>Giảm 10% nếu bạn đăng ký ngay bây giờ</span>
 
             </h2>
 
@@ -4007,9 +3873,9 @@ include "view/header.php";
 
                 <div class="col-md-8 col-md-offset-2">
 
+                        
 
-
-                    <p class="text-center">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                    <p class="text-center"></p>
 
 
 
@@ -4019,13 +3885,13 @@ include "view/header.php";
 
                         <div class="form-group">
 
-                            <label for="formSubscribeEmail" class="sr-only">Enter your email here</label>
+                            <label for="formSubscribeEmail" class="sr-only">Nhập email của bạn</label>
 
                             <input type="text" class="form-control" id="formSubscribeEmail" placeholder="Enter your email here" title="Email is required">
 
                         </div>
 
-                        <button type="submit" class="btn btn-submit btn-theme ripple-effect btn-theme-dark">Subscribe</button>
+                        <button type="submit" class="btn btn-submit btn-theme ripple-effect btn-theme-dark">Đăng kí</button>
 
                     </form>
 
