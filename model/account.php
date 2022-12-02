@@ -23,6 +23,11 @@
             $listtaikhoan = pdo_query($sql);
             return $listtaikhoan;
         }
+        function loadOne_Nhanvien($id_nhanvien){
+            $sql = "SELECT * FROM account where id=".$id_nhanvien;
+            $nhanvien=pdo_query_one($sql);
+            return $nhanvien;
+        }
         function loadOne_user($id){
             $sql="SELECT * FROM account where id=".$id;
             $user=pdo_query_one($sql);
@@ -32,3 +37,4 @@
             $sql = "DELETE FROM  account WHERE id=".$id;
             pdo_execute($sql);
         }
+        

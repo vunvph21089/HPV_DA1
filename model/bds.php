@@ -75,13 +75,13 @@ function update_bds($id, $tenbds, $imgValue, $price, $diachi, $dientich, $info, 
         `id_user`='$id_user' WHERE `id`='$id' ";
     pdo_execute($sql);
 }
-function insert_anhmota($fileName,$id_bds ){
+function insert_anhmota($fileName,$id_bds){
     $sql = "INSERT INTO `images`(`file_name`, `id_bds`) VALUES ('$fileName','$id_bds')";
     pdo_execute($sql);
 }
-function update_anhmota($oneanhmota,$id){
+function update_anhmota($id,$fileName){
     $sql = "UPDATE `images` SET 
-    `file_name` = '$oneanhmota' WHERE id=".$id;
+    `file_name` = '$fileName' WHERE id=".$id;
     pdo_execute($sql);
 }
 function delete_anhmota($id){

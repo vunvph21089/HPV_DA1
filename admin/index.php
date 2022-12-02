@@ -92,8 +92,8 @@ if (isset($_GET['act'])) {
             break;
         case 'updatebds':
             if (isset($_POST['submit']) && ($_POST['submit'])) {
-                $id = $_POST['id'];
-                $bds = loadone_bds($id);
+                $id_bds = $_POST['id'];
+                $bds = loadone_bds($id_bds);
                 $tenbds = $_POST['name_bds'];
                 $anh = $_FILES['anh'];
                 $imgValue = $bds['img'];
@@ -104,6 +104,7 @@ if (isset($_GET['act'])) {
                 $sophong = $_POST['sophong'];
                 $id_loaibds = $_POST['loaibds'];
                 $id_user = $_POST['nguoidang'];
+                $filename = "";
                 $targetDir = '../uploads/';
                 $allowTypes = array('jpg', 'png', 'jpeg', 'gif');
 
@@ -114,9 +115,25 @@ if (isset($_GET['act'])) {
                     $imgValue = 'uploads/' . $filename;
                 }
                 // UPLOAD ẢNH MÔ TẢ
-                
+                $id = update_bds($id_bds, $tenbds, $imgValue, $price, $diachi, $dientich, $info, $sophong, $id_loaibds, $id_user);
+                foreach ($_FILES["files"]['name'] as $key => $val) {
+                    $fileName = basename($_FILES['files']['name'][$key]);
+                    $targetFilePath = $targetDir . $fileName;
 
-                update_bds($id, $tenbds, $imgValue, $price, $diachi, $dientich, $info, $sophong, $id_loaibds, $id_user);
+                    // Check whether file type is valid 
+                    $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
+                    if (in_array($fileType, $allowTypes)) {
+                        // Upload file to server 
+
+                        if (move_uploaded_file($_FILES["files"]["tmp_name"][$key], $targetFilePath)) {
+                            // Image db insert sql 
+                            $upload_img = '/HPV_DA1/uploads/' . $fileName;
+                            insert_anhmota($upload_img,$id);
+                        }
+                    }
+                }
+
+                
                 $thongbao = "Add Succesfull";
             }
             $listloaibds = loadAll_danhmuc();

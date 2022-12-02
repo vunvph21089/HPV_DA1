@@ -77,8 +77,10 @@
 
     <!-- link icon -->
     <script src="https://kit.fontawesome.com/7e155ef984.js" crossorigin="anonymous"></script>
-
+    <!-- Assets admin -->
+    
     <style>
+        
         #box_bds {
             background-color: #fff;
             border-bottom-left-radius: 5px;

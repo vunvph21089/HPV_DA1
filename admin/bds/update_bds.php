@@ -209,9 +209,7 @@
                                     <p class="text-muted">Thêm ảnh mô tả cho bất động sản</p>
 
                                     <div class="dropzone" hidden></div>
-                                    <div class="fallback">
-                                        <input type="file" name="files[]" multiple class="form-control">
-                                    </div>
+                                    
                                     <div>
                                         <ul style="list-style-type: none;padding:0 20px 0 20px;margin-top:10px">
                                         <?php
@@ -238,7 +236,7 @@
                                                             <div class="avatar-title bg-light rounded">
                                                                 <img src="'.$file_name.'" id="product-img" class="avatar-md h-auto" />
                                                             </div>
-                                                            <a href="'.$del_anhmota.'"><i class="ri-delete-bin-5-fill fs-16"></i></a>
+                                                            
                                                         </div>
                                                         
                                                     </div>
@@ -248,6 +246,9 @@
                                             }
                                         ?>
                                         </ul>
+                                    </div>
+                                    <div class="fallback">
+                                        <input type="file" name="files[]" multiple class="form-control">
                                     </div>
                                     <!-- end dropzon-preview -->
                                 </div>
