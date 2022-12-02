@@ -46,6 +46,9 @@
     <link href="view/assets/plugins/swiper/css/swiper.min.css" rel="stylesheet">
 
     <link href="view/assets/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
 
 
@@ -71,10 +74,10 @@
 
         <![endif]-->
 
-        
-        <!-- link icon -->
-        <script src="https://kit.fontawesome.com/7e155ef984.js" crossorigin="anonymous"></script>
-        
+
+    <!-- link icon -->
+    <script src="https://kit.fontawesome.com/7e155ef984.js" crossorigin="anonymous"></script>
+
     <style>
         #box_bds {
             background-color: #fff;
@@ -112,6 +115,7 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
         #box_bds {
             background-color: #fff;
             border-bottom-left-radius: 5px;
@@ -120,7 +124,8 @@
             padding-left: 10px;
             position: relative;
         }
-        .hobbie{
+
+        .hobbie {
             position: absolute;
             bottom: 5px;
             right: 10px;
@@ -132,9 +137,11 @@
             height: 30px;
             line-height: 30px;
         }
-        .hobbie:hover{
+
+        .hobbie:hover {
             background-color: #ccc;
         }
+
         .box_img_bds {
             width: 100%;
             height: 250px !important;
@@ -159,14 +166,14 @@
 
         #ten_bds {
             margin: 0 0 10px 0;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Roboto', sans-serif;
             text-transform: none;
             font-size: 16px;
-            
+
         }
 
         #ten_bds_chitiet {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Roboto', sans-serif;
             font-size: 24px;
             margin-top: 25px;
             margin-bottom: 20px;
@@ -189,30 +196,38 @@
         .header {
             z-index: 999 !important;
         }
-        .modal-content{
+
+        .modal-content {
             border: 1px solid #14181c;
             border-radius: 10px;
-            display:none;
+            display: none;
             z-index: -1;
         }
-        .modal-header{
+
+        .modal-header {
             height: 40px;
             border-bottom: none;
             background-color: #F3F6F9;
             position: relative;
         }
-        .modal-header a{
+
+        .modal-header a {
             position: absolute;
             top: 5px;
             right: 15px;
-            text-decoration:none;
-            color:#000;
-            font-size:18px
-        
+            text-decoration: none;
+            color: #000;
+            font-size: 18px
+        }
+
+        .media img{
+            width: 300px;
+            height: 270px;
+            object-fit: cover;
         }
         #ten_bds {
             margin: 0 0 10px 0;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Roboto', sans-serif;
             text-transform: none;
             font-size: 16px;
             -webkit-line-clamp: 2;
@@ -220,10 +235,12 @@
             display: -webkit-box;
             overflow: hidden;
         }
-        .isotope-item{
+
+        .isotope-item {
             z-index: 0 !important;
         }
-        #diachibds{
+
+        #diachibds {
             -webkit-line-clamp: 1;
             -webkit-box-orient: vertical;
             display: -webkit-box;
@@ -389,31 +406,31 @@
                                                 extract($_SESSION['user']);
                                             ?>
                                                 <li class="dropdown">
-                                                   
-                                                       
-                                                       <a href="">Chào <?= $user ?></a>
-                                                       
-                                                        <div class="dropdown-content">
-                                                            
-                                                            <a href="index.php?act=quenmk">Quên mật khẩu </a>
-                                                            <a href="index.php?act=edit_taikhoan">Cập nhật tài khoản</a>
-                                                            <?php
-                                                            if ($id_role == 1) {
-                                                            ?>
-                                                                <a href="admin/index.php">Đăng nhập Admin</a>
-                                                            <?php }else if($id_role == 2){
-                                                                ?>
-                                                                <a href="index.php?act=listtuvan">Tư vấn</a>
-                                                            <?php } ?>
-                                                            
 
-                                                            
-                                                           
-                                                                
-                                                            
-                                                            <a href="index.php?act=exit">Thoát</a>
-                                                        </div>
-                                                    
+
+                                                    <a href="">Chào <?= $user ?></a>
+
+                                                    <div class="dropdown-content">
+
+                                                        <a href="index.php?act=quenmk">Quên mật khẩu </a>
+                                                        <a href="index.php?act=edit_taikhoan">Cập nhật tài khoản</a>
+                                                        <?php
+                                                        if ($id_role == 1) {
+                                                        ?>
+                                                            <a href="admin/index.php">Đăng nhập Admin</a>
+                                                        <?php } else if ($id_role == 2) {
+                                                        ?>
+                                                            <a href="index.php?act=listtuvan">Tư vấn</a>
+                                                        <?php } ?>
+
+
+
+
+
+
+                                                        <a href="index.php?act=exit">Thoát</a>
+                                                    </div>
+
                                                 </li>
                                             <?php
                                             } else {

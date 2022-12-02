@@ -595,15 +595,7 @@ include "view/header.php";
 
                         <table class="table">
 
-                            <tr>
-
-                                <td><i class="fa fa-expand"></i> 250 m2 </td>
-
-                                <td><i class="fa fa-bed"></i> 1 Bedroom</td>
-
-                                <td><i class="fa fa-tint"></i> 1 Bathroom</td>
-
-                            </tr>
+                            
 
                         </table>
 
@@ -3059,7 +3051,7 @@ include "view/header.php";
                         <div class="media">
 
                             
-                            <img src="view/assets/img/preview/team/team-270x270x2.jpg" alt="" />
+                            <img src="https://i.pinimg.com/564x/5c/9d/e5/5c9de57ebfdb5c4a5fe30ae2c459677f.jpg" alt="" />
 
                         </div>
 
@@ -3073,7 +3065,7 @@ include "view/header.php";
 
                                 <li><i class="fa fa-phone">&nbsp;</i> 087-678-5555</li>
 
-                                <li><i class="fa fa-envelope">&nbsp;</i> <a href="mailto:supportname@gmail.com">tranthiphuong@gmail.com</a></li>
+                                <li><i class="fa fa-envelope">&nbsp;</i> <a href="mailto:supportname@gmail.com">migu@gmail.com</a></li>
 
                             </ul>
 
@@ -3095,7 +3087,7 @@ include "view/header.php";
 
                         <div class="media">
 
-                        <img src="view/assets/img/preview/team/team-270x270x4.jpg" alt="" />
+                        <img src="https://i.pinimg.com/736x/b0/56/7d/b0567dfb53d779cf6f481b9cc04dc220.jpg" alt="" />
 
                         </div>
 
@@ -3105,11 +3097,11 @@ include "view/header.php";
 
                             <ul class="team-details">
 
-                                <li><i class="fa fa-skype">&nbsp;</i> Giam đốc</li>
+                                <li><i class="fa fa-skype">&nbsp;</i> Giám đốc</li>
 
                                 <li><i class="fa fa-phone">&nbsp;</i> 082 456-6666</li>
 
-                                <li><i class="fa fa-envelope">&nbsp;</i> <a href="mailto:supportname@gmail.com">phamhoang@gmail.com</a></li>
+                                <li><i class="fa fa-envelope">&nbsp;</i> <a href="mailto:supportname@gmail.com">zithoan@gmail.com</a></li>
 
                             </ul>
 
@@ -3131,7 +3123,7 @@ include "view/header.php";
 
                         <div class="media">
 
-                        <img src="view/assets/img/preview/team/team-270x270x4.jpg" alt="" />
+                        <img src="https://i.pinimg.com/564x/80/3b/bd/803bbd7f5ea4e50e9183636639531611.jpg" alt="" />
 
                         </div>
 
@@ -3167,21 +3159,21 @@ include "view/header.php";
 
                         <div class="media">
 
-                            <img src="view/assets/img/preview/team/team-270x270x4.jpg" alt="" />
+                            <img src="https://i.pinimg.com/564x/2b/f5/72/2bf572010d4a06b9a7265693f9ff85da.jpg" alt="" />
 
                         </div>
 
                         <div class="caption">
 
-                            <h4 class="caption-title">Anthony Hopkins <small>Customer Service</small></h4>
+                            <h4 class="caption-title">Vũ Bảo Linh <small>Chuyên viên tư vấn</small></h4>
 
                             <ul class="team-details">
 
-                                <li><i class="fa fa-skype">&nbsp;</i> team.member</li>
+                                <li><i class="fa fa-skype">&nbsp;</i> Chuyên gia</li>
 
-                                <li><i class="fa fa-phone">&nbsp;</i> 555 555-5555</li>
+                                <li><i class="fa fa-phone">&nbsp;</i> 034-738-3594</li>
 
-                                <li><i class="fa fa-envelope">&nbsp;</i> <a href="mailto:supportname@gmail.com">supportname@gmail.com</a></li>
+                                <li><i class="fa fa-envelope">&nbsp;</i> <a href="mailto:supportname@gmail.com">vubaolinh@gmail.com</a></li>
 
                             </ul>
 
