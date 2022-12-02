@@ -76,6 +76,7 @@
                                                 <th>Trạng thái</th>
                                                 <th>Nhân viên</th>
                                                 <th>Thời gian tư vấn</th>
+
                                             </tr>
                                         </thead>
                                         <tbody class="list form-check-all">
@@ -85,7 +86,6 @@
                                                         extract($tuvan);
                                                         $uptuvan = "index.php?act=sua_bds_tuvan&id=" . $id;
                                                     } ?>
-
                                             <tr>
                                                 <td class="customer_name"><?= $tuvan['id'] ?></td>
                                                 <td class="customer_name"><?= $tuvan['name'] ?></td>
@@ -103,11 +103,26 @@
                                                 </td>
                                                 <td class="customer_name"><?= $tuvan['id_nhanvien'] ?></td>
                                                 <td class="customer_name"><?= $tuvan['time_tuvan'] ?></td>
+
                                             </tr>
                                         <?php endforeach ?>
                                         </tr>
+
+                                        <?php if (isset($_COOKIE["id"])) :die(); ?>
+                                            
+                                        
+
+                                        <?php endif ?>
+
                                         </tbody>
                                     </table>
+                                    <script>
+                                        function get_ID_Nhanvien() {
+                                            const option = document.querySelector('#product-discount-input');
+                                            console.log(option.value);
+                                            document.cookie = `id=${option.value}`
+                                        }
+                                    </script>
                                 </div>
 
                             </div>

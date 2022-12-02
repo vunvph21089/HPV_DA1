@@ -573,7 +573,7 @@ include "view/header.php";
 
                         <span class="p-price">' . $price . ' </span>
 
-                        <a class="media-link" data-gal="prettyPhoto" href="' . $linkbds . '">
+                        <a class="media-link" data-gal="prettyPhoto" href="' . $img . '">
 
                             <img src="' . $img . '" alt=""/>
 

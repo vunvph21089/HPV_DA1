@@ -164,7 +164,7 @@
                                 <select class="form-select" name="loaibds" id="choices-category-input" data-choices data-choices-search-false>
                                     <?php foreach ($listloaibds as $index => $dm) : ?>
                                         <option name="name" <?php if ($bds['id_loaibds'] == $dm['id']) : ?>selected <?php
-                                                                                                                endif ?> value="<?= $dm['id'] ?>"><?= $dm['name'] ?></option>
+                                            endif ?> value="<?= $dm['id'] ?>"><?= $dm['name'] ?></option>
                                     <?php endforeach ?>
                                 </select>
                             </div>
@@ -228,14 +228,12 @@
                                                                 <div class="avatar-xs">
                                                                     <div class="avatar-title bg-light border rounded-circle text-muted cursor-pointer">
                                                                         <i class="ri-image-fill"></i>
-                                                                        
                                                                     </div>
                                                                     
                                                                 </div>
                                                             </label>
                                                             <input class="form-control d-none" name="anh" id="product-image-input" type="file" accept="image/png, image/gif, image/jpeg, image/jpg">
                                                         </div>
-                                                        
                                                         <div class="avatar-lg">
                                                             <div class="avatar-title bg-light rounded">
                                                                 <img src="'.$file_name.'" id="product-img" class="avatar-md h-auto" />
