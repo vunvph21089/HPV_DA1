@@ -32,12 +32,6 @@ function loadall_bds_home()
     $listpro = pdo_query($sql);
     return $listpro;
 }
-function loadall_bds_top10()
-{
-    $sql = "SELECT*FROM bds WHERE 1 ORDER BY luotxem DESC LIMIT 0,10";
-    $listpro = pdo_query($sql);
-    return $listpro;
-}
 function load_ten_dm($id_loaibds)
 {
     if ($id_loaibds > 0) {
@@ -74,6 +68,17 @@ function update_bds($id, $tenbds, $imgValue, $price, $diachi, $dientich, $info, 
         `id_loaibds`='$id_loaibds',
         `id_user`='$id_user' WHERE `id`='$id' ";
     pdo_execute($sql);
+}
+function tang_view($id)
+{
+    $sql = "UPDATE bds SET luotxem = luotxem + 1 WHERE id=" . $id;
+    pdo_query($sql);
+}
+function loadAll_bds_top5()
+{
+    $sql = "Select * from bds WHERE 1 order by luotxem desc limit 0,5";
+    $listpro = pdo_query($sql);
+    return $listpro;
 }
 function insert_anhmota($fileName,$id_bds){
     $sql = "INSERT INTO `images`(`file_name`, `id_bds`) VALUES ('$fileName','$id_bds')";

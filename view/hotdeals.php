@@ -12,14 +12,14 @@ include "view/header.php";
 
 
                 <?php
-                foreach ($ds_bds as $bds) {
-                    extract($bds);
-                    $linkbds = "index.php?act=batdongsanchitiet&idbds=" . $id;
+                foreach ($dstop5 as $index => $sp5) :?>
+                    <?php
+                    $linkbds = "index.php?act=batdongsanchitiet&idbds=" . $sp5['id'];
                     echo '
                 <div class="thumbnail no-border no-padding thumbnail-property-card clearfix">
                 <div class="media">
-                    <a class="media-link" data-gal="prettyPhoto" href="' . $img . '">
-                        <img style="width:300px;height:auto;" src="' . $img . '" alt=""/>
+                    <a class="media-link" data-gal="prettyPhoto" href="' . $sp5['img'] . '">
+                        <img style="width:300px;height:auto;" src="' . $sp5['img']. '" alt=""/>
                         <span class="icon-view"><strong><i class="fa fa-eye"></i></strong></span>
                     </a>
                 </div>
@@ -27,9 +27,9 @@ include "view/header.php";
                     <div class="rating">
                         <a href="#"> <img alt="" src="view/assets/img/map-marker-icon.png"> </a>
                     </div>
-                    <h4 class="caption-title"><a href="' . $linkbds . '">' . $name . '</a></h4>
-                    <h5 class="caption-title-sub">' . $price . '</h5>
-                    <div class="caption-text">' . $location . '</div>
+                    <h4 class="caption-title"><a href="' . $linkbds . '">' . $sp5['name'] . '</a></h4>
+                    <h5 class="caption-title-sub">' . $sp5['price'] . '</h5>
+                    <div class="caption-text">' . $sp5['location'] . '</div>
                     <table class="table">
                         <tr>
                             <td><i class="fa fa-expand"></i> 250 sq ft </td>
@@ -42,8 +42,7 @@ include "view/header.php";
                 </div>
             </div>
                 ';
-                }
-                ?>
+                endforeach; ?>
 
 
 

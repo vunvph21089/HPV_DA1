@@ -7,6 +7,7 @@ include "model/tuvan.php";
 // include "model/user.php";
 $bds_new = loadall_bds_home();
 $loaibds = loadAll_danhmuc();
+$dstop5 = loadAll_bds_top5();
 session_start();
 
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
@@ -15,6 +16,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case 'batdongsanchitiet':
             if (isset($_GET['idbds']) && ($_GET['idbds'] > 0)) {
                 $id = $_GET['idbds'];
+                tang_view($id);
                 $onebds = loadone_bds($id);
                 extract($onebds);
                 $anhmota = load_anhmota($id);
