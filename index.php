@@ -4,9 +4,12 @@ include "model/bds.php";
 include "model/loai_bds.php";
 include "model/pdo.php";
 include "model/tuvan.php";
+include "model/tintuc.php";
+include "model/danhmuc_tintuc.php";
 // include "model/user.php";
 $bds_new = loadall_bds_home();
 $loaibds = loadAll_danhmuc();
+$danhmuctt = loadAll_danhmuctintuc();
 session_start();
 
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
@@ -60,9 +63,32 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include 'view/features.php';
             break;
 
+        case 'tintucchitiet':
+            if (isset($_GET['idtt']) && ($_GET['idtt'] > 0)) {
+                $id = $_GET['idtt'];
+                $onett = loadOne_tintuc($id);
+                extract($onett);
+                // $tintuc_cungloai =load_tintuc_cungloai($id,$id_dm_tintuc);
+                include "view/tintucchitiet.php";
+            } else {
+                include "view/blog.php";
+            }
+            break;
+
+          
         case 'blog':
             // code  vao day
-
+            if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
+                $kyw = $_POST['kyw'];
+            } else {
+                $kyw = "";
+            }
+            if (isset($_GET['id_tintuc']) && ($_GET['id_tintuc'] > 0)) {
+                $id_dm_tintuc = $_GET['id_tintuc'];
+            } else {
+                $id_dm_tintuc = 0;
+            }
+            $ds_tt =loadAll_tintuc($kyw, $id_dm_tintuc);
             include 'view/blog.php';
             break;
 

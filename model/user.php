@@ -1,4 +1,8 @@
 <?php
+  function delete_taikhoan($id){
+    $sql = "DELETE FROM  account WHERE id=".$id;
+    pdo_execute($sql);
+}
     function delete_user($id){
         $sql = "DELETE FROM account WHERE id =".$id;
         pdo_query($sql);

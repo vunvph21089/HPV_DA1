@@ -19,20 +19,50 @@ function loadOne_tintuc($id)
     return $tintuc;
 }
 
-function loadAll_tintuc()
+// function loadAll_tintuc()
+// {
+//     $sql = "SELECT * FROM tintuc order by tieude desc limit 0,5";
+//     $listtintuc = pdo_query($sql);
+//     return $listtintuc;
+// }
+
+
+function loadAll_tintuc($kyw = "", $id_dm_tintuc = 0)
 {
-    $sql = "SELECT * FROM tintuc order by tieude";
+    $sql = "SELECT * FROM tintuc WHERE 1";
+    if ($kyw != "") {
+        $sql .= " and tieude like '%" . $kyw . "%'";
+    }
+    if ($id_dm_tintuc > 0) {
+        $sql .= " and id_danhmuctt = '" . $id_dm_tintuc . "' ";
+    }
+
+    $sql .= " ORDER BY id DESC";
     $listtintuc = pdo_query($sql);
     return $listtintuc;
 }
+
+function load_ten_tt($id_tintuc)
+{
+    if ($id_tintuc > 0) {
+        $sql = "SELECT * FROM tintuc$id_tintuc WHERE id=" . $id_tintuc;
+        $dm = pdo_query_one($sql);
+        extract($dm);
+        return $name;
+    } else {
+        return "";
+    }
+}
+
+
 function tang_view($id)
 {
     $sql = "UPDATE tintuc SET view = view + 1 WHERE id=" . $id;
     pdo_query($sql, true);
 }
-function load_tintuc_cungloai($id, $id_danhmuctt)
+function load_tintuc_cungloai($id,$id_dm_tintuc)
 {
-    $sql = "Select * from tintuc WHERE id_danhmuctt = " . $id_danhmuctt . " AND id <> " . $id;
+    $sql = "Select * from tintuc WHERE id_danhmuctt = " . $id_dm_tintuc . " AND id <> " . $id;
     $tintuc = pdo_query($sql, true);
     return $tintuc;
 }

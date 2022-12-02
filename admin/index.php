@@ -114,7 +114,7 @@ if (isset($_GET['act'])) {
                     $imgValue = 'uploads/' . $filename;
                 }
                 // UPLOAD ẢNH MÔ TẢ
-                
+
 
                 update_bds($id, $tenbds, $imgValue, $price, $diachi, $dientich, $info, $sophong, $id_loaibds, $id_user);
                 $thongbao = "Add Succesfull";
@@ -299,8 +299,10 @@ if (isset($_GET['act'])) {
                 }
                 // END UPLOAD
                 insert_tintuc($tieude, $filename, $noidung, $mota_ngan, $id_danhmuctt, $id_user);
-                $thongbao = "Add Succesfull";
+                $thongbao = "Bạn đã thêm tin tức thành công";
             }
+
+
             $list_tintuc = loadAll_danhmuctintuc();
             $listtintuc = loadAll_tintuc();
             $listuser = loadAll_user();
@@ -383,22 +385,22 @@ if (isset($_GET['act'])) {
             } else {
                 $kyw = "";
             }
-            if(isset($_POST['capnhat'])){
+            if (isset($_POST['capnhat'])) {
                 $id = $_POST["id"];
                 $nhanvien = $_POST['user'];
                 $trangthai = $_POST['trangthai'];
                 date_default_timezone_set("Asia/Ho_Chi_Minh");
                 $time_tuvan = date('h:i:sa d/m/Y');
-                update_bds_tuvan($id,$nhanvien,$trangthai,$time_tuvan);
+                update_bds_tuvan($id, $nhanvien, $trangthai, $time_tuvan);
             }
             $listtuvan = loadAll_bds_tuvan($kyw);
             include 'tuvan/list.php';
             break;
             // Nhan vien
-            case 'list_nhanvien':
-                $listnhanvien = loadAll_nhanvien();
-                include 'nhanvien/list.php';
-                break;
+        case 'list_nhanvien':
+            $listnhanvien = loadAll_nhanvien();
+            include 'nhanvien/list.php';
+            break;
         default:
             include "home.php";
             break;

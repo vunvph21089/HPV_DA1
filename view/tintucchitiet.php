@@ -8,7 +8,7 @@ include "view/header.php";
     <section class="page-section breadcrumbs text-right">
         <div class="container">
             <div class="page-header">
-                <h1>Tin tức </h1>
+                <h1>Tin tức tiết</h1>
             </div>
             <ul class="breadcrumb">
                 <li><a href="index.php?act=home">Trang chủ</a></li>
@@ -24,13 +24,10 @@ include "view/header.php";
         <div class="container">
             <div class="row">
                 <div class="col-md-9 content" id="content">
-                    <?php foreach ($ds_tt as $tt) {
-                        extract($tt);
-                        $linktt = "index.php?act=tintucchitiet&idtt=" . $id;
+                    <?php 
+                        extract($onett);
+                        $linktt = "index.php?act=batdongsanchitiet&idbds=" . $id;
                         echo '<article class="post-wrap">
-    <div class="post-media">
-        <a  href="' . $img . '"prettyPhoto"><img style=" width: 99% ; heigh: auto; " src="' . $img . '" alt=""></a>
-    </div>
     <div class="post-header">
         <h2 class="post-title"><a href="#">' . $tieude . '</a></h2>
         <div class="post-meta">By <a href="#">author name here</a> / 6th June 2014 / in <a href="#">Design</a>, <a href="#">Photography</a> / <a href="#">27 Comments</a> / 18 Likes / <a href="#">Share This Post</a></div>
@@ -38,13 +35,14 @@ include "view/header.php";
     <div class="post-body">
         <div class="post-excerpt">
             <p>' . $mota_ngan . '</p>
+            <p>' . $noidung. '</p>
         </div>
     </div>
     <div class="post-footer">
-        <span class="post-read-more"><a href="' . $linktt . '" class="btn btn-theme btn-theme-transparent btn-icon-left">Đọc thêm</a></span>
+        <span class="post-read-more"><a href="#" class="btn btn-theme btn-theme-transparent btn-icon-left">Read more</a></span>
     </div>
 </article>';
-                    } ?>
+                     ?>
 
 
 
@@ -83,7 +81,7 @@ include "view/header.php";
                         <div class="widget-content no-pad">
                             <ul>
                                 <li>
-                                   
+                                    
 
                                     <ul class="">
                                         <?php
@@ -107,7 +105,31 @@ include "view/header.php";
                     <!-- /widget tabs -->
                     <!-- widget archives -->
 
-
+                    <?php
+                    foreach ($tintuc_cungloai as $same_tt) {
+                        extract($same_tt);
+                        $linktt = "index.php?act=tintucchitiet&idtt=" . $id;
+                        echo '
+                                            <div class="col-sm-6 col-md-3">
+                                                <div class="thumbnail no-border no-padding">
+                                                    <div class="media">
+                                                        <a href="' . $linktt . '">
+                                                            <img class="img_lienquan" src="' . $img . '" alt="">
+                                                            <div class="caption hovered">
+                                                                <div class="caption-wrapper div-table">
+                                                                    <div class="caption-inner div-cell">
+                                                                        <h3 id="ten_bds" class="caption-title">' . $name . '</h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ';
+                    }
+                    ?>
+                    ?>
                     <!-- /widget archive -->
                     <!-- widget flickr feed -->
                     <div class="widget widget-flickr-feed">

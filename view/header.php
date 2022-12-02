@@ -246,6 +246,12 @@
             display: -webkit-box;
             overflow: hidden;
         }
+
+        .image img {
+width: 99%;
+height: auto;
+
+        }
     </style>
 
 

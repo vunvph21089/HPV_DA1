@@ -112,11 +112,14 @@
                                 <a href="index.php?act=listtintuc"><input class="btn btn-success w-sm" value="Danh sách"></a>
 
                                 <div class="text-end mb-3">
-                                    <input type="submit" name="submit" class="btn btn-success w-sm" value="Thêm">
+                                    <input type="submit" name="submit" class="btn btn-success w-sm" value="Thêm">                               
                                 </div>
+
                                 <?php
-                                if (isset($thongbao) && ($thongbao != "")) echo $thongbao;
+                                if (isset($thongbao) && ($thongbao != ""))
+                                  echo $thongbao;
                                 ?>
+                               
                             </div>
                             <!-- end col -->
 
