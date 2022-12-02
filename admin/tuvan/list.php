@@ -106,23 +106,7 @@
 
                                             </tr>
                                         <?php endforeach ?>
-                                        </tr>
-
-                                        <?php if (isset($_COOKIE["id"])) :die(); ?>
-                                            
-                                        
-
-                                        <?php endif ?>
-
-                                        </tbody>
-                                    </table>
-                                    <script>
-                                        function get_ID_Nhanvien() {
-                                            const option = document.querySelector('#product-discount-input');
-                                            console.log(option.value);
-                                            document.cookie = `id=${option.value}`
-                                        }
-                                    </script>
+                                                </tr>
                                 </div>
 
                             </div>
