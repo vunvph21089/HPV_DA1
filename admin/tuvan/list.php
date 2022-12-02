@@ -101,9 +101,17 @@
                                                         <?php echo '<a class="btn btn-danger" href="' . $uptuvan . '">Đang chờ</a>' ?>
                                                     <?php endif ?>
                                                 </td>
-                                                <td class="customer_name"><?= $tuvan['id_nhanvien'] ?></td>
+                                                
+                                                <?php
+                                                if (isset($tuvan['id_nhanvien'])) {
+                                                    $nhanvien = loadOne_Nhanvien($tuvan['id_nhanvien']);
+                                                    extract($nhanvien);
+                                                    echo '<td class="customer_name">'.$user.'</td>';
+                                                }else{
+                                                    echo '<td class="customer_name"></td>';
+                                                }
+                                                ?>
                                                 <td class="customer_name"><?= $tuvan['time_tuvan'] ?></td>
-
                                             </tr>
                                         <?php endforeach ?>
                                         </tr>
