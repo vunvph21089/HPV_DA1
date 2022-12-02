@@ -378,27 +378,19 @@ if (isset($_GET['act'])) {
             include "tuvan/update.php";
             break;
         case 'update_bds_tuvan':
-            if (isset($_COOKIE["id"])) {
-                var_dump($_COOKIE["id"]);
-                die();
-            }
-            
-            
             if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
                 $kyw = $_POST['kyw'];
             } else {
                 $kyw = "";
             }
-            
-                $id = $_GET["id"];
+            if(isset($_POST['capnhat'])){
+                $id = $_POST["id"];
                 $nhanvien = $_POST['user'];
-
                 $trangthai = $_POST['trangthai'];
-
                 date_default_timezone_set("Asia/Ho_Chi_Minh");
                 $time_tuvan = date('h:i:sa d/m/Y');
                 update_bds_tuvan($id,$nhanvien,$trangthai,$time_tuvan);
-            
+            }
             $listtuvan = loadAll_bds_tuvan($kyw);
             include 'tuvan/list.php';
             break;

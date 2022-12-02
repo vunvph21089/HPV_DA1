@@ -97,16 +97,18 @@
                                                 <td>
                                                     <?php if ($tuvan['trangthai'] == 1) : ?>
                                                         <?php echo '<a class="btn btn-success">Đã giao việc</a>' ?>
-                                                <?php else : ?>
-                                                    <?php echo '<a class="btn btn-danger" href="' . $uptuvan . '&trangthai">Đang chờ</a>' ?>
-                                                <?php endif ?>
+                                                    <?php else : ?>
+                                                        <?php echo '<a class="btn btn-danger" href="' . $uptuvan . '">Đang chờ</a>' ?>
+                                                    <?php endif ?>
                                                 </td>
                                                 <td class="customer_name"><?= $tuvan['id_nhanvien'] ?></td>
                                                 <td class="customer_name"><?= $tuvan['time_tuvan'] ?></td>
 
                                             </tr>
                                         <?php endforeach ?>
-                                                </tr>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
 
                             </div>
