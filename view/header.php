@@ -168,7 +168,9 @@
         .property-listing .thumbnail-property-card .table td.buttons{
             width:28%;
         }
-
+        p img{
+            width: 850px;
+        }
         #ten_bds {
             margin: 0 0 10px 0;
             font-family: 'Roboto', sans-serif;
