@@ -10,6 +10,7 @@ include "model/danhmuc_tintuc.php";
 $bds_new = loadall_bds_home();
 $loaibds = loadAll_danhmuc();
 $danhmuctt = loadAll_danhmuctintuc();
+$dstop5 = loadAll_bds_top5();
 session_start();
 
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
