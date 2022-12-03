@@ -70,7 +70,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $id = $_GET['idtt'];
                 $onett = loadOne_tintuc($id);
                 extract($onett);
-                // $tintuc_cungloai =load_tintuc_cungloai($id,$id_dm_tintuc);
+                $tintuc_cungloai =load_tintuc_cungloai($id,$id_danhmuctt);
                 include "view/tintucchitiet.php";
             } else {
                 include "view/blog.php";

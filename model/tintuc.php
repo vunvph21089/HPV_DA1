@@ -55,21 +55,21 @@ function load_ten_tt($id_tintuc)
 }
 
 
-function tang_view($id)
+function tang_viewtintuc($id)
 {
     $sql = "UPDATE tintuc SET view = view + 1 WHERE id=" . $id;
-    pdo_query($sql, true);
+    pdo_query($sql);
 }
-function load_tintuc_cungloai($id,$id_dm_tintuc)
+function load_tintuc_cungloai($id,$id_danhmuctt)
 {
-    $sql = "Select * from tintuc WHERE id_danhmuctt = " . $id_dm_tintuc . " AND id <> " . $id;
-    $tintuc = pdo_query($sql, true);
+    $sql = "Select * from tintuc WHERE id_danhmuctt = " . $id_danhmuctt . " AND id <> " . $id;
+    $tintuc = pdo_query($sql);
     return $tintuc;
 }
 function loadAll_tintuc_top5()
 {
     $sql = "Select * from tintuc WHERE 1 order by view desc limit 05";
-    $listtintuc = pdo_query($sql, true);
+    $listtintuc = pdo_query($sql);
     return $listtintuc;
 }
 function update_tintuc($id, $tieude, $imgValue, $noidung, $mota_ngan, $id_danhmuctt, $id_user)

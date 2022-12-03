@@ -8,7 +8,7 @@ include "view/header.php";
     <section class="page-section breadcrumbs text-right">
         <div class="container">
             <div class="page-header">
-                <h1>Tin tức tiết</h1>
+                <h1>Tin tức chi tiết</h1>
             </div>
             <ul class="breadcrumb">
                 <li><a href="index.php?act=home">Trang chủ</a></li>
@@ -77,7 +77,7 @@ include "view/header.php";
                     <!-- /widget search -->
                     <!-- widget car categories -->
                     <div class="widget shadow property-categories">
-                        <h4 class="widget-title">Categories</h4>
+                        <h4 class="widget-title">Danh mục</h4>
                         <div class="widget-content no-pad">
                             <ul>
                                 <li>
@@ -104,32 +104,28 @@ include "view/header.php";
                     <!-- widget detail reservation -->
                     <!-- /widget tabs -->
                     <!-- widget archives -->
-
+                    <h4 class="widget-title"><span>Tin tức liên quan</span></h4>
                     <?php
                     foreach ($tintuc_cungloai as $same_tt) {
                         extract($same_tt);
                         $linktt = "index.php?act=tintucchitiet&idtt=" . $id;
                         echo '
-                                            <div class="col-sm-6 col-md-3">
-                                                <div class="thumbnail no-border no-padding">
-                                                    <div class="media">
-                                                        <a href="' . $linktt . '">
-                                                            <img class="img_lienquan" src="' . $img . '" alt="">
-                                                            <div class="caption hovered">
-                                                                <div class="caption-wrapper div-table">
-                                                                    <div class="caption-inner div-cell">
-                                                                        <h3 id="ten_bds" class="caption-title">' . $name . '</h3>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
+                        <div class="widget widget-flickr-feed">
+                        
+                        <ul>
+                            <li><a href="'.$linktt.'"><img style="width:110px; height:80px; object-fit:cover;" src="'.$img.'" alt="//"></a></li>
+                            <a style="color:black;" href="'.$linktt.'">'.$tieude.'</a>
+                          
+                        </ul>
+                        <ul> 
+                     
+                        </ul>
+                    </div>
                                         ';
                     }
                     ?>
-                    ?>
+
+                    
                     <!-- /widget archive -->
                     <!-- widget flickr feed -->
                     <div class="widget widget-flickr-feed">
