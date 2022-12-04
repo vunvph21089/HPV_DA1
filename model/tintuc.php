@@ -5,10 +5,10 @@ function delete_tintuc($id)
     pdo_query($sql);
 }
 
-function insert_tintuc($tieude, $hinh, $noidung, $mota_ngan, $id_danhmuctt, $id_user)
+function insert_tintuc($tieude, $hinh, $noidung, $mota_ngan, $ngaydangtin, $id_danhmuctt, $id_user)
 {
-    $sql = "INSERT INTO  tintuc(tieude,img,noidung,mota_ngan,id_danhmuctt,id_user) 
-        values('$tieude','$hinh','$noidung','$mota_ngan','$id_danhmuctt','$id_user')";
+    $sql = "INSERT INTO  tintuc(tieude,img,noidung,mota_ngan,ngaydangtin,id_danhmuctt,id_user) 
+        values('$tieude','$hinh','$noidung','$mota_ngan','$ngaydangtin','$id_danhmuctt','$id_user')";
     pdo_execute($sql);
 }
 

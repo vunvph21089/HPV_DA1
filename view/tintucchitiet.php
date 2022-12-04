@@ -24,40 +24,28 @@ include "view/header.php";
         <div class="container">
             <div class="row">
                 <div class="col-md-9 content" id="content">
-                    <?php 
-                        extract($onett);
-                        $linktt = "index.php?act=batdongsanchitiet&idbds=" . $id;
-                        echo '<article class="post-wrap">
-    <div class="post-header">
-        <h2 class="post-title"><a href="#">' . $tieude . '</a></h2>
-        <div class="post-meta">By <a href="#">author name here</a> / 6th June 2014 / in <a href="#">Design</a>, <a href="#">Photography</a> / <a href="#">27 Comments</a> / 18 Likes / <a href="#">Share This Post</a></div>
-    </div>
-    <div class="post-body">
-        <div class="post-excerpt">
-            <p>' . $mota_ngan . '</p>
-            <p>' . $noidung. '</p>
-        </div>
-    </div>
-    <div class="post-footer">
-        <span class="post-read-more"><a href="#" class="btn btn-theme btn-theme-transparent btn-icon-left">Read more</a></span>
-    </div>
-</article>';
-                     ?>
-
-
-
-                    <!-- Pagination -->
-                    <div class="pagination-wrapper">
-                        <ul class="pagination">
-                            <li class="disabled"><a href="#"><i class="fa fa-angle-double-left"></i> Previous</a></li>
-                            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">Next <i class="fa fa-angle-double-right"></i></a></li>
-                        </ul>
-                    </div>
-                    <!-- /Pagination -->
+                    <?php
+                    extract($onett);
+                    $linktt = "index.php?act=batdongsanchitiet&idbds=" . $id;
+                    ?>
+                    <article class="post-wrap">
+                        <div class="post-header">
+                            <h2 class="post-title"><a href="#"><?= $onett['tieude'] ?></a></h2>
+                            <div class="post-meta">By <a href="#">
+                                    <?php
+                                    $oneuser = loadOne_user($onett['id_user']);
+                                    extract($oneuser); ?>
+                                    <?= $oneuser['user'] ?>
+                                </a> / <?= $onett['ngaydangtin'] ?> /</div>
+                        </div>
+                        <div class="post-body">
+                            <div class="post-excerpt">
+                                <p><?= $onett['mota_ngan'] ?></p>
+                                <p><?= $onett['noidung'] ?></p>
+                            </div>
+                        </div>
+                        
+                    </article>'
 
                 </div>
                 <!-- /CONTENT -->
@@ -81,7 +69,7 @@ include "view/header.php";
                         <div class="widget-content no-pad">
                             <ul>
                                 <li>
-                                    
+
 
                                     <ul class="">
                                         <?php
@@ -113,8 +101,8 @@ include "view/header.php";
                         <div class="widget widget-flickr-feed">
                         
                         <ul>
-                            <li><a href="'.$linktt.'"><img style="width:110px; height:80px; object-fit:cover;" src="'.$img.'" alt="//"></a></li>
-                            <a style="color:black;" href="'.$linktt.'">'.$tieude.'</a>
+                            <li><a href="' . $linktt . '"><img style="width:110px; height:80px; object-fit:cover;" src="' . $img . '" alt="//"></a></li>
+                            <a style="color:black;" href="' . $linktt . '">' . $tieude . '</a>
                           
                         </ul>
                         <ul> 
@@ -125,7 +113,7 @@ include "view/header.php";
                     }
                     ?>
 
-                    
+
                     <!-- /widget archive -->
                     <!-- widget flickr feed -->
                     <div class="widget widget-flickr-feed">

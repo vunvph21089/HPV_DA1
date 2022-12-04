@@ -13,8 +13,8 @@ include "view/header.php";
         </div>
         <div class="clearfix text-center">
             <ul id="filtrable" class="filtrable clearfix">
-                <li class="all current"><a href="index.php?act=features" data-filter="*">New</a></li>
-                <li class="all current"><a href="index.php?act=batdongsan" data-filter="*">All</a></li>
+                <li class="all current"><a href="index.php?act=features" data-filter="*">Mới</a></li>
+                <li class="all current"><a href="index.php?act=batdongsan" data-filter="*">Tất cả</a></li>
                 <?php
                 foreach ($loaibds as $dm) {
                     extract($dm);

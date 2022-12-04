@@ -1,8 +1,8 @@
 <?php
-function insert_bds_tuvan($id_user,$fullname, $note_user, $id_bds,$name,$img, $time_yeucau, $email, $tel)
+function insert_bds_tuvan($id_user,$note_user, $id_bds,$time_yeucau)
 {
-    $sql = "INSERT INTO `bds_tuvan`(`id_user`, `name_kh`, `note_user`, `id_bds`, `name`, `img`, `time_yeucau`, `email`, `tel`)
-    VALUES ('$id_user','$fullname','$note_user','$id_bds','$name','$img' ,'$time_yeucau','$email','$tel')";
+    $sql = "INSERT INTO `bds_tuvan`(`id_user`,`note_user`, `id_bds`,`time_yeucau`)
+    VALUES ('$id_user','$note_user','$id_bds' ,'$time_yeucau')";
     pdo_execute($sql);
 }
 
@@ -31,7 +31,7 @@ function loadAll_bds_tuvan($kyw = "")
 {
     $sql = "SELECT * FROM bds_tuvan WHERE 1";
     if ($kyw != "") {
-        $sql .= " and name like '%" . $kyw . "%'";
+        $sql .= " and id like '%" . $kyw . "%'";
     }
     $sql .= " ORDER BY id ";
     $list_bds_tuvan = pdo_query($sql);

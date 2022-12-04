@@ -39,7 +39,7 @@
                                 <div class="row g-3">
                                     <div class="col-xl-6">
                                         <div class="search-box">
-                                            <input type="text" name="kyw" class="form-control search" placeholder="Nhập tên bất động sản cần tìm">
+                                            <input type="text" name="kyw" class="form-control search" placeholder="Nhập mã tư vấn cần tìm">
                                             <i class="ri-search-line search-icon"></i>
                                         </div>
                                     </div>
@@ -85,33 +85,45 @@
                                                 foreach ($listtuvan as $tuvan) : {
                                                         extract($tuvan);
                                                         $uptuvan = "index.php?act=sua_bds_tuvan&id=" . $id;
-                                                    } ?>
-                                            <tr>
-                                                <td class="customer_name"><?= $tuvan['id'] ?></td>
-                                                <td class="customer_name"><?= $tuvan['name'] ?></td>
-                                                <td class="customer_name"><?= $tuvan['name_kh'] ?></td>
-                                                <td class="customer_name"><?= $tuvan['email'] ?></td>
-                                                <td class="customer_name"><?= $tuvan['tel'] ?></td>
-                                                <td class="customer_name"><?= $tuvan['note_user'] ?></td>
-                                                <td class="customer_name"><?= $tuvan['time_yeucau'] ?></td>
-                                                <td>
-                                                    <?php if ($tuvan['trangthai'] == 1) : ?>
-                                                        <?php echo '<a class="btn btn-success">Đã giao việc</a>' ?>
-                                                    <?php else : ?>
-                                                        <?php echo '<a class="btn btn-danger" href="' . $uptuvan . '">Đang chờ</a>' ?>
-                                                    <?php endif ?>
-                                                </td>
-                                                
-                                                <?php
-                                                if (isset($tuvan['id_nhanvien'])) {
-                                                    $nhanvien = loadOne_Nhanvien($tuvan['id_nhanvien']);
-                                                    extract($nhanvien);
-                                                    echo '<td class="customer_name">'.$user.'</td>';
-                                                }else{
-                                                    echo '<td class="customer_name"></td>';
-                                                }
-                                                ?>
-                                                <td class="customer_name"><?= $tuvan['time_tuvan'] ?></td>
+                                                    } 
+                                                    ?>
+                                                    <td class="customer_name"><?= $tuvan['id'] ?></td>
+                                                    <?php
+                                                        $bds = loadone_bds($tuvan['id_bds']);
+                                                        extract($bds);
+                                                        echo '
+                                                        <td class="customer_name">' . $name . '</td>
+                                                        ';
+                                                    ?>
+                                                    <?php
+                                                        $user = loadOne_user($tuvan['id_user']);
+                                                        extract($user);
+                                                        echo '
+                                                        <td class="customer_name">' . $user . '</td>
+                                                        <td class="customer_name">' . $email . '</td>
+                                                        <td class="customer_name">' . $tel . '</td>
+                                                        ';
+                                                    ?>
+                                                    <td class="customer_name"><?= $tuvan['note_user'] ?></td>
+                                                    <td class="customer_name"><?= $tuvan['time_yeucau'] ?></td>
+                                                    <td>
+                                                        <?php if ($tuvan['trangthai'] == 1) : ?>
+                                                            <?php echo '<a class="btn btn-success">Đã giao việc</a>' ?>
+                                                        <?php else : ?>
+                                                            <?php echo '<a class="btn btn-danger" href="' . $uptuvan . '">Đang chờ</a>' ?>
+                                                        <?php endif ?>
+                                                    </td>
+
+                                                    <?php
+                                                    if (isset($tuvan['id_nhanvien'])) {
+                                                        $nhanvien = loadOne_Nhanvien($tuvan['id_nhanvien']);
+                                                        extract($nhanvien);
+                                                        echo '<td class="customer_name">' . $user . '</td>';
+                                                    } else {
+                                                        echo '<td class="customer_name"></td>';
+                                                    }
+                                                    ?>
+                                                    <td class="customer_name"><?= $tuvan['time_tuvan'] ?></td>
                                             </tr>
                                         <?php endforeach ?>
                                         </tr>

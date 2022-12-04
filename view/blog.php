@@ -27,24 +27,31 @@ include "view/header.php";
                     <?php foreach ($ds_tt as $tt) {
                         extract($tt);
                         $linktt = "index.php?act=tintucchitiet&idtt=" . $id;
-                        echo '<article class="post-wrap">
-    <div class="post-media">
-        <a  href="' . $img . '"prettyPhoto"><img style=" width: 99% ; heigh: auto; " src="' . $img . '" alt=""></a>
-    </div>
-    <div class="post-header">
-        <h2 class="post-title"><a href="#">' . $tieude . '</a></h2>
-        <div class="post-meta">By <a href="#">author name here</a> / 6th June 2014 / in <a href="#">Design</a>, <a href="#">Photography</a> / <a href="#">27 Comments</a> / 18 Likes / <a href="#">Share This Post</a></div>
-    </div>
-    <div class="post-body">
-        <div class="post-excerpt">
-            <p>' . $mota_ngan . '</p>
-        </div>
-    </div>
-    <div class="post-footer">
-        <span class="post-read-more"><a href="' . $linktt . '" class="btn btn-theme btn-theme-transparent btn-icon-left">Đọc thêm</a></span>
-    </div>
-</article>';
-                    } ?>
+
+                    ?>
+                        <article class="post-wrap">
+                            <div class="post-media">
+                                <a href="<?= $tt['img'] ?>" prettyPhoto"><img style=" width: 99% ; heigh: auto; " src="<?= $tt['img'] ?>" alt=""></a>
+                            </div>
+                            <div class="post-header">
+                                <h2 class="post-title"><a href="#"><?= $tt['tieude'] ?></a></h2>
+                                <div class="post-meta">By <a href="#">
+                                        <?php
+                                        $oneuser = loadOne_user($tt['id_user']);
+                                        extract($oneuser); ?>
+                                        <?= $oneuser['user'] ?>
+                                    </a> / <?= $tt['ngaydangtin'] ?> /</div>
+                            </div>
+                            <div class="post-body">
+                                <div class="post-excerpt">
+                                    <p><?= $tt['mota_ngan'] ?></p>
+                                </div>
+                            </div>
+                            <div class="post-footer">
+                                <span class="post-read-more"><a href="<?= $linktt ?>" class="btn btn-theme btn-theme-transparent btn-icon-left">Đọc thêm</a></span>
+                            </div>
+                        </article>
+                    <?php } ?>
 
 
 
@@ -83,7 +90,7 @@ include "view/header.php";
                         <div class="widget-content no-pad">
                             <ul>
                                 <li>
-                                   
+
 
                                     <ul class="">
                                         <?php

@@ -41,27 +41,17 @@ include "view/header.php";
             </div>
                 ';
                 endforeach; ?>
-
-
-
-
-
-
-
-
-
-
                 <!-- /Car Listing -->
 
                 <!-- Pagination -->
                 <div class="pagination-wrapper">
                     <ul class="pagination">
-                        <li class="disabled"><a href="#"><i class="fa fa-angle-double-left"></i> Previous</a></li>
+                        <li class="disabled"><a href="#"><i class="fa fa-angle-double-left"></i>Trước</a></li>
                         <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
                         <li><a href="#">2</a></li>
                         <li><a href="#">3</a></li>
                         <li><a href="#">4</a></li>
-                        <li><a href="#">Next <i class="fa fa-angle-double-right"></i></a></li>
+                        <li><a href="#">Tiếp theo<i class="fa fa-angle-double-right"></i></a></li>
                     </ul>
                 </div>
                 <!-- /Pagination -->
@@ -77,27 +67,14 @@ include "view/header.php";
                     <div class="widget-content">
                         <!-- Search form -->
                         <div class="form-search light">
-                            <form action="#">
+                            <form action="index.php?act=hotdeals" method="POST">
 
                                 <div class="form-group has-icon has-label">
                                     <label for="formSearchUpLocation3">Vị trí</label>
-                                    <input type="text" class="form-control" id="formSearchUpLocation3" placeholder="City">
+                                    <input type="text" name="location" class="form-control" id="formSearchUpLocation3" placeholder="Thành phố">
                                     <span class="form-control-icon"><i class="fa fa-map-marker"></i></span>
                                 </div>
-
-
-
-                                <div class="form-group has-label">
-                                    <label>Danh mục</label>
-                                    <!-- <select class="form-select" name="loaibds" id="choices-category-input" data-choices data-choices-search-false>
-                                        <?php foreach ($listloaibds as $index => $dm) : ?>
-                                            <option name="loaibds" value="<?= $dm['id'] ?>"><?= $dm['name'] ?></option>
-                                        <?php endforeach ?>
-                                    </select> -->
-                                </div>
-
-
-                                <button type="submit" id="formSearchSubmit3" class="btn btn-submit btn-theme btn-theme-dark btn-block">Tìm kiếm</button>
+                                <button type="submit" name="search" id="formSearchSubmit3" class="btn btn-submit btn-theme btn-theme-dark btn-block">Tìm kiếm</button>
 
                             </form>
                         </div>

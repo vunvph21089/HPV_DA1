@@ -25,6 +25,8 @@ if (isset($_GET['act'])) {
                 $dientich = $_POST['dientich'];
                 $info = $_POST['mota'];
                 $sophong = $_POST['sophong'];
+                date_default_timezone_set("Asia/Ho_Chi_Minh");
+                $ngaydang = date('d/m/Y');
                 $id_user = $_POST['nguoidang'];
                 $targetDir = '../uploads/';
                 $allowTypes = array('jpg', 'png', 'jpeg', 'gif');
@@ -38,7 +40,7 @@ if (isset($_GET['act'])) {
                 // END UPLOAD
 
                 // UPLOAD ẢNH MÔ TẢ
-                $id = insert_bds($tenbds, $filename, $price, $diachi, $dientich, $info, $sophong, $id_loaibds, $id_user);
+                $id = insert_bds($tenbds, $filename, $price, $diachi, $dientich, $info, $sophong, $ngaydang, $id_loaibds, $id_user);
                 foreach ($_FILES["files"]['name'] as $key => $val) {
                     $fileName = basename($_FILES['files']['name'][$key]);
                     $targetFilePath = $targetDir . $fileName;
@@ -290,6 +292,8 @@ if (isset($_GET['act'])) {
                 $filename = "";
                 $noidung = $_POST['noidung'];
                 $mota_ngan = $_POST['mota_ngan'];
+                date_default_timezone_set("Asia/Ho_Chi_Minh");
+                $ngaydangtin = date('d/m/Y');
                 $id_danhmuctt = $_POST['danhmuctt'];
                 $id_user = $_POST['nguoidang'];
                 // UPLOAD ẢNH
@@ -299,7 +303,7 @@ if (isset($_GET['act'])) {
                     $filename = 'uploads/' . $filename;
                 }
                 // END UPLOAD
-                insert_tintuc($tieude, $filename, $noidung, $mota_ngan, $id_danhmuctt, $id_user);
+                insert_tintuc($tieude, $filename, $noidung, $mota_ngan, $ngaydangtin, $id_danhmuctt, $id_user);
                 $thongbao = "Bạn đã thêm tin tức thành công";
             }
 

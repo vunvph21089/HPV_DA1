@@ -78,9 +78,8 @@
     <!-- link icon -->
     <script src="https://kit.fontawesome.com/7e155ef984.js" crossorigin="anonymous"></script>
     <!-- Assets admin -->
-    
+
     <style>
-        
         #box_bds {
             background-color: #fff;
             border-bottom-left-radius: 5px;
@@ -165,8 +164,9 @@
             object-fit: cover;
             border-radius: 5px;
         }
-        .property-listing .thumbnail-property-card .table td.buttons{
-            width:28%;
+
+        .property-listing .thumbnail-property-card .table td.buttons {
+            width: 28%;
         }
 
         #ten_bds {
@@ -225,11 +225,12 @@
             font-size: 18px
         }
 
-        .media img{
+        .media img {
             width: 300px;
             height: 270px;
             object-fit: cover;
         }
+
         #ten_bds {
             margin: 0 0 10px 0;
             font-family: 'Roboto', sans-serif;
@@ -252,9 +253,14 @@
             overflow: hidden;
         }
 
+        .post-excerpt img {
+            width: 99%;
+            height: auto;
+        }
+
         .image img {
-width: 99%;
-height: auto;
+            width: 99%;
+            height: auto;
 
         }
     </style>

@@ -10,7 +10,6 @@ include "model/danhmuc_tintuc.php";
 $bds_new = loadall_bds_home();
 $loaibds = loadAll_danhmuc();
 $danhmuctt = loadAll_danhmuctintuc();
-$dstop5 = loadAll_bds_top5();
 session_start();
 
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
@@ -56,9 +55,14 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
 
         case 'hotdeals':
+            if (isset($_POST['location']) && ($_POST['location'] != "")) {
+                $kyw = $_POST['location'];
+            } else {
+                $kyw = "";
+            }
             // code  vao day
             // $id_loaibds = $_POST['loaibds'];
-            $ds_bds = loadall_bds();
+            $dstop5 = loadAll_bds_top5();
             include 'view/hotdeals.php';
             break;
 
@@ -71,6 +75,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $id = $_GET['idtt'];
                 $onett = loadOne_tintuc($id);
                 extract($onett);
+
                 $tintuc_cungloai =load_tintuc_cungloai($id,$id_danhmuctt);
                 include "view/tintucchitiet.php";
             } else {
@@ -91,6 +96,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             } else {
                 $id_dm_tintuc = 0;
             }
+            
             $ds_tt =loadAll_tintuc($kyw, $id_dm_tintuc);
             include 'view/blog.php';
             break;
@@ -108,16 +114,12 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case 'tuvan':
             if (isset($_POST['tuvan']) && $_POST['tuvan']) {
                 $id_user = $_POST['id_login'];
-                $fullname = $_POST['fullname'];
-                $email = $_POST['email'];
                 $tel = $_POST['tel'];
                 $note_user = $_POST['note_user'];
                 $id_bds = $_POST['id_bds'];
-                $name = $_POST['name'];
-                $img = $_POST['img'];
                 date_default_timezone_set("Asia/Ho_Chi_Minh");
                 $time_yeucau = date('h:i:sa d/m/Y');
-                insert_bds_tuvan($id_user,$fullname, $note_user, $id_bds,$name,$img,$time_yeucau, $email, $tel);
+                insert_bds_tuvan($id_user,$note_user,$id_bds,$time_yeucau);
                 $thongbao = "Bạn đã gửi yêu cầu tư vấn thành công";
                 header('location:index.php?act=batdongsan');
             }

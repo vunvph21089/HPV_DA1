@@ -34,7 +34,7 @@ include "view/header.php";
                     </div>
                     <div></div>
                     <h3 id="ten_bds_chitiet" class="block-title"><span><?= $name ?></span></h3>
-
+                    <p style="text-transform:capitalize;"><?= $ngaydang ?></p>
                 </div>
 
                 <div class="col-lg-4 col-md-5 col-sm-7">
@@ -66,6 +66,8 @@ include "view/header.php";
                             <dd><?= $sophong ?></dd>
                             <dt>Địa chỉ</dt>
                             <dd><?= $location ?></dd>
+                            <dt>Ngày đăng</dt>
+                            <dd><?= $ngaydang ?></dd>
                         </dl>
 
                         <div class="button">
@@ -74,11 +76,15 @@ include "view/header.php";
                                 echo $thongbao;
                             } ?>
 
-                            <a href="#" class="btn btn-block btn-theme btn-theme-dark" onclick="modal()">Tư vấn ngay</a>
+                            
                             <?php
                             if (isset($_SESSION['user'])) {
                                 $id_login = $_SESSION['user'];
                             ?>
+                            <?php
+                                if($id_login['id_role'] == 3){
+                            ?>
+                            <a href="#" class="btn btn-block btn-theme btn-theme-dark" onclick="modal()">Tư vấn ngay</a>
                                 <div class="modal-content" id="modal">
                                     <div class="modal-header bg-light p-3">
                                         <a href="" id="hidemodal" onclick="hidemodal()">
@@ -127,16 +133,20 @@ include "view/header.php";
 
                                                 <a href=""> <input type="submit" name="tuvan" class="btn btn-block btn-theme btn-theme-dark" id="add-btn" value="gửi"></a>
                                             </div>
-
                                         </div>
                                         <?php
                                         $idbds = $_GET['idbds'];
                                         ?>
                                     </form>
                                 </div>
+                                <?php
+                                }
+                                ?>
+
                             <?php
                             }else {
                                 echo '
+                                <a href="#" class="btn btn-block btn-theme btn-theme-dark" onclick="modal()">Tư vấn ngay</a>
                                 <div align="center"><p style="color:red;font-size:18px;margin-top:10px">Bạn cần đăng nhập để đăng ký tư vấn !</p></div>';
                             }
                             ?>

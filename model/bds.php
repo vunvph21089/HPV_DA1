@@ -1,8 +1,8 @@
 <?php
-function insert_bds($tenbds, $hinh, $price, $diachi, $dientich, $info, $sophong, $id_loaibds,$id_user)
+function insert_bds($tenbds, $hinh, $price, $diachi, $dientich, $info, $sophong,$ngaydang,$id_loaibds,$id_user)
 {
-    $sql = "INSERT INTO `bds` (`name`, `img`, `price`, `location`, `dientich`, `info`, `sophong`, `id_loaibds`, `id_user`) 
-        VALUES ('$tenbds', '$hinh', '$price', '$diachi', '$dientich', '$info', '$sophong', '$id_loaibds','$id_user')";
+    $sql = "INSERT INTO `bds` (`name`, `img`, `price`, `location`, `dientich`, `info`, `sophong`, `ngaydang`, `id_loaibds`, `id_user`) 
+        VALUES ('$tenbds', '$hinh', '$price', '$diachi', '$dientich', '$info', '$sophong', '$ngaydang', '$id_loaibds','$id_user')";
     $id = pdo_query_last_id($sql);
     return $id;
 }

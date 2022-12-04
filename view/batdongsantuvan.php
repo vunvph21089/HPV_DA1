@@ -4,7 +4,7 @@ include "view/header.php";
 <div class="row">
     <div class="col-lg-12">
         <div class="card" id="customerList">
-            
+
 
             <div class="card-body">
                 <div>
@@ -14,9 +14,7 @@ include "view/header.php";
                             <thead class="table-light text-muted">
                                 <tr>
                                     <th class="sort" data-sort="eamil">ID Tư vấn</th>
-                                    <th class="sort" data-sort="eamil">ID Bất động sản</th>
                                     <th class="sort" data-sort="eamil">Tên bất động sản</th>
-
                                     <th class="sort" data-sort="action">Ảnh</th>
                                     <th class="sort" data-sort="customer_name">Tên khách hàng</th>
                                     <th class="sort" data-sort="email">Email</th>
@@ -31,22 +29,32 @@ include "view/header.php";
                             <tbody class="list form-check-all">
                                 <tr>
                                     <?php
-                                    foreach ($listtuvan as $tuvan) {
+                                    foreach ($listtuvan as $tuvan) :
                                         extract($tuvan);
-                                        echo  '<tr>
-                            <td class="customer_name">' . $id . '</td>
-                            <td class="customer_name">' . $id_bds . '</td>
-                            <td class="customer_name">' . $name . '</td>
-                            <td class="customer_name"><img src="' . $img . '" width="60" height="60"></td>
-                            <td class="customer_name">' . $name_kh . '</td>
-                            <td class="customer_name">' . $email . '</td>
-                            <td class="customer_name">' . $tel . '</td>
-                            <td class="customer_name">' . $note_user . '</td>
-                            <td class="customer_name">' . $time_yeucau . '</td>
-                            <td class="customer_name">' . $time_tuvan . '</td>
-
-                            ';
                                     ?>
+                                        <tr>
+                                            <td class="customer_name"><?=$tuvan['id']?></td>
+                                            <?php
+                                                $bds = loadone_bds($tuvan['id_bds']);
+                                                extract($bds);
+                                                echo '
+                                                <td class="customer_name">' . $name . '</td>
+                                                <td class="customer_name"><img src="' . $img . '" style="object-fit:cover;width:50px;height:50px;"></td>
+                                                ';
+                                            ?>
+                                            <?php
+                                                $user = loadOne_user($tuvan['id_user']);
+                                                extract($user);
+                                                echo '
+                                                <td class="customer_name">' . $user . '</td>
+                                                <td class="customer_name">' . $email . '</td>
+                                                <td class="customer_name">' . $tel . '</td>
+                                                ';
+                                            ?>
+                                            <td class="customer_name"><?=$tuvan['note_user']?></td>
+                                            <td class="customer_name"><?=$tuvan['time_yeucau']?></td>
+                                            <td class="customer_name"><?=$tuvan['time_tuvan']?></td>
+                                    
                                         <?php
                                         if (isset($tuvan['id_nhanvien'])) {
                                             $nhanvien = loadOne_Nhanvien($tuvan['id_nhanvien']);
@@ -65,9 +73,7 @@ include "view/header.php";
 
 
                                 </tr>
-                            <?php
-                                    }
-                            ?>
+                                <?php endforeach ?>
                             </tr>
                             </tbody>
                         </table>
