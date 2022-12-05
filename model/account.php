@@ -1,6 +1,7 @@
 <?php
-        function insert_account($email, $user, $pass){
-            $sql = "INSERT INTO account(email, user, pass) values('$email', '$user', '$pass')";
+        function insert_account($email, $hoten, $tel, $user, $pass){
+            $sql = "INSERT INTO account(email, hoten, tel, user, pass, id_role) 
+            values('$email', '$hoten', '$tel', '$user', '$pass', '3')";
             pdo_execute($sql);
         }
         function checkuser($user, $pass){

@@ -110,7 +110,7 @@
             min-width: 170px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             padding: 12px 16px;
-            z-index: 1;
+            z-index: 999;
         }
 
         .dropdown:hover .dropdown-content {
@@ -168,9 +168,11 @@
         .property-listing .thumbnail-property-card .table td.buttons {
             width: 28%;
         }
-        p img{
+
+        p img {
             width: 850px;
         }
+
         #ten_bds {
             margin: 0 0 10px 0;
             font-family: 'Roboto', sans-serif;
@@ -269,6 +271,39 @@
             width: 99%;
             height: auto;
         }
+
+        .nhanvien {
+            font-size:48px;
+            font-weight: 700;
+            text-align: center;
+            color: #9ea6b1;
+            text-transform: uppercase;
+            font-family: 'Raleway', sans-serif;
+            padding-bottom: 10px;
+        }
+        .bdstuvan{
+            font-size:16px;
+            font-weight: 700;
+            text-align: center;
+            color: #9ea6b1;
+            text-transform: uppercase;
+            font-family: 'Raleway', sans-serif;
+            padding-bottom: 20px;
+        }
+        #bangtuvan{
+
+            margin: 105px 10px;
+            z-index: -1 !important;
+        }
+        #bangtuvan thead{
+            background-color: #5c677b;
+            color: #fff;
+        }
+        #bangtuvan table{
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        
     </style>
 
 

@@ -22,7 +22,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $onebds = loadone_bds($id);
                 extract($onebds);
                 $anhmota = load_anhmota($id);
-                $oneuser=loadOne_user($id_user);
+                $oneuser = loadOne_user($id_user);
                 $bds_cungloai = load_bds_cungloai($id, $id_loaibds);
                 include "view/bds_chitiet.php";
             } else {
@@ -44,8 +44,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $ds_bds = loadall_bds($kyw, $id_loaibds);
             include 'view/batdongsan.php';
             break;
-        case 'home':         
-           
+        case 'home':
+
             include 'view/home.php';
             break;
         case 'detail':
@@ -76,14 +76,14 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $onett = loadOne_tintuc($id);
                 extract($onett);
 
-                $tintuc_cungloai =load_tintuc_cungloai($id,$id_danhmuctt);
+                $tintuc_cungloai = load_tintuc_cungloai($id, $id_danhmuctt);
                 include "view/tintucchitiet.php";
             } else {
                 include "view/blog.php";
             }
             break;
 
-          
+
         case 'blog':
             // code  vao day
             if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
@@ -96,8 +96,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             } else {
                 $id_dm_tintuc = 0;
             }
-            
-            $ds_tt =loadAll_tintuc($kyw, $id_dm_tintuc);
+
+            $ds_tt = loadAll_tintuc($kyw, $id_dm_tintuc);
             include 'view/blog.php';
             break;
 
@@ -119,7 +119,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $id_bds = $_POST['id_bds'];
                 date_default_timezone_set("Asia/Ho_Chi_Minh");
                 $time_yeucau = date('h:i:sa d/m/Y');
-                insert_bds_tuvan($id_user,$note_user,$id_bds,$time_yeucau);
+                insert_bds_tuvan($id_user, $note_user, $id_bds, $time_yeucau);
                 $thongbao = "Bạn đã gửi yêu cầu tư vấn thành công";
                 header('location:index.php?act=batdongsan');
             }
@@ -127,17 +127,27 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case 'dangky':
             if (isset($_POST['dangky']) && ($_POST['dangky'])) {
                 $email = $_POST['email'];
+                $hoten = $_POST['hoten'];
                 $user = $_POST['user'];
+                $tel = $_POST['tel'];
                 $pass = md5($_POST['pass']);
-                insert_account($email, $user, $pass);
-                $thongbao = "Đăng ký thành công.Đăng nhập để sử dụng chức năng !";
+                $repass = md5($_POST['repass']);
+                // var_dump($pass,$repass);
+                // die();
+                $thongbao = "";
+                if ($pass != $repass) {
+                    $thongbao = "Nhập lại mật khẩu không đúng. Vui lòng nhập lại chính xác để đăng ký!";
+                }else{
+                    insert_account($email, $hoten, $tel, $user, $pass);
+                    $thongbao = "Đăng ký thành công. Đăng nhập để sử dụng chức năng !";
+                }
             }
             include "view/account/register.php";
             break;
         case 'dangnhap':
             if (isset($_POST['dangnhap'])) {
                 $user = $_POST['user'];
-                $pass = $_POST['pass'];
+                $pass = md5($_POST['pass']);
                 $checkuser = checkuser($user, $pass);
                 if (is_array($checkuser)) {
                     $_SESSION['user'] = $checkuser;

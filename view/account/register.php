@@ -93,6 +93,13 @@
 
                                         <div class="mt-4">
                                             <form class="needs-validation" action="index.php?act=dangky" method="POST">
+                                            <div class="mb-3">
+                                                    <label for="username" class="form-label">Họ và tên<span class="text-danger">*</span></label>
+                                                    <input type="text" name="hoten" class="form-control" id="username" placeholder="Nhập vào họ và tên" required>
+                                                    <div class="invalid-feedback">
+                                                        Vui lòng nhập vào họ tên của bạn
+                                                    </div>
+                                                </div>
                                                 <div class="mb-3">
                                                     <label for="username" class="form-label">Tên đăng nhập <span class="text-danger">*</span></label>
                                                     <input type="text" name="user" class="form-control" id="username" placeholder="Nhập vào tên đăng nhập" required>
@@ -107,7 +114,13 @@
                                                         Vui lòng nhập vào email của bạn
                                                     </div>
                                                 </div>
-
+                                                <div class="mb-3">
+                                                    <label for="username" class="form-label">Số điện thoại<span class="text-danger">*</span></label>
+                                                    <input type="text" name="tel" class="form-control" id="username" placeholder="Nhập vào số điện thoại" required>
+                                                    <div class="invalid-feedback">
+                                                        Vui lòng nhập vào số điện thoại
+                                                    </div>
+                                                </div>
 
                                                 <div class="mb-3">
                                                     <label class="form-label" for="password-input">Mật khẩu</label>
@@ -116,6 +129,16 @@
                                                         <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon" type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i></button>
                                                         <div class="invalid-feedback">
                                                         Vui lòng nhập vào mật khẩu 
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="password-input">Nhập lại mật khẩu</label>
+                                                    <div class="position-relative auth-pass-inputgroup">
+                                                        <input type="password" name="repass" class="form-control pe-5 password-input" onpaste="return false" placeholder="Nhập lại mật khẩu" id="password-input" aria-describedby="passwordInput" required>
+                                                        <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon" type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i></button>
+                                                        <div class="invalid-feedback">
+                                                        Vui lòng nhập lại mật khẩu 
                                                         </div>
                                                     </div>
                                                 </div>
