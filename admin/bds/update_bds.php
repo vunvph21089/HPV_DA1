@@ -204,54 +204,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div>
-                                    <h5 class="fs-14 mb-1">Danh mục ảnh</h5>
-                                    <p class="text-muted">Thêm ảnh mô tả cho bất động sản</p>
-
-                                    <div class="dropzone" hidden></div>
-                                    
-                                    <div>
-                                        <ul style="list-style-type: none;padding:0 20px 0 20px;margin-top:10px">
-                                        <?php
-                                            foreach ($anhmota as $index => $img){
-                                                extract($img);
-                                                $up_anhmota = "index.php?act=fix_anhmota&id_anhmota=".$id;
-                                                $del_anhmota = "index.php?act=delete_anhmota&id_anhmota=".$id;
-                                                echo '
-                                                    <li class="li">
-
-                                                    <div class="position-relative d-inline-block">
-                                                        <div class="position-absolute top-100 start-100 translate-middle">
-                                                            <label for="product-image-input" class="mb-0" data-bs-toggle="tooltip" data-bs-placement="right" title="Select Image">
-                                                                <div class="avatar-xs">
-                                                                    <div class="avatar-title bg-light border rounded-circle text-muted cursor-pointer">
-                                                                        <i class="ri-image-fill"></i>
-                                                                    </div>
-                                                                    
-                                                                </div>
-                                                            </label>
-                                                            <input class="form-control d-none" name="anh" id="product-image-input" type="file" accept="image/png, image/gif, image/jpeg, image/jpg">
-                                                        </div>
-                                                        <div class="avatar-lg">
-                                                            <div class="avatar-title bg-light rounded">
-                                                                <img src="'.$file_name.'" id="product-img" class="avatar-md h-auto" />
-                                                            </div>
-                                                            
-                                                        </div>
-                                                        
-                                                    </div>
-
-                                                    </li>
-                                                ';
-                                            }
-                                        ?>
-                                        </ul>
-                                    </div>
-                                    <div class="fallback">
-                                        <input type="file" name="files[]" multiple class="form-control">
-                                    </div>
-                                    <!-- end dropzon-preview -->
-                                </div>
+                                
                             </div>
                         </div>
                     </div>

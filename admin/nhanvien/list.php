@@ -53,7 +53,7 @@
                                                     extract($nhanvien);
                                                     echo  '<tr>
                                                             <td class="customer_name">' . $id . '</td>
-                                                            <td class="customer_name">' . $user . '</td>
+                                                            <td class="customer_name">' . $hoten . '</td>
                                                             </tr>';
                                                 }
                                                 ?>

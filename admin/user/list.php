@@ -43,7 +43,8 @@
                                         <thead class="table-light text-muted">
                                             <tr>
                                                 <th class="sort" data-sort="eamil">ID</th>
-                                                <th class="sort" data-sort="customer_name">Tên</th>
+                                                <th class="sort" data-sort="customer_name">Họ và tên</th>
+                                                <th class="sort" data-sort="customer_name">Tên đăng nhập</th>
                                                 <th class="sort" data-sort="email">Email</th>
                                                 <th class="sort" data-sort="phone">Phone</th>
                                                 <th class="sort" data-sort="date">Địa chỉ</th>
@@ -59,6 +60,7 @@
                                                     $updateuser = "index.php?act=suauser&id=" . $id;
                                                     echo  '<tr>
                                                             <td class="customer_name">' . $id . '</td>
+                                                            <td class="customer_name">' . $hoten . '</td>
                                                             <td class="customer_name">' . $user . '</td>
                                                             <td class="customer_name">' . $email . '</td>
                                                             <td class="customer_name">' . $tel . '</td>

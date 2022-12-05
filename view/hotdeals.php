@@ -62,25 +62,7 @@ include "view/header.php";
             <!-- SIDEBAR -->
             <aside class="col-md-3 sidebar" id="sidebar">
                 <!-- widget -->
-                <div class="widget shadow widget-find-property">
-                    <h4 class="widget-title">Tìm kiếm bất động sản</h4>
-                    <div class="widget-content">
-                        <!-- Search form -->
-                        <div class="form-search light">
-                            <form action="index.php?act=hotdeals" method="POST">
-
-                                <div class="form-group has-icon has-label">
-                                    <label for="formSearchUpLocation3">Vị trí</label>
-                                    <input type="text" name="location" class="form-control" id="formSearchUpLocation3" placeholder="Thành phố">
-                                    <span class="form-control-icon"><i class="fa fa-map-marker"></i></span>
-                                </div>
-                                <button type="submit" name="search" id="formSearchSubmit3" class="btn btn-submit btn-theme btn-theme-dark btn-block">Tìm kiếm</button>
-
-                            </form>
-                        </div>
-                        <!-- /Search form -->
-                    </div>
-                </div>
+                
                 <!-- /widget -->
                 <!-- widget price filter -->
 
