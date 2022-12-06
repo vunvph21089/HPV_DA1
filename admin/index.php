@@ -369,6 +369,12 @@ if (isset($_GET['act'])) {
             } else {
                 $kyw = "";
             }
+            if (isset($_POST['fill']) && ($_POST['fill'] != "")) {
+                $stt = $_POST['fill'];
+            } else {
+                $stt = "";
+            }
+            var_dump($_POST['fill']);
             $listnhanvien = loadAll_nhanvien();
             $listtuvan = loadAll_bds_tuvan($kyw);
             include 'tuvan/list.php';

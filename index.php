@@ -7,6 +7,7 @@ include "model/tuvan.php";
 include "model/tintuc.php";
 include "model/danhmuc_tintuc.php";
 // include "model/user.php";
+$ds_bds = loadall_bds();
 $bds_new = loadall_bds_home();
 $loaibds = loadAll_danhmuc();
 $danhmuctt = loadAll_danhmuctintuc();
@@ -17,6 +18,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
     switch ($act) {
         case 'batdongsanchitiet':
             if (isset($_GET['idbds']) && ($_GET['idbds'] > 0)) {
+                $url_bds = $_SERVER['REQUEST_URI'];
                 $id = $_GET['idbds'];
                 tang_view($id);
                 $onebds = loadone_bds($id);
@@ -107,9 +109,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include 'view/contact.php';
             break;
         case 'listtuvan':
-            $id_nhanvien = $_SESSION['user'];
-            $nhanvientuvan = load_Bds_Tuvan_Nhanvien($id_nhanvien);
-            $listtuvan = loadAll_bds_tuvan();
+            $id_nhanvien = $_SESSION['user']['id'];
+            $listtuvan = load_Bds_Tuvan_Nhanvien($id_nhanvien);
             include 'view/batdongsantuvan.php';
             break;
 
@@ -148,20 +149,35 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "view/account/register.php";
             break;
         case 'dangnhap':
+            $url_bds = $_GET;
+            if(isset($_GET['url'])){
+                setcookie('url_bds', $_GET['url']);
+                setcookie('id_bds', $_GET['idbds']);
+            }
             if (isset($_POST['dangnhap'])) {
+                
                 $user = $_POST['user'];
                 $pass = md5($_POST['pass']);
                 $checkuser = checkuser($user, $pass);
-                if (is_array($checkuser)) {
-                    $_SESSION['user'] = $checkuser;
-                    if ($_SESSION['user']['id_role'] == 1) {
-                        header('location:admin/index.php');
-                    }else{
-                    header('location:index.php');
+                if(isset($_COOKIE['url_bds'])&& ($_COOKIE['id_bds'])){
+                    if (is_array($checkuser)) {
+                        $_SESSION['user'] = $checkuser;
+                        header('location:'.$_COOKIE['url_bds'].'&idbds='.$_COOKIE['id_bds']);
                     }
-                } else {
-                    $thongbao = "Tài khoản không tồn tại vui lòng kiểm tra hoặc đăng kí mới";
+                }else{
+                    if (is_array($checkuser)) {
+                        $_SESSION['user'] = $checkuser;
+                        if ($_SESSION['user']['id_role'] == 1) {
+                            header('location:admin/index.php');
+                        }else{
+                        header('location:index.php');
+                        }
+                    } else {
+                        $thongbao = "Tài khoản không tồn tại vui lòng kiểm tra hoặc đăng kí mới";
+                    }
                 }
+                
+                
             }
             include "view/account/login.php";
             break;
@@ -198,6 +214,5 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
     }
 } else {
-    $ds_bds = loadall_bds();
     include "view/home.php";
 }

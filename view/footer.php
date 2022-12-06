@@ -12,17 +12,17 @@
 
                  <!-- Get in touch -->
 
-                <h2 class="section-title wow fadeInDown text-left" data-wow-offset="200" data-wow-delay="100ms">
+                <!-- <h2 class="section-title wow fadeInDown text-left" data-wow-offset="200" data-wow-delay="100ms">
 
                     <span>LIÊN HỆ VỚI CHÚNG TÔI</span>
 
-                </h2>
+                </h2> -->
 
 
 
                 <!-- Contact form -->
 
-                <form name="contact-form" method="post" action="#" class="contact-form" id="contact-form">
+                <!-- <form name="contact-form" method="post" action="#" class="contact-form" id="contact-form">
 
 
 
@@ -140,13 +140,13 @@
 
 
 
-                </form>
+                </form> -->
 
                 <!-- /Contact form -->
 
             </div>
 
-            <div class="col-md-6 wow fadeInRight" data-wow-offset="200" data-wow-delay="200ms">
+            <div class="col-md-10 wow fadeInRight" data-wow-offset="200" data-wow-delay="200ms">
 
                 
 

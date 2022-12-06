@@ -37,14 +37,23 @@
                         <div class="card-body border-bottom-dashed border-bottom">
                             <form action="index.php?act=list_bds_tuvan" method="POST">
                                 <div class="row g-3">
-                                    <div class="col-xl-6">
+                                    <div class="col-xl-4">
                                         <div class="search-box">
                                             <input type="text" name="kyw" class="form-control search" placeholder="Nhập mã tư vấn cần tìm">
                                             <i class="ri-search-line search-icon"></i>
                                         </div>
                                     </div>
+                                    <div class="col-xl-2">
+                                        <div class="search-box">
+                                            <select name="fill" class="form-control search">
+                                                <option value="">Chọn trạng thái</option>
+                                                <option value="0">Đang chờ</option>
+                                                <option value="1">Đã giao việc</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     <!--end col-->
-                                    <div class="col-xl-6">
+                                    <div class="col-xl-5">
                                         <div class="row g-3">
                                             <div class="col-sm-4">
                                                 <div class="">

@@ -32,14 +32,14 @@ include "view/header.php";
                             <tbody class="list form-check-all">
                                 <tr>
                                     <?php
-                                    if(isset($_SESSION['user'])){
-                                        $id_nhanvien = $_SESSION['user'];
-                                    }
                                     foreach ($listtuvan as $tuvan) :
                                         extract($tuvan);
+                                    if(isset($_SESSION['user'])){
+                                        $id_nhanvien = $_SESSION['user']['id'];
+                                    }
+                                    
                                     ?>
                                 <tr>
-                                    <input type="hidden" value="<?=$id_nhanvien['id']?>">
                                     <td class="customer_name"><?= $tuvan['id'] ?></td>
                                     <?php
                                         $bds = loadone_bds($tuvan['id_bds']);

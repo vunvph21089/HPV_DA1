@@ -27,16 +27,21 @@ function loadOne_bds_tuvan($id)
     return $bds_tuvan;
 }
 
-function loadAll_bds_tuvan($kyw = "")
+function loadAll_bds_tuvan($kyw = "",$stt = "")
 {
     $sql = "SELECT * FROM bds_tuvan WHERE 1";
     if ($kyw != "") {
         $sql .= " and id like '%" . $kyw . "%'";
+    }
+    if ($stt!="") {
+        $sql.=" and trangthai= '".$stt."'";
     }
     $sql .= " ORDER BY id ";
     $list_bds_tuvan = pdo_query($sql);
     return $list_bds_tuvan;
 }
 function load_Bds_Tuvan_Nhanvien($id_nhanvien){
-    $sql = "SELECT * FROM bds_tuvan WHERE id_nhanvien= '$id_nhanvien' ";
+    $sql = "SELECT * FROM bds_tuvan WHERE id_nhanvien=" .$id_nhanvien;
+    $listtuvan = pdo_query($sql);
+    return $listtuvan;
 }

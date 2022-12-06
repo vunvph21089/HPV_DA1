@@ -135,7 +135,7 @@ include "view/header.php";
                             <?php
                             } else {
                                 echo '
-                                <a href="#" class="btn btn-block btn-theme btn-theme-dark" onclick="modal()">Tư vấn ngay</a>
+                                <a href="index.php?act=dangnhap&url='.$url_bds.'" class="btn btn-block btn-theme btn-theme-dark" onclick="modal()">Đăng nhập để tư vấn</a>
                                 <div align="center"><p style="color:red;font-size:18px;margin-top:10px">Bạn cần đăng nhập để đăng ký tư vấn !</p></div>';
                             }
                             ?>

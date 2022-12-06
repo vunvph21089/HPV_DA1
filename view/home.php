@@ -3517,10 +3517,8 @@ include "view/header.php";
 
             <h2 class="section-title wow fadeInDown" data-wow-offset="200" data-wow-delay="100ms">
 
-                <small>Nhận giá tốt nhất ngay trong email của bạn</small>
-
                 <span>Giảm 10% nếu bạn đăng ký ngay bây giờ</span>
-
+                
             </h2>
 
 
@@ -3537,19 +3535,7 @@ include "view/header.php";
 
                     <!-- Subscribe form -->
 
-                    <form action="#" class="form-subscribe">
-
-                        <div class="form-group">
-
-                            <label for="formSubscribeEmail" class="sr-only">Nhập email của bạn</label>
-
-                            <input type="text" class="form-control" id="formSubscribeEmail" placeholder="Enter your email here" title="Email is required">
-
-                        </div>
-
-                        <button type="submit" class="btn btn-submit btn-theme ripple-effect btn-theme-dark">Đăng kí</button>
-
-                    </form>
+                    
 
                     <!-- Subscribe form -->
 

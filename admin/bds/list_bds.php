@@ -35,36 +35,36 @@
                                 <div class="col-sm-auto">
                                     <div>
                                         <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn"><i class="ri-add-line align-bottom me-1"></i>
-                                        <a style="color:#fff" href="index.php?act=addbds">Thêm mới</a></button>
+                                            <a style="color:#fff" href="index.php?act=addbds">Thêm mới</a></button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="card-body border-bottom-dashed border-bottom">
-                                    <form action="index.php?act=listbds" method="POST">
+                            <form action="index.php?act=listbds" method="POST">
+                                <div class="row g-3">
+                                    <div class="col-xl-6">
+                                        <div class="search-box">
+                                            <input type="text" name="kyw" class="form-control search" placeholder="Nhập tên bất động sản cần tìm">
+                                            <i class="ri-search-line search-icon"></i>
+                                        </div>
+                                    </div>
+                                    <!--end col-->
+                                    <div class="col-xl-6">
                                         <div class="row g-3">
-                                            <div class="col-xl-6">
-                                                <div class="search-box">
-                                                    <input type="text" name="kyw" class="form-control search" placeholder="Nhập tên bất động sản cần tìm">
-                                                    <i class="ri-search-line search-icon"></i>
+                                            <div class="col-sm-4">
+                                                <div class="">
+                                                    <button type="submit" name="search" class="btn btn-success add-btn">Tìm kiếm</button>
                                                 </div>
                                             </div>
                                             <!--end col-->
-                                            <div class="col-xl-6">
-                                                <div class="row g-3">
-                                                    <div class="col-sm-4">
-                                                        <div class="">
-                                                            <button type="submit" name="search" class="btn btn-success add-btn">Tìm kiếm</button>
-                                                        </div>
-                                                    </div>
-                                                    <!--end col-->
-                                                    
-                                                </div>
-                                            </div>
+
                                         </div>
-                                        <!--end row-->
-                                    </form>
+                                    </div>
                                 </div>
+                                <!--end row-->
+                            </form>
+                        </div>
                         <div class="card-body">
                             <div>
                                 <div class="table-responsive table-card mb-1">
@@ -81,6 +81,7 @@
                                                 <th>Lượt xem</th>
                                                 <th>Loại</th>
                                                 <th>Người đăng</th>
+                                                <th>Ngày đăng</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -100,8 +101,16 @@
                                                             <td>' . $dientich . '</td>
                                                             <td>' . $sophong . '</td>
                                                             <td>' . $luotxem . '</td>
-                                                            <td>' . $id_loaibds . '</td>
+                                                            '; ?>
+                                                    <?php
+                                                    if (isset($bds['id_loaibds'])) {
+                                                        $loaibds = loadOne_danhmuc($bds['id_loaibds']);
+                                                        extract($loaibds);
+                                                        echo '<td>' . $name . '</td>';
+                                                    } ?>
+                                                <?php echo '
                                                             <td>' . $id_user . '</td>
+                                                            <td>' . $ngaydang . '</td>
                                                             <td>
                                                                 <ul class="list-inline hstack gap-2 mb-0">
                                                                  <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Edit">
