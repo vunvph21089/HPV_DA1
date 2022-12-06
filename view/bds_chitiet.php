@@ -106,23 +106,10 @@ include "view/header.php";
 
                                                 <div class="mb-3">
                                                     <label for="customername-field" class="form-label">Tên đăng nhập</label>
-                                                    <input type="text" name="user" value="<?= $id_login['user'] ?>" id="customername-field" class="form-control" placeholder="Nhập vào họ tên" />
+                                                    <input type="text" name="user" value="<?= $id_login['user'] ?>" id="customername-field" disabled class="form-control" placeholder="Nhập vào họ tên" />
 
                                                 </div>
-                                                <div class="mb-3">
-                                                    <label for="email-field" class="form-label">Email</label>
-                                                    <input type="email" name="email" value="<?= $id_login['email'] ?>" id="email-field" class="form-control" placeholder="Nhập vào email" required />
-                                                </div>
-
-                                                <div class="mb-3">
-                                                    <label for="email-field" class="form-label">Họ và tên</label>
-                                                    <input type="text" name="fullname" value="<?= $id_login['hoten'] ?>" id="email-field" class="form-control" placeholder="Nhập vào tên của bạn" required />
-                                                </div>
-
-                                                <div class="mb-3">
-                                                    <label for="phone-field" class="form-label">Số điện thoại</label>
-                                                    <input type="text" name="tel" value="<?= $id_login['tel'] ?>" id="phone-field" class="form-control" placeholder="Nhập vào số điện thoại" required />
-                                                </div>
+                                                
 
                                                 <div class="mb-3">
                                                     <label for="phone-field" class="form-label">Lời nhắn</label>

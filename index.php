@@ -107,6 +107,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include 'view/contact.php';
             break;
         case 'listtuvan':
+            $id_nhanvien = $_SESSION['user'];
+            $nhanvientuvan = load_Bds_Tuvan_Nhanvien($id_nhanvien);
             $listtuvan = loadAll_bds_tuvan();
             include 'view/batdongsantuvan.php';
             break;
@@ -114,15 +116,16 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case 'tuvan':
             if (isset($_POST['tuvan']) && $_POST['tuvan']) {
                 $id_user = $_POST['id_login'];
-                $tel = $_POST['tel'];
                 $note_user = $_POST['note_user'];
                 $id_bds = $_POST['id_bds'];
                 date_default_timezone_set("Asia/Ho_Chi_Minh");
                 $time_yeucau = date('h:i:sa d/m/Y');
                 insert_bds_tuvan($id_user, $note_user, $id_bds, $time_yeucau);
-                $thongbao = "Bạn đã gửi yêu cầu tư vấn thành công";
-                header('location:index.php?act=batdongsan');
+                $thongbaotuvan = 1;
+                $linkbdschitiet = 'index.php?act=batdongsanchitiet&idbds='.$id_bds;
+                header('location:'.$linkbdschitiet);
             }
+
             break;
         case 'dangky':
             if (isset($_POST['dangky']) && ($_POST['dangky'])) {
@@ -151,7 +154,11 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $checkuser = checkuser($user, $pass);
                 if (is_array($checkuser)) {
                     $_SESSION['user'] = $checkuser;
+                    if ($_SESSION['user']['id_role'] == 1) {
+                        header('location:admin/index.php');
+                    }else{
                     header('location:index.php');
+                    }
                 } else {
                     $thongbao = "Tài khoản không tồn tại vui lòng kiểm tra hoặc đăng kí mới";
                 }

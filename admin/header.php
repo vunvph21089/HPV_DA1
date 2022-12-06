@@ -76,7 +76,7 @@
                             <div class="dropdown-menu dropdown-menu-end">
                                 <!-- item-->
                                 <h6 class="dropdown-header">Xin chào</h6>
-                                <a class="dropdown-item" href="admin/index.php?act=exit"><i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span class="align-middle" data-key="t-logout">Đăng xuất</span></a>
+                                <a class="dropdown-item" href="index.php?act=exit"><i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span class="align-middle" data-key="t-logout">Đăng xuất</span></a>
                             </div>
                         </div>
                     </div>

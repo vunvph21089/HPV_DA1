@@ -8,7 +8,7 @@ include "../model/tintuc.php";
 include "../model/danhmuc_tintuc.php";
 include "../model/dbConfig.php";
 include "../model/tuvan.php";
-
+session_start();
 include "header.php";
 
 if (isset($_GET['act'])) {
@@ -405,6 +405,11 @@ if (isset($_GET['act'])) {
         case 'list_nhanvien':
             $listnhanvien = loadAll_nhanvien();
             include 'nhanvien/list.php';
+            break;
+        // 
+        case 'exit':
+            session_unset();
+            header('location:/view/account/login.php');
             break;
         default:
             include "home.php";

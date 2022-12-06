@@ -37,18 +37,6 @@ function loadAll_bds_tuvan($kyw = "")
     $list_bds_tuvan = pdo_query($sql);
     return $list_bds_tuvan;
 }
-function trangthai($n)
-{
-    switch ($n) {
-        case '0':
-            $tt = "Đang chờ";
-            break;
-        case '1':
-            $tt = "Đã giao việc";
-            break;
-        default:
-            $tt = "Đơn hàng mới";
-            break;
-    }
-    return $tt;
+function load_Bds_Tuvan_Nhanvien($id_nhanvien){
+    $sql = "SELECT * FROM bds_tuvan WHERE id_nhanvien= '$id_nhanvien' ";
 }
