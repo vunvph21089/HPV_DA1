@@ -123,8 +123,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $time_yeucau = date('h:i:sa d/m/Y');
                 insert_bds_tuvan($id_user, $note_user, $id_bds, $time_yeucau);
                 $thongbaotuvan = 1;
-                $linkbdschitiet = 'index.php?act=batdongsanchitiet&idbds='.$id_bds;
-                header('location:'.$linkbdschitiet);
+                $linkbdschitiet = 'index.php?act=batdongsanchitiet&idbds=' . $id_bds;
+                header('location:' . $linkbdschitiet);
             }
 
             break;
@@ -141,7 +141,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $thongbao = "";
                 if ($pass != $repass) {
                     $thongbao = "Nhập lại mật khẩu không đúng. Vui lòng nhập lại chính xác để đăng ký!";
-                }else{
+                } else {
                     insert_account($email, $hoten, $tel, $user, $pass);
                     $thongbao = "Đăng ký thành công. Đăng nhập để sử dụng chức năng !";
                 }
@@ -150,34 +150,26 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
         case 'dangnhap':
             $url_bds = $_GET;
-            if(isset($_GET['url'])){
+            if (isset($_GET['url'])) {
                 setcookie('url_bds', $_GET['url']);
                 setcookie('id_bds', $_GET['idbds']);
             }
             if (isset($_POST['dangnhap'])) {
-                
                 $user = $_POST['user'];
                 $pass = md5($_POST['pass']);
                 $checkuser = checkuser($user, $pass);
-                if(isset($_COOKIE['url_bds'])&& ($_COOKIE['id_bds'])){
-                    if (is_array($checkuser)) {
-                        $_SESSION['user'] = $checkuser;
-                        header('location:'.$_COOKIE['url_bds'].'&idbds='.$_COOKIE['id_bds']);
-                    }
-                }else{
+                if (isset($_COOKIE['url_bds']) && ($_COOKIE['id_bds'])) {
                     if (is_array($checkuser)) {
                         $_SESSION['user'] = $checkuser;
                         if ($_SESSION['user']['id_role'] == 1) {
                             header('location:admin/index.php');
-                        }else{
-                        header('location:index.php');
+                        } else {
+                            header('location:' . $_COOKIE['url_bds'] . '&idbds=' . $_COOKIE['id_bds']);
                         }
-                    } else {
-                        $thongbao = "Tài khoản không tồn tại vui lòng kiểm tra hoặc đăng kí mới";
                     }
+                } else {
+                    $thongbao = "Tài khoản không tồn tại vui lòng kiểm tra hoặc đăng kí mới";
                 }
-                
-                
             }
             include "view/account/login.php";
             break;

@@ -9,8 +9,8 @@ include "../model/danhmuc_tintuc.php";
 include "../model/dbConfig.php";
 include "../model/tuvan.php";
 session_start();
-include "header.php";
 
+include "header.php";
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {
@@ -374,9 +374,8 @@ if (isset($_GET['act'])) {
             } else {
                 $stt = "";
             }
-            var_dump($_POST['fill']);
             $listnhanvien = loadAll_nhanvien();
-            $listtuvan = loadAll_bds_tuvan($kyw);
+            $listtuvan = loadAll_bds_tuvan($kyw, $stt);
             include 'tuvan/list.php';
             break;
         case 'sua_bds_tuvan':
@@ -415,7 +414,7 @@ if (isset($_GET['act'])) {
         // 
         case 'exit':
             session_unset();
-            header('location:/view/account/login.php');
+            header('location:view/account/login.php');
             break;
         default:
             include "home.php";
