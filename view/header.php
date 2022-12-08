@@ -473,10 +473,11 @@
                                                         <a href="index.php?act=quenmk">Quên mật khẩu </a>
                                                         <a href="index.php?act=edit_taikhoan">Cập nhật tài khoản</a>
                                                         <?php
-                                                        if ($id_role == 1) {
+                                                        if ($id_role == 1) { 
                                                         ?>
                                                             <a href="admin/index.php">Đăng nhập Admin</a>
                                                         <?php } else if ($id_role == 2) {
+                                                            
                                                         ?>
                                                             <a href="index.php?act=listtuvan">Tư vấn</a>
                                                         <?php } ?>

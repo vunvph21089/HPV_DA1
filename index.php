@@ -151,8 +151,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case 'dangnhap':
             $url_bds = $_GET;
             if (isset($_GET['url'])) {
-                setcookie('url_bds', $_GET['url']);
-                setcookie('id_bds', $_GET['idbds']);
+                setcookie('url_bds', $_GET['url'],time()+3600);
+                setcookie('id_bds', $_GET['idbds'],time()+3600);
             }
             if (isset($_POST['dangnhap'])) {
                 $user = $_POST['user'];
@@ -163,12 +163,27 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                         $_SESSION['user'] = $checkuser;
                         if ($_SESSION['user']['id_role'] == 1) {
                             header('location:admin/index.php');
-                        } else {
+                        } else {                 
                             header('location:' . $_COOKIE['url_bds'] . '&idbds=' . $_COOKIE['id_bds']);
+                            setcookie("url_bds", "", time()-3600);  
+                            setcookie("id_bds", "", time()-3600); 
                         }
+                    } else{
+                        $thongbao = "Tài khoản không tồn tại vui lòng kiểm tra hoặc đăng kí mới";
                     }
                 } else {
-                    $thongbao = "Tài khoản không tồn tại vui lòng kiểm tra hoặc đăng kí mới";
+                    
+                    if (is_array($checkuser)) {
+                        
+                        $_SESSION['user'] = $checkuser;
+                        if ($_SESSION['user']['id_role'] == 1) {
+                            header('location:admin/index.php');
+                        } else {
+                            header('location:index.php');
+                        }
+                    } else {
+                            $thongbao = "Tài khoản không tồn tại vui lòng kiểm tra hoặc đăng kí mới";
+                    }
                 }
             }
             include "view/account/login.php";
