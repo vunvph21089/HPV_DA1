@@ -95,54 +95,58 @@
                                             <form class="needs-validation" action="index.php?act=dangky" method="POST">
                                             <div class="mb-3">
                                                     <label for="username" class="form-label">Họ và tên<span class="text-danger">*</span></label>
-                                                    <input type="text" name="hoten" class="form-control" id="username" placeholder="Nhập vào họ và tên" required>
+                                                    <input type="text" name="hoten" class="form-control" id="username" placeholder="Nhập vào họ và tên" >
                                                     <div class="invalid-feedback">
                                                         Vui lòng nhập vào họ tên của bạn
                                                     </div>
                                                 </div>
+                                                <h6><?php if (isset($error['hoten'])) {echo $error['hoten'];}?></h6>
                                                 <div class="mb-3">
                                                     <label for="username" class="form-label">Tên đăng nhập <span class="text-danger">*</span></label>
-                                                    <input type="text" name="user" class="form-control" id="username" placeholder="Nhập vào tên đăng nhập" required>
+                                                    <input type="text" name="user" class="form-control" id="username" placeholder="Nhập vào tên đăng nhập" >
                                                     <div class="invalid-feedback">
                                                         Vui lòng nhập vào tên đăng nhập
                                                     </div>
                                                 </div>
+                                                <h6><?php if (isset($error['user'])) {echo $error['user'];}?></h6>
                                                 <div class="mb-3">
                                                     <label for="useremail" class="form-label">Email <span class="text-danger">*</span></label>
-                                                    <input type="email" name="email" class="form-control" id="useremail" placeholder="Nhập vào địa chỉ email" required>
+                                                    <input type="email" name="email" class="form-control" id="useremail" placeholder="Nhập vào địa chỉ email" >
                                                     <div class="invalid-feedback">
                                                         Vui lòng nhập vào email của bạn
                                                     </div>
                                                 </div>
+                                                <h6><?php if (isset($error['email'])) {echo $error['email'];}?></h6>
                                                 <div class="mb-3">
                                                     <label for="username" class="form-label">Số điện thoại<span class="text-danger">*</span></label>
-                                                    <input type="text" name="tel" class="form-control" id="username" placeholder="Nhập vào số điện thoại" required>
+                                                    <input type="text" name="tel" class="form-control" id="username" placeholder="Nhập vào số điện thoại" >
                                                     <div class="invalid-feedback">
                                                         Vui lòng nhập vào số điện thoại
                                                     </div>
                                                 </div>
-
+                                                <h6><?php if (isset($error['tel'])) {echo $error['tel'];}?></h6>
                                                 <div class="mb-3">
                                                     <label class="form-label" for="password-input">Mật khẩu</label>
                                                     <div class="position-relative auth-pass-inputgroup">
-                                                        <input type="password" name="pass" class="form-control pe-5 password-input" onpaste="return false" placeholder="Nhập vào mật khẩu " id="password-input" aria-describedby="passwordInput" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                                                        <input type="password" name="pass" class="form-control pe-5 password-input" onpaste="return false" placeholder="Nhập vào mật khẩu " id="password-input" aria-describedby="passwordInput" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" >
                                                         <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon" type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i></button>
                                                         <div class="invalid-feedback">
                                                         Vui lòng nhập vào mật khẩu 
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <h6><?php if (isset($error['pass'])) {echo $error['pass'];}?></h6>
                                                 <div class="mb-3">
                                                     <label class="form-label" for="password-input">Nhập lại mật khẩu</label>
                                                     <div class="position-relative auth-pass-inputgroup">
-                                                        <input type="password" name="repass" class="form-control pe-5 password-input" onpaste="return false" placeholder="Nhập lại mật khẩu" id="password-input" aria-describedby="passwordInput" required>
+                                                        <input type="password" name="repass" class="form-control pe-5 password-input" onpaste="return false" placeholder="Nhập lại mật khẩu" id="password-input" aria-describedby="passwordInput" >
                                                         <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon" type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i></button>
                                                         <div class="invalid-feedback">
                                                         Vui lòng nhập lại mật khẩu 
                                                         </div>
                                                     </div>
                                                 </div>
-
+                                                <h6><?php if (isset($error['repass'])) {echo $error['repass'];}?></h6>
                                                 <div class="mb-4">
                                                     <p class="mb-0 fs-12 text-muted fst-italic">Bằng cách đăng ký, bạn đồng ý với HPV <a href="#" class="text-primary text-decoration-underline fst-normal fw-medium">Điều khoản sử dụng</a></p>
                                                 </div>

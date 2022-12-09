@@ -129,21 +129,52 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
             break;
         case 'dangky':
+            require 'view/account/validate.php';
             if (isset($_POST['dangky']) && ($_POST['dangky'])) {
-                $email = $_POST['email'];
-                $hoten = $_POST['hoten'];
-                $user = $_POST['user'];
-                $tel = $_POST['tel'];
-                $pass = md5($_POST['pass']);
-                $repass = md5($_POST['repass']);
-                // var_dump($pass,$repass);
-                // die();
-                $thongbao = "";
-                if ($pass != $repass) {
-                    $thongbao = "Nhập lại mật khẩu không đúng. Vui lòng nhập lại chính xác để đăng ký!";
-                } else {
-                    insert_account($email, $hoten, $tel, $user, $pass);
-                    $thongbao = "Đăng ký thành công. Đăng nhập để sử dụng chức năng !";
+                if (empty($_POST['hoten'])) {
+                    $error['hoten'] = "Không được bỏ trống họ tên";
+                }
+
+                if (empty($_POST['user'])) {
+                    $error['user'] = "Không được bỏ trống tên đăng nhập";
+                }
+
+                if (empty($_POST['email'])) {
+                    $error['email'] = "Không được bỏ trống email";
+                } else if (!is_email($_POST['email'])) {
+                    $error['email'] = "Định dạng email không đúng";
+                }
+
+                if (empty($_POST['pass'])) {
+                    $error['pass'] = "Bạn chưa nhập vào mật khẩu";
+                }
+
+                if (empty($_POST['repass'])) {
+                    $error['repass'] = "Không được bỏ trống nhập lại mật khẩu";
+                } else if ($_POST['repass'] != $_POST['pass']) {
+                    $error['repass'] = "Nhập lại mật khẩu không chính xác";
+                }
+
+                if (empty($_POST['tel'])) {
+                    $error['tel'] = "Không được bỏ trống số điện thoại";
+                } else if (!is_tel($_POST['tel'])) {
+                    $error['tel'] = "Định dạng số điện thoại không phù hợp";
+                }
+
+                if (empty($error)) {
+                    $email = $_POST['email'];
+                    $hoten = $_POST['hoten'];
+                    $user = $_POST['user'];
+                    $tel = $_POST['tel'];
+                    $pass = md5($_POST['pass']);
+                    $repass = md5($_POST['repass']);
+                    $thongbao = "";
+                    if ($pass == $repass) {
+                        insert_account($email, $hoten, $tel, $user, $pass);
+                        $thongbao = "Đăng ký thành công. Đăng nhập để sử dụng chức năng !";
+                    } else {
+                        $thongbao = "Nhập lại mật khẩu không đúng. Vui lòng nhập lại chính xác để đăng ký!";
+                    }
                 }
             }
             include "view/account/register.php";
@@ -151,38 +182,49 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case 'dangnhap':
             $url_bds = $_GET;
             if (isset($_GET['url'])) {
-                setcookie('url_bds', $_GET['url'],time()+3600);
-                setcookie('id_bds', $_GET['idbds'],time()+3600);
+                setcookie('url_bds', $_GET['url'], time() + 3600);
+                setcookie('id_bds', $_GET['idbds'], time() + 3600);
             }
             if (isset($_POST['dangnhap'])) {
-                $user = $_POST['user'];
-                $pass = md5($_POST['pass']);
-                $checkuser = checkuser($user, $pass);
-                if (isset($_COOKIE['url_bds']) && ($_COOKIE['id_bds'])) {
-                    if (is_array($checkuser)) {
-                        $_SESSION['user'] = $checkuser;
-                        if ($_SESSION['user']['id_role'] == 1) {
-                            header('location:admin/index.php');
-                        } else {                 
-                            header('location:' . $_COOKIE['url_bds'] . '&idbds=' . $_COOKIE['id_bds']);
-                            setcookie("url_bds", "", time()-3600);  
-                            setcookie("id_bds", "", time()-3600); 
-                        }
-                    } else{
-                        $thongbao = "Tài khoản không tồn tại vui lòng kiểm tra hoặc đăng kí mới";
-                    }
-                } else {
-                    
-                    if (is_array($checkuser)) {
-                        
-                        $_SESSION['user'] = $checkuser;
-                        if ($_SESSION['user']['id_role'] == 1) {
-                            header('location:admin/index.php');
+                if (empty($_POST['user'])) {
+                    $error['user'] = 'Không được bỏ trống tên đăng nhập';
+                }
+
+                if (empty($_POST['pass'])) {
+                    $error['pass'] = 'Không được bỏ trống mật khẩu';
+                }
+
+                if (empty($error)) {
+                    $user = isset($_POST['user']) ? $_POST['user'] : '';
+                    $pass = isset($_POST['pass']) ? md5($_POST['pass']) : '';
+
+                    $checkuser = checkuser($user, $pass);
+                    if (isset($_COOKIE['url_bds']) && ($_COOKIE['id_bds'])) {
+                        if (is_array($checkuser)) {
+                            $_SESSION['user'] = $checkuser;
+                            if ($_SESSION['user']['id_role'] == 1) {
+                                header('location:admin/index.php');
+                            } else {
+                                header('location:' . $_COOKIE['url_bds'] . '&idbds=' . $_COOKIE['id_bds']);
+                                setcookie("url_bds", "", time() - 3600);
+                                setcookie("id_bds", "", time() - 3600);
+                            }
                         } else {
-                            header('location:index.php');
+                            $thongbao = "Tài khoản không tồn tại vui lòng kiểm tra hoặc đăng kí mới";
                         }
                     } else {
+
+                        if (is_array($checkuser)) {
+
+                            $_SESSION['user'] = $checkuser;
+                            if ($_SESSION['user']['id_role'] == 1) {
+                                header('location:admin/index.php');
+                            } else {
+                                header('location:index.php');
+                            }
+                        } else {
                             $thongbao = "Tài khoản không tồn tại vui lòng kiểm tra hoặc đăng kí mới";
+                        }
                     }
                 }
             }

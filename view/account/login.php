@@ -1,9 +1,9 @@
-
 <!doctype html>
 <html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable">
 
 
 <!-- Mirrored from themesbrand.com/velzon/html/default/auth-signin-cover.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Nov 2022 01:09:38 GMT -->
+
 <head>
 
     <meta charset="utf-8" />
@@ -28,20 +28,21 @@
 </head>
 
 <style>
-    h6{
+    h6 {
         color: red;
         padding-bottom: 10px;
     }
 </style>
+
 <body>
     <!-- auth-page wrapper -->
     <div class="auth-page-wrapper auth-bg-cover py-5 d-flex justify-content-center align-items-center min-vh-100">
-        <div class="bg-overlay">   
-    </div>
-        
+        <div class="bg-overlay">
+        </div>
+
         <!-- auth-page content -->
         <div class="auth-page-content overflow-hidden pt-lg-5">
-       
+
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -52,7 +53,7 @@
                                         <div class="bg-overlay"></div>
                                         <div class="position-relative h-100 d-flex flex-column">
                                             <div class="mb-4">
-                                                
+
                                                 <a href="index.html" class="d-block">
                                                     <img src="assets/images/logo-light.png" alt="" height="18">
                                                 </a>
@@ -99,8 +100,9 @@
 
                                                 <div class="mb-3">
                                                     <label for="username" class="form-label">Tên đăng nhập</label>
-                                                    <input type="text"  name="user" class="form-control" id="username" placeholder="Nhập vào tên đăng nhập">
+                                                    <input type="text" name="user" class="form-control" id="username" placeholder="Nhập vào tên đăng nhập">
                                                 </div>
+                                                <h6><?php if (isset($error['user'])) {echo $error['user'];}?></h6>
 
                                                 <div class="mb-3">
                                                     <div class="float-end">
@@ -112,6 +114,7 @@
                                                         <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon" type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i></button>
                                                     </div>
                                                 </div>
+                                                <h6><?php if (isset($error['pass'])) {echo $error['pass'];}?></h6>
 
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="" id="auth-remember-check">
@@ -119,13 +122,15 @@
                                                 </div>
 
                                                 <div class="mt-4">
-                                                <h6>
-                                                    <?php
-                                                    
-                                                    if (isset($thongbao) && ($thongbao != "")) {
-                                                        echo $thongbao;
-                                                    }?>
-                                                </h6>
+                                                    <h6>
+                                                        
+                                                        <?php
+
+                                                        if (isset($thongbao) && ($thongbao != "")) {
+                                                            echo $thongbao;
+                                                        } ?>
+                                                    </h6>
+
                                                     <!-- <button class="btn btn-success w-100"  name="dangnhap" type="submit">Sign In</button> -->
                                                     <input class="btn btn-success w-100" type="submit" name="dangnhap" value="Đăng nhập">
                                                 </div>
@@ -173,7 +178,9 @@
                     <div class="col-lg-12">
                         <div class="text-center">
                             <p class="mb-0">&copy;
-                                <script>document.write(new Date().getFullYear())</script> Velzon. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand
+                                <script>
+                                    document.write(new Date().getFullYear())
+                                </script> Velzon. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand
                             </p>
                         </div>
                     </div>
@@ -198,4 +205,5 @@
 
 
 <!-- Mirrored from themesbrand.com/velzon/html/default/auth-signin-cover.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Nov 2022 01:09:38 GMT -->
+
 </html>

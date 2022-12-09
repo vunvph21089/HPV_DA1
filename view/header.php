@@ -273,7 +273,7 @@
         }
 
         .nhanvien {
-            font-size:48px;
+            font-size: 48px;
             font-weight: 700;
             text-align: center;
             color: #9ea6b1;
@@ -281,8 +281,9 @@
             font-family: 'Raleway', sans-serif;
             padding-bottom: 10px;
         }
-        .bdstuvan{
-            font-size:16px;
+
+        .bdstuvan {
+            font-size: 16px;
             font-weight: 700;
             text-align: center;
             color: #9ea6b1;
@@ -290,20 +291,47 @@
             font-family: 'Raleway', sans-serif;
             padding-bottom: 20px;
         }
-        #bangtuvan{
+
+        #bangtuvan {
 
             margin: 105px 10px;
             z-index: -1 !important;
         }
-        #bangtuvan thead{
+
+        #bangtuvan thead {
             background-color: #5c677b;
             color: #fff;
         }
-        #bangtuvan table{
+
+        #bangtuvan table {
             border: 1px solid #ccc;
             margin-bottom: 20px;
         }
+        .form_account{
+            margin: 100px 50px;
+        }
+        .form-controls{
+            width: 50%;
+            height: 40px;
+            border: 1px solid #ced4da;
+            color: #212529;
+            background-color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 5px 20px;
+            color: #000;
+            margin: 0 20px 20px;
+            border-radius: 5px;
+        }
+        .form_account h5{
+            font-weight: 500;
+            margin: 0 20px 5px;
+            font-size: 16px;
+            color: #000;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* style log-in */
         
+        /*  */
     </style>
 
 
@@ -446,10 +474,6 @@
                                             <li class="megamenu sale"><a href="index.php?act=blog">Tin tức</a>
                                             </li>
 
-                                            <li><a href="index.php?act=contact">Liên hệ</a>
-                                            </li>
-
-
 
                                             <!-- <a href="index.php?act=dangnhap">Đăng nhập</a>
                                             
@@ -473,11 +497,11 @@
                                                         <a href="index.php?act=quenmk">Quên mật khẩu </a>
                                                         <a href="index.php?act=edit_taikhoan">Cập nhật tài khoản</a>
                                                         <?php
-                                                        if ($id_role == 1) { 
+                                                        if ($id_role == 1) {
                                                         ?>
                                                             <a href="admin/index.php">Đăng nhập Admin</a>
                                                         <?php } else if ($id_role == 2) {
-                                                            
+
                                                         ?>
                                                             <a href="index.php?act=listtuvan">Tư vấn</a>
                                                         <?php } ?>
