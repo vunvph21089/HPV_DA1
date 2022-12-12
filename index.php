@@ -105,6 +105,25 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
         case 'contact':
             // code  vao day
+            require 'view/account/validate.php';
+            if (isset($_POST['submit']) && ($_POST['submit'])) {
+                if (empty($_POST['name'])) {
+                    $error['name'] = "Bạn chưa nhập vào họ tên";
+                }
+                if (empty($_POST['email'])) {
+                    $error['email'] = "Bạn chưa nhập vào email";
+                } else if (!is_email($_POST['email'])) {
+                    $error['email'] = "Định dạng email không đúng";
+                }
+                if (empty($_POST['message'])) {
+                    $error['message'] = "Bạn chưa nhập vào lời nhắn";
+                }
+
+                if (empty($error)) {
+                    $thongbao = "Bạn đã gửi yêu cầu liên hệ thành công !";
+                }
+            }
+
 
             include 'view/contact.php';
             break;

@@ -12,18 +12,13 @@
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-
     <title>HPV</title>
-
-
 
     <!-- Favicon -->
 
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="view/assets/ico/apple-touch-icon-144-precomposed.png">
 
-    <link rel="shortcut icon" href="/view/assets/img/logo_sm.png">
+    <link rel="shortcut icon" href="view/assets/img/logo_sm.png">
 
 
 
@@ -472,6 +467,8 @@
                                         <ul class="nav sf-menu">
 
                                             <li class="megamenu sale"><a href="index.php?act=blog">Tin tức</a>
+                                            </li>
+                                            <li class="megamenu sale"><a href="index.php?act=contact">Liên hệ</a>
                                             </li>
 
 

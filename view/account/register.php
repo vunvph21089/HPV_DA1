@@ -147,7 +147,6 @@
                                                     </div>
                                                 </div>
                                                 <h6><?php if (isset($error['repass'])) {echo $error['repass'];}?></h6>
-                                                
 
                                                 <div id="password-contain" class="p-3 bg-light mb-2 rounded">
                                                     <h5 class="fs-13">Mật khẩu cần phải chứa:</h5>
