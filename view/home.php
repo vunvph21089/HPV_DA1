@@ -32,7 +32,7 @@ include "view/header.php";
                                     <div class="div-cell">
 
                                         <div class="caption-content">
-                                            
+
                                             <h2 class="caption-subtitle">
 
                                                 <span class="span-caption">Chúng tôi sẽ theo trong suốt quá trình</span>
@@ -68,54 +68,54 @@ include "view/header.php";
 
                     <div class="item slide2 ver2">
 
-<div class="caption">
+                        <div class="caption">
 
-    <div class="container">
+                            <div class="container">
 
-        <div class="div-table">
+                                <div class="div-table">
 
-            <div class="div-cell">
+                                    <div class="div-cell">
 
-                <div class="caption-content">
+                                        <div class="caption-content">
 
-                    <!-- Search form -->
-
-                    
-
-                    <!-- /Search form -->
+                                            <!-- Search form -->
 
 
 
-                    <h2 class="caption-subtitle">
+                                            <!-- /Search form -->
 
-                        <span class="span-caption">Chúng tôi sẽ theo trong suốt quá trình</span>
-                        Tìm ngôi nhà mơ ước của bạn
 
-                    </h2>
 
-                    <p class="caption-text">
+                                            <h2 class="caption-subtitle">
 
-                        Duy nhất trong tháng 12, HPV chính thức triển khai chương trình khuyến mại và hoàn tiền cực khủng chưa từng có. Đặc biệt, khi nạp tiền trong thời gian diễn ra chương trình, Quý khách sẽ được nhận ngay các quà tặng hấp dẫn và giá trị.
+                                                <span class="span-caption">Chúng tôi sẽ theo trong suốt quá trình</span>
+                                                Tìm ngôi nhà mơ ước của bạn
 
-                    </p>
+                                            </h2>
 
-                    <p class="caption-text">
+                                            <p class="caption-text">
 
-                        <a class="btn btn-theme ripple-effect btn-theme-md" href="index.php?act=batdongsan"><i class="fa fa-list">&nbsp;</i> Xem tất cả bất động sản</a>
+                                                Duy nhất trong tháng 12, HPV chính thức triển khai chương trình khuyến mại và hoàn tiền cực khủng chưa từng có. Đặc biệt, khi nạp tiền trong thời gian diễn ra chương trình, Quý khách sẽ được nhận ngay các quà tặng hấp dẫn và giá trị.
 
-                    </p>
+                                            </p>
 
-                </div>
+                                            <p class="caption-text">
 
-            </div>
+                                                <a class="btn btn-theme ripple-effect btn-theme-md" href="index.php?act=batdongsan"><i class="fa fa-list">&nbsp;</i> Xem tất cả bất động sản</a>
 
-        </div>
+                                            </p>
 
-    </div>
+                                        </div>
 
-</div>
+                                    </div>
 
-</div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                     <!-- Slide 3 -->
 
@@ -144,7 +144,7 @@ include "view/header.php";
 
                                             <p class="caption-text">
 
-                                            Duy nhất trong tháng 12, HPV chính thức triển khai chương trình khuyến mại và hoàn tiền cực khủng chưa từng có. Đặc biệt, khi nạp tiền trong thời gian diễn ra chương trình, Quý khách sẽ được nhận ngay các quà tặng hấp dẫn và giá trị.
+                                                Duy nhất trong tháng 12, HPV chính thức triển khai chương trình khuyến mại và hoàn tiền cực khủng chưa từng có. Đặc biệt, khi nạp tiền trong thời gian diễn ra chương trình, Quý khách sẽ được nhận ngay các quà tặng hấp dẫn và giá trị.
 
                                             </p>
 
@@ -223,7 +223,7 @@ include "view/header.php";
                                 <!-- Slides -->
 
                                 <?php
-                                
+
                                 foreach ($ds_bds as $bds) {
                                     extract($bds);
                                     $linkbds = "index.php?act=batdongsanchitiet&idbds=" . $id;
@@ -331,19 +331,19 @@ include "view/header.php";
             <div class="tabs awesome wow fadeInUp" data-wow-offset="70" data-wow-delay="500ms">
 
                 <ul id="tabs1" class="nav">
-                <?php
-                foreach ($loaibds as $dm) {
-                    extract($dm);
-                    $linkdm = "index.php?act=batdongsan&id_loaibds=" . $id;
-                    if (isset($linkdm)) {
-                        $current = "current";
-                    } else {
-                        $current = "";
+                    <?php
+                    foreach ($loaibds as $dm) {
+                        extract($dm);
+                        $linkdm = "index.php?act=batdongsan&id_loaibds=" . $id;
+                        if (isset($linkdm)) {
+                            $current = "current";
+                        } else {
+                            $current = "";
+                        }
+                        echo '<li class="dress ' . $current . ' "><a href="' . $linkdm . '" data-filter="*">' . $name . '</a></li>';
                     }
-                    echo '<li class="dress ' . $current . ' "><a href="' . $linkdm . '" data-filter="*">' . $name . '</a></li>';
-                }
-                ?>
-                    
+                    ?>
+
 
                 </ul>
 
@@ -2714,7 +2714,7 @@ include "view/header.php";
 
                         <div class="media">
 
-                            
+
                             <img src="https://i.pinimg.com/564x/5c/9d/e5/5c9de57ebfdb5c4a5fe30ae2c459677f.jpg" alt="" />
 
                         </div>
@@ -2751,7 +2751,7 @@ include "view/header.php";
 
                         <div class="media">
 
-                        <img src="https://i.pinimg.com/736x/b0/56/7d/b0567dfb53d779cf6f481b9cc04dc220.jpg" alt="" />
+                            <img src="https://i.pinimg.com/736x/b0/56/7d/b0567dfb53d779cf6f481b9cc04dc220.jpg" alt="" />
 
                         </div>
 
@@ -2787,7 +2787,7 @@ include "view/header.php";
 
                         <div class="media">
 
-                        <img src="https://i.pinimg.com/564x/80/3b/bd/803bbd7f5ea4e50e9183636639531611.jpg" alt="" />
+                            <img src="https://i.pinimg.com/564x/80/3b/bd/803bbd7f5ea4e50e9183636639531611.jpg" alt="" />
 
                         </div>
 
@@ -2969,97 +2969,7 @@ include "view/header.php";
 
 
 
-    <!-- PAGE -->
 
-    <section class="page-section image">
-
-        <div class="container">
-
-
-
-            <div class="row">
-
-                <div class="col-md-3 col-sm-6 wow fadeInDown" data-wow-offset="200" data-wow-delay="100ms">
-
-                    <div class="thumbnail thumbnail-counto no-border no-padding">
-
-                        <div class="caption">
-
-                            <div class="caption-icon"><i class="fa fa-heart"></i></div>
-
-                            <div class="caption-number">10 million</div>
-
-                            <h4 class="caption-title">Happy Customers</h4>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-3 col-sm-6 wow fadeInDown" data-wow-offset="200" data-wow-delay="200ms">
-
-                    <div class="thumbnail thumbnail-counto no-border no-padding">
-
-                        <div class="caption">
-
-                            <div class="caption-icon"><i class="fa fa-thumbs-o-up"></i></div>
-
-                            <div class="caption-number">50 million</div>
-
-                            <h4 class="caption-title">Sellers Prefer us</h4>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-3 col-sm-6 wow fadeInDown" data-wow-offset="200" data-wow-delay="300ms">
-
-                    <div class="thumbnail thumbnail-counto no-border no-padding">
-
-                        <div class="caption">
-
-                            <div class="caption-icon"><i class="fa fa-users"></i></div>
-
-                            <div class="caption-number">12 million</div>
-
-                            <h4 class="caption-title">Buyers trust us</h4>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-3 col-sm-6 wow fadeInDown" data-wow-offset="200" data-wow-delay="400ms">
-
-                    <div class="thumbnail thumbnail-counto no-border no-padding">
-
-                        <div class="caption">
-
-                            <div class="caption-icon"><i class="fa fa-comments-o"></i></div>
-
-                            <div class="caption-number">1255</div>
-
-                            <h4 class="caption-title">Expert Guidance</h4>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-        </div>
-
-    </section>
-
-    <!-- /PAGE -->
 
 
 
@@ -3099,7 +3009,7 @@ include "view/header.php";
 
                                     <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
 
-                                        <span class="dot"></span> Các khoản phí khác  sẽ phải trả là gì?
+                                        <span class="dot"></span> Các khoản phí khác sẽ phải trả là gì?
 
                                     </a>
 
@@ -3111,7 +3021,7 @@ include "view/header.php";
 
                                 <div class="panel-body">
 
-                                    Bạn sẽ không chả bất cứ phí phát sinh khác đến chúng tôi sẽ hướng dân mua đất 
+                                    Bạn sẽ không chả bất cứ phí phát sinh khác đến chúng tôi sẽ hướng dân mua đất
 
                                 </div>
 
@@ -3219,7 +3129,7 @@ include "view/header.php";
 
                                 <div class="panel-body">
 
-                                  Bạn phải trả tiền đặt cọc , và đến ngay trụ sở làm việc tiền trao rồi nhận đất
+                                    Bạn phải trả tiền đặt cọc , và đến ngay trụ sở làm việc tiền trao rồi nhận đất
 
                                 </div>
 
@@ -3313,7 +3223,7 @@ include "view/header.php";
 
     <!-- PAGE -->
 
-    
+
 
     <!-- /PAGE -->
 
@@ -3417,7 +3327,7 @@ include "view/header.php";
 
                                 <br />
 
-                                <a href="index.php?act=batdongsan" class="btn btn-theme"><i class="fa fa-chevron-right">&nbsp;</i> xem ngay</a>
+                                <a href="index.php?act=blog" class="btn btn-theme"><i class="fa fa-chevron-right">&nbsp;</i> xem ngay</a>
 
                             </div>
 
@@ -3477,7 +3387,7 @@ include "view/header.php";
 
                                 <br />
 
-                                <a href="index.php?act=batdongsan" class="btn btn-theme"><i class="fa fa-chevron-right">&nbsp;</i> xem ngay</a>
+                                <a href="index.php?act=blog" class="btn btn-theme"><i class="fa fa-chevron-right">&nbsp;</i> xem ngay</a>
 
                             </div>
 
@@ -3493,7 +3403,7 @@ include "view/header.php";
 
             <div class="text-center margin-top wow fadeInDown" data-wow-offset="200" data-wow-delay="100ms">
 
-                <a href="#" class="btn btn-theme ripple-effect btn-theme-light btn-more-posts">Xem tất cả</a>
+                <a href="index.php?act=blog" class="btn btn-theme ripple-effect btn-theme-light btn-more-posts">Xem tất cả</a>
 
             </div>
 
@@ -3518,7 +3428,7 @@ include "view/header.php";
             <h2 class="section-title wow fadeInDown" data-wow-offset="200" data-wow-delay="100ms">
 
                 <span>Giảm 10% nếu bạn đăng ký ngay bây giờ</span>
-                
+
             </h2>
 
 
@@ -3527,7 +3437,7 @@ include "view/header.php";
 
                 <div class="col-md-8 col-md-offset-2">
 
-                        
+
 
                     <p class="text-center"></p>
 
@@ -3535,7 +3445,7 @@ include "view/header.php";
 
                     <!-- Subscribe form -->
 
-                    
+
 
                     <!-- Subscribe form -->
 

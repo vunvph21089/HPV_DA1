@@ -8,8 +8,15 @@
         pdo_query($sql);
     }
 
-    function loadAll_user(){
-        $sql = "SELECT * FROM account order by id";
+    function loadAll_user($iduser = 0,$id_role = 0){
+        $sql = "SELECT * FROM account WHERE 1";
+        if ($iduser > 0) {
+            $sql .= " and id= '" . $iduser . "' ";
+        }
+        if ($id_role > 0) {
+            $sql .= " and id_role= '" . $id_role . "' ";
+        }
+        $sql .= " ORDER BY id DESC";
         $listuser=pdo_query($sql);
         return $listuser;
     }
@@ -32,4 +39,9 @@
         $user=pdo_query_one($sql);
         return $user;
     }
+    function loadAll_tacgia(){
+        $sql = "SELECT * FROM account where id_role=4 or id_role= 1";
+        $listtacgia=pdo_query($sql);
+        return $listtacgia;
+    } 
 ?>

@@ -46,9 +46,7 @@
                                         <thead class="table-light text-muted">
                                             <tr>
                                                 <th scope="col" style="width: 50px;">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="checkAll" value="option">
-                                                    </div>
+                                                    
                                                 </th>
 
                                                 <th class="sort" data-sort="customer_name">Mã danh mục tin tức</th>
@@ -62,9 +60,7 @@
                                                 extract($dmtintuc);
                                                 echo '<tr>
                                                 <th scope="row">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" name="chk_child" value="option1">
-                                                    </div>
+                                                    
                                                 </th>
                                                 <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
                                                 <td class="customer_name">' . $id . '</td>

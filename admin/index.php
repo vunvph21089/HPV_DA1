@@ -69,8 +69,13 @@ if (isset($_GET['act'])) {
             } else {
                 $kyw = "";
             }
+            if (isset($_POST['loaibds']) && ($_POST['loaibds'] != "")) {
+                $id_loaibds = $_POST['loaibds'];
+            } else {
+                $id_loaibds = 0;
+            }
             $listloaibds = loadAll_danhmuc();
-            $listbds = loadall_bds($kyw);
+            $listbds = loadall_bds($kyw, $id_loaibds);
             include "bds/list_bds.php";
             break;
         case 'deletebds':
@@ -117,7 +122,7 @@ if (isset($_GET['act'])) {
                     $imgValue = 'uploads/' . $filename;
                 }
                 // UPLOAD ẢNH MÔ TẢ
-                
+
 
                 update_bds($id, $tenbds, $imgValue, $price, $diachi, $dientich, $info, $sophong, $id_loaibds, $id_user);
                 $thongbao = "Add Succesfull";
@@ -204,7 +209,17 @@ if (isset($_GET['act'])) {
 
             // Controller user
         case 'listuser':
-            $listuser = loadAll_user();
+            if (isset($_POST['iduser']) && ($_POST['iduser'] != "")) {
+                $iduser = $_POST['iduser'];
+            } else {
+                $iduser = "";
+            }
+            if (isset($_POST['id_role']) && ($_POST['id_role'] != "")) {
+                $id_role = $_POST['id_role'];
+            } else {
+                $id_role = "";
+            }
+            $listuser = loadAll_user($iduser,$id_role);
             include "user/list.php";
             break;
         case 'deleteuser':
@@ -314,7 +329,22 @@ if (isset($_GET['act'])) {
             include "tintuc/add.php";
             break;
         case 'listtintuc':
-            $listtintuc = loadAll_tintuc();
+            if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
+                $kyw = $_POST['kyw'];
+            } else {
+                $kyw = "";
+            }
+            if (isset($_POST['id_dm']) && ($_POST['id_dm'] != "")) {
+                $id_dm_tintuc = $_POST['id_dm'];
+            } else {
+                $id_dm_tintuc = "";
+            }
+            if (isset($_POST['tacgia']) && ($_POST['tacgia'] != "")) {
+                $id_user = $_POST['tacgia'];
+            } else {
+                $id_user = "";
+            }
+            $listtintuc = loadAll_tintuc($kyw,$id_dm_tintuc,$id_user);
             include "tintuc/list.php";
             break;
         case 'deletetintuc':
@@ -361,8 +391,6 @@ if (isset($_GET['act'])) {
             include "tintuc/list.php";
             break;
             // Tu van
-        case 'delete_bds_tuvan':
-            break;
         case 'list_bds_tuvan':
             if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
                 $kyw = $_POST['kyw'];
@@ -376,6 +404,14 @@ if (isset($_GET['act'])) {
             }
             $listnhanvien = loadAll_nhanvien();
             $listtuvan = loadAll_bds_tuvan($kyw, $stt);
+            include 'tuvan/list.php';
+            break;
+        case 'delete_bds_tuvan':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                delete_tuvan($_GET['id']);
+            }
+            $listnhanvien = loadAll_nhanvien();
+            $listtuvan = loadAll_bds_tuvan();
             include 'tuvan/list.php';
             break;
         case 'sua_bds_tuvan':
@@ -411,7 +447,7 @@ if (isset($_GET['act'])) {
             $listnhanvien = loadAll_nhanvien();
             include 'nhanvien/list.php';
             break;
-        // 
+            // 
         case 'exit':
             session_unset();
             header('location:view/account/login.php');

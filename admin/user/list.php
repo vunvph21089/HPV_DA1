@@ -35,7 +35,41 @@
 
                             </div>
                         </div>
-                        
+                        <div class="card-body border-bottom-dashed border-bottom">
+                            <form action="index.php?act=listuser" method="POST">
+                                <div class="row g-3">
+                                    <div class="col-xl-4">
+                                        <div class="search-box">
+                                            <input type="text" name="iduser" class="form-control search" placeholder="Nhập mã người dùng cần tìm">
+                                            <i class="ri-search-line search-icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2">
+                                        <div class="search-box">
+                                            <select name="id_role" class="form-control search">
+                                                <option value="0">Chọn quyền</option>
+                                                <?php foreach ($listrole=loadAll_role() as $index => $role) : ?>
+                                                    <option name="id_role" value="<?= $role['id_role'] ?>"><?= $role['name_role'] ?></option>
+                                                <?php endforeach ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!--end col-->
+                                    <div class="col-xl-5">
+                                        <div class="row g-3">
+                                            <div class="col-sm-4">
+                                                <div class="">
+                                                    <button type="submit" name="search" class="btn btn-success add-btn">Tìm kiếm</button>
+                                                </div>
+                                            </div>
+                                            <!--end col-->
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end row-->
+                            </form>
+                        </div>
                         <div class="card-body">
                             <div>
                                 <div class="table-responsive table-card mb-1">
@@ -48,7 +82,7 @@
                                                 <th class="sort" data-sort="email">Email</th>
                                                 <th class="sort" data-sort="phone">Phone</th>
                                                 <th class="sort" data-sort="date">Địa chỉ</th>
-                                                <th class="sort" data-sort="date">Role</th>
+                                                <th class="sort" data-sort="date">Quyền</th>
                                                 <th class="sort" data-sort="action">Action</th>
                                             </tr>
                                         </thead>
@@ -57,6 +91,8 @@
                                                 <?php
                                                 foreach ($listuser as $user) {
                                                     extract($user);
+                                                    $role = loadOne_role($id_role);
+                                                    extract($role);
                                                     $updateuser = "index.php?act=suauser&id=" . $id;
                                                     echo  '<tr>
                                                             <td class="customer_name">' . $id . '</td>
@@ -65,7 +101,7 @@
                                                             <td class="customer_name">' . $email . '</td>
                                                             <td class="customer_name">' . $tel . '</td>
                                                             <td class="customer_name">' . $diachi . '</td>
-                                                            <td class="customer_name">' . $id_role . '</td>
+                                                            <td class="customer_name">' . $role['name_role'] . '</td>
                                                             <td>
                                                                 <ul class="list-inline hstack gap-2 mb-0">
                                                                  <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Edit">
@@ -89,7 +125,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </div>
                             <div class="modal fade" id="showModal" tabindex="-1" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">

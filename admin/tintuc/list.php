@@ -39,7 +39,51 @@
                                 </div>
                             </div>
                         </div>
-                        
+                        <div class="card-body border-bottom-dashed border-bottom">
+                            <form action="index.php?act=listtintuc" method="POST">
+                                <div class="row g-3">
+                                    <div class="col-xl-3">
+                                        <div class="search-box">
+                                            <input type="text" name="kyw" class="form-control search" placeholder="Nhập tin tức cần tìm">
+                                            <i class="ri-search-line search-icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2">
+                                        <div class="search-box">
+                                            <select name="id_dm" class="form-control search">
+                                                <option value="0">Chọn loại tin tức</option>
+                                                <?php foreach ($list_dmtintuc=loadAll_danhmuctintuc() as $index => $dm) : ?>
+                                                    <option name="id_dm" value="<?= $dm['id'] ?>"><?= $dm['name'] ?></option>
+                                                <?php endforeach ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2">
+                                        <div class="search-box">
+                                            <select name="tacgia" class="form-control search">
+                                                <option value="0">Chọn tác giả</option>
+                                                <?php foreach ($listtacgia=loadAll_tacgia() as $index => $tacgia) : ?>
+                                                    <option name="tacgia" value="<?= $tacgia['id'] ?>"><?= $tacgia['user'] ?></option>
+                                                <?php endforeach ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!--end col-->
+                                    <div class="col-xl-4">
+                                        <div class="row g-3">
+                                            <div class="col-sm-4">
+                                                <div class="">
+                                                    <button type="submit" name="search" class="btn btn-success add-btn">Tìm kiếm</button>
+                                                </div>
+                                            </div>
+                                            <!--end col-->
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end row-->
+                            </form>
+                        </div>
                         <div class="card-body">
                             <div>
                                 <div class="table-responsive table-card mb-1">
@@ -48,7 +92,7 @@
                                             <tr>
                                                 <th class="sort" data-sort="eamil">ID</th>
                                                 <th class="sort" data-sort="customer_name">Tiêu đề</th>
-                                                <th class="sort" data-sort="action">Thumbnail</th>
+                                                <th class="sort" data-sort="action">Ảnh đại diện</th>
                                                 <th class="sort" data-sort="action">Mô tả ngắn</th>
                                                 <th class="sort" data-sort="email">Loại</th>
                                                 <th class="sort" data-sort="action">Người đăng</th>
@@ -60,6 +104,8 @@
                                                 <?php
                                                 foreach ($listtintuc as $tintuc) {
                                                     extract($tintuc);
+                                                    $danhmuc= loadOne_danhmuctintuc($id_danhmuctt);
+                                                    $user = loadOne_user($id_user);
                                                     $uptintuc = "index.php?act=suatintuc&id=" . $id;
                                                     $image = "../" . $tintuc['img'];
                                                     
@@ -68,8 +114,8 @@
                                                             <td class="customer_name">' . $tieude . '</td>
                                                             <td class="customer_name"><img src="' . $image . '" width="60" height="60"></td>
                                                             <td class="customer_name">' . $mota_ngan . '</td>
-                                                            <td class="customer_name">' . $id_danhmuctt . '</td>
-                                                            <td class="customer_name">' . $id_user . '</td>
+                                                            <td class="customer_name">' . $danhmuc['name'] . '</td>
+                                                            <td class="customer_name">' . $user['user'] . '</td>
                                                             <td>
                                                                 <ul class="list-inline hstack gap-2 mb-0">
                                                                     <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Edit">

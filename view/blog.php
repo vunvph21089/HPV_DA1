@@ -31,7 +31,7 @@ include "view/header.php";
                     ?>
                         <article class="post-wrap">
                             <div class="post-media">
-                                <a href="<?= $tt['img'] ?>" prettyPhoto"><img style=" width: 99% ; heigh: auto; " src="<?= $tt['img'] ?>" alt=""></a>
+                                <a href="<?= $tt['img'] ?>" prettyPhoto"><img src="<?= $tt['img'] ?>" alt=""></a>
                             </div>
                             <div class="post-header">
                                 <h2 class="post-title"><a href="#"><?= $tt['tieude'] ?></a></h2>
@@ -55,18 +55,7 @@ include "view/header.php";
 
 
 
-                    <!-- Pagination -->
-                    <div class="pagination-wrapper">
-                        <ul class="pagination">
-                            <li class="disabled"><a href="#"><i class="fa fa-angle-double-left"></i> Previous</a></li>
-                            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">Next <i class="fa fa-angle-double-right"></i></a></li>
-                        </ul>
-                    </div>
-                    <!-- /Pagination -->
+                    
 
                 </div>
                 <!-- /CONTENT -->
@@ -120,14 +109,14 @@ include "view/header.php";
                     <div class="widget widget-flickr-feed">
                         <h4 class="widget-title"><span>Ảnh đẹp bất động sản</span></h4>
                         <ul>
-                            <li><a href="index.php?act=batdongsan"><img src="view/assets/img/preview/flickr/flickr-feed-8.jpg" alt="//"></a></li>
-                            <li><a href="index.php?act=batdongsan"><img src="view/assets/img/preview/flickr/flickr-feed-9.jpg" alt="//"></a></li>
-                            <li><a href="index.php?act=batdongsan"><img src="view/assets/img/preview/flickr/flickr-feed-10.jpg" alt="//"></a></li>
-                            <li><a href="index.php?act=batdongsan"><img src="view/assets/img/preview/flickr/flickr-feed-11.jpg" alt="//"></a></li>
-                            <li><a href="index.php?act=batdongsan"><img src="view/assets/img/preview/flickr/flickr-feed-12.jpg" alt="//"></a></li>
-                            <li><a href="index.php?act=batdongsan"><img src="view/assets/img/preview/flickr/flickr-feed-13.jpg" alt="//"></a></li>
-                            <li><a href="index.php?act=batdongsan"><img src="view/assets/img/preview/flickr/flickr-feed-14.jpg" alt="//"></a></li>
-                            <li><a href="index.php?act=batdongsan"><img src="view/assets/img/preview/flickr/flickr-feed-15.jpg" alt="//"></a></li>
+                            <li><a href="#"><img src="view/assets/img/preview/flickr/flickr-feed-8.jpg" alt="//"></a></li>
+                            <li><a href="#"><img src="view/assets/img/preview/flickr/flickr-feed-9.jpg" alt="//"></a></li>
+                            <li><a href="#"><img src="view/assets/img/preview/flickr/flickr-feed-10.jpg" alt="//"></a></li>
+                            <li><a href="#"><img src="view/assets/img/preview/flickr/flickr-feed-11.jpg" alt="//"></a></li>
+                            <li><a href="#"><img src="view/assets/img/preview/flickr/flickr-feed-12.jpg" alt="//"></a></li>
+                            <li><a href="#"><img src="view/assets/img/preview/flickr/flickr-feed-13.jpg" alt="//"></a></li>
+                            <li><a href="#"><img src="view/assets/img/preview/flickr/flickr-feed-14.jpg" alt="//"></a></li>
+                            <li><a href="#"><img src="view/assets/img/preview/flickr/flickr-feed-15.jpg" alt="//"></a></li>
                         </ul>
                     </div>
                     <!-- /widget flickr feed -->

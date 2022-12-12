@@ -27,7 +27,7 @@ function loadOne_tintuc($id)
 // }
 
 
-function loadAll_tintuc($kyw = "", $id_dm_tintuc = 0)
+function loadAll_tintuc($kyw = "", $id_dm_tintuc = 0,$id_user=0)
 {
     $sql = "SELECT * FROM tintuc WHERE 1";
     if ($kyw != "") {
@@ -36,7 +36,9 @@ function loadAll_tintuc($kyw = "", $id_dm_tintuc = 0)
     if ($id_dm_tintuc > 0) {
         $sql .= " and id_danhmuctt = '" . $id_dm_tintuc . "' ";
     }
-
+    if ($id_user > 0) {
+        $sql .= " and id_user = '" . $id_user . "' ";
+    }
     $sql .= " ORDER BY id DESC";
     $listtintuc = pdo_query($sql);
     return $listtintuc;
@@ -68,10 +70,11 @@ function load_tintuc_cungloai($id,$id_danhmuctt)
 }
 function loadAll_tintuc_top5()
 {
-    $sql = "Select * from tintuc WHERE 1 order by view desc limit 05";
+    $sql = "Select * from tintuc WHERE id order by view desc limit 0,5";
     $listtintuc = pdo_query($sql);
     return $listtintuc;
 }
+
 function update_tintuc($id, $tieude, $imgValue, $noidung, $mota_ngan, $id_danhmuctt, $id_user)
 {
     $sql = "UPDATE `tintuc` SET 

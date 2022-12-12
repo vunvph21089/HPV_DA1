@@ -49,8 +49,19 @@
                                             <i class="ri-search-line search-icon"></i>
                                         </div>
                                     </div>
+                                    <div class="col-xl-2">
+                                        <div class="search-box">
+                                            <select name="loaibds" id="" style="padding-left:18px" class="form-control search">
+                                                <option value="0">Chọn loại</option>
+                                                <?php foreach ($listloaibds as $index => $dm) : ?>
+                                                    <option name="loaibds" value="<?= $dm['id'] ?>"><?= $dm['name'] ?></option>
+                                                <?php endforeach ?>
+
+                                            </select>
+                                        </div>
+                                    </div>
                                     <!--end col-->
-                                    <div class="col-xl-6">
+                                    <div class="col-xl-4">
                                         <div class="row g-3">
                                             <div class="col-sm-4">
                                                 <div class="">
@@ -108,8 +119,13 @@
                                                         extract($loaibds);
                                                         echo '<td>' . $name . '</td>';
                                                     } ?>
+                                                    <?php
+                                                    if (isset($bds['id_user'])) {
+                                                        $user = loadOne_user($bds['id_user']);
+                                                        extract($user);
+                                                        echo '<td>' . $user . '</td>';
+                                                    } ?>
                                                 <?php echo '
-                                                            <td>' . $id_user . '</td>
                                                             <td>' . $ngaydang . '</td>
                                                             <td>
                                                                 <ul class="list-inline hstack gap-2 mb-0">

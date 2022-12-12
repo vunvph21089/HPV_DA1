@@ -85,7 +85,7 @@
                                                 <th>Trạng thái</th>
                                                 <th>Nhân viên</th>
                                                 <th>Thời gian tư vấn</th>
-
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody class="list form-check-all">
@@ -94,6 +94,7 @@
                                                 foreach ($listtuvan as $tuvan) : {
                                                         extract($tuvan);
                                                         $uptuvan = "index.php?act=sua_bds_tuvan&id=" . $id;
+                                                        $deltuvan = "index.php?act=delete_bds_tuvan&id=" . $id;
                                                     } 
                                                     ?>
                                                     <td class="customer_name"><?= $tuvan['id'] ?></td>
@@ -133,6 +134,11 @@
                                                     }
                                                     ?>
                                                     <td class="customer_name"><?= $tuvan['time_tuvan'] ?></td>
+                                                    <td class="customer_name">
+                                                        <a href="<?= $deltuvan ?>">
+                                                        <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i>
+                                                        </a>
+                                                    </td>
                                             </tr>
                                         <?php endforeach ?>
                                         </tr>

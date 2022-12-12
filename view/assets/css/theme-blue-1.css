@@ -4030,6 +4030,8 @@ span.span-caption:after {
 .post-media img {
     max-width: 100%;
     width: 100%;
+    height: 470px !important;
+    object-fit: cover;
 }
 .post-media .btn-play {
     position: absolute;
