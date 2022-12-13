@@ -6,145 +6,7 @@
 
         <div class="row">
 
-            <div class="col-md-6 wow fadeInLeft" data-wow-offset="200" data-wow-delay="200ms">
-
-
-
-                 <!-- Get in touch -->
-
-                <!-- <h2 class="section-title wow fadeInDown text-left" data-wow-offset="200" data-wow-delay="100ms">
-
-                    <span>LIÊN HỆ VỚI CHÚNG TÔI</span>
-
-                </h2> -->
-
-
-
-                <!-- Contact form -->
-
-                <!-- <form name="contact-form" method="post" action="#" class="contact-form" id="contact-form">
-
-
-
-                    <div class="row">
-
-                        <div class="col-md-6">
-
-
-
-                            <div class="outer required">
-
-                                <div class="form-group af-inner has-icon">
-
-                                    <label class="sr-only" for="name">Tên</label>
-
-                                    <input
-
-                                        type="text" name="name" id="name" placeholder="Name" value="" size="30"
-
-                                        data-toggle="tooltip" title="Name is required"
-
-                                        class="form-control placeholder"/>
-
-                                    <span class="form-control-icon"><i class="fa fa-user"></i></span>
-
-                                </div>
-
-                            </div>
-
-
-
-                        </div>
-
-                        <div class="col-md-6">
-
-
-
-                            <div class="outer required">
-
-                                <div class="form-group af-inner has-icon">
-
-                                    <label class="sr-only" for="email">Email</label>
-
-                                    <input
-
-                                        type="text" name="email" id="email" placeholder="Email" value="" size="30"
-
-                                        data-toggle="tooltip" title="Email is required"
-
-                                        class="form-control placeholder"/>
-
-                                    <span class="form-control-icon"><i class="fa fa-envelope"></i></span>
-
-                                </div>
-
-                            </div>
-
-
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="outer required">
-
-                        <div class="form-group af-inner has-icon">
-
-                            <label class="sr-only" for="subject">Subject</label>
-
-                            <input
-
-                                type="text" name="subject" id="subject" placeholder="Subject" value="" size="30"
-
-                                data-toggle="tooltip" title="Subject is required"
-
-                                class="form-control placeholder"/>
-
-                            <span class="form-control-icon"><i class="fa fa-bars"></i></span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="form-group af-inner has-icon">
-
-                        <label class="sr-only" for="input-message">Lời nhắn</label>
-
-                        <textarea
-
-                            name="message" id="input-message" placeholder="Message" rows="4" cols="50"
-
-                            data-toggle="tooltip" title="Message is required"
-
-                            class="form-control placeholder"></textarea>
-
-                        <span class="form-control-icon"><i class="fa fa-bars"></i></span>
-
-                    </div>
-
-
-
-                    <div class="outer required">
-
-                        <div class="form-group af-inner">
-
-                            <input type="submit" name="submit" class="form-button form-button-submit btn btn-block btn-theme ripple-effect btn-theme-dark" id="submit_btn" value="Gửi" />
-
-                        </div>
-
-                    </div>
-
-
-
-                </form> -->
-
-                <!-- /Contact form -->
-
-            </div>
+            
 
             <div class="col-md-10 wow fadeInRight" data-wow-offset="200" data-wow-delay="200ms">
 
@@ -190,7 +52,7 @@
 
                         <div class="media-left"><i class="fa fa-clock-o"></i></div>
 
-                        <div class="media-body">Giờ hàm việc: 09:30-21:00 trừ ngày chủ nhật</div>
+                        <div class="media-body">Giờ làm việc: 09:30-21:00 trừ ngày chủ nhật</div>
 
                     </li>
 
@@ -241,17 +103,20 @@
 
                 <p class="btn-row text-center">
 
-                    <a href="#" class="btn btn-theme ripple-effect btn-icon-left facebook wow fadeInDown" data-wow-offset="20" data-wow-delay="100ms"><i class="fa fa-facebook"></i>FACEBOOK</a>
+                    <a href="https://www.facebook.com/?stype=lo&jlou=AfdcCQ93IJ_ctQf0TDLV0WGR63mRYT3bLjFlFvL6LbE1R_UrWr3reUOyaS7yjx3ssKU7b8QbesNBKQneAdAHcMHNAZ0HQODcuzO-acVkJkpiHw&smuh=51727&lh=Ac-hkcTUiSrX1DKVMbc"
+                     class="btn btn-theme ripple-effect btn-icon-left facebook wow fadeInDown" data-wow-offset="20" data-wow-delay="100ms"><i class="fa fa-facebook"></i>
+                    FACEBOOK</a>
 
-                    <a href="#" class="btn btn-theme btn-icon-left ripple-effect twitter wow fadeInDown" data-wow-offset="20" data-wow-delay="200ms"><i class="fa fa-twitter"></i>TWITTER</a>
+                    <a href="" class="btn btn-theme btn-icon-left ripple-effect twitter wow fadeInDown" data-wow-offset="20" data-wow-delay="200ms"><i class="fa fa-twitter"></i>
+                    TWITTER</a>
 
-                    <a href="#" class="btn btn-theme btn-icon-left ripple-effect pinterest wow fadeInDown" data-wow-offset="20" data-wow-delay="300ms"><i class="fa fa-pinterest"></i>PINTEREST</a>
+                    <a href="https://www.pinterest.com/" class="btn btn-theme btn-icon-left ripple-effect pinterest wow fadeInDown" data-wow-offset="20" data-wow-delay="300ms"><i class="fa fa-pinterest"></i>PINTEREST</a>
 
-                    <a href="#" class="btn btn-theme btn-icon-left ripple-effect google wow fadeInDown" data-wow-offset="20" data-wow-delay="400ms"><i class="fa fa-google"></i>GOOGLE</a>
+                    <a href="https://www.google.com/" class="btn btn-theme btn-icon-left ripple-effect google wow fadeInDown" data-wow-offset="20" data-wow-delay="400ms"><i class="fa fa-google"></i>GOOGLE</a>
 
                 </p>
 
-                <div class="copyright">&copy; 2022 HPV — Dự án 1 lớp VIE103.87</div>
+                <div class="copyright">&copy; 2022 HPV</div>
 
             </div>
 

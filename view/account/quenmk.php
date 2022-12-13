@@ -102,21 +102,14 @@
                                                     <label for="username" class="form-label">Email của bạn</label>
                                                     <input type="email" name="email" class="form-control" id="username" placeholder="Nhập vào email của bạn">
                                                 </div>
-                                                <!-- <h6><?php if (isset($error['email'])) {echo $error['email'];}?></h6> -->
-
-                                                
-
                                                 <div class="mt-4">
-                                                    <h6>
-                                                        
+                                                    <h6 class="thongbao">
                                                         <?php
-
                                                         if (isset($thongbao) && ($thongbao != "")) {
                                                             echo $thongbao;
-                                                        } ?>
+                                                        }
+                                                        ?>
                                                     </h6>
-
-                                                    <!-- <button class="btn btn-success w-100"  name="dangnhap" type="submit">Sign In</button> -->
                                                     <input class="btn btn-success w-100" type="submit" name="gui" value="Lấy lại mật khẩu">
                                                 </div>
 
@@ -124,8 +117,6 @@
                                                     <div class="signin-other-title">
                                                         <h5 class="fs-13 mb-4 title"><a href="index.php?act=dangnhap">Đăng nhập</a></h5>
                                                     </div>
-
-                                                    
                                                 </div>
 
                                             </form>

@@ -6,6 +6,7 @@ include "model/pdo.php";
 include "model/tuvan.php";
 include "model/tintuc.php";
 include "model/danhmuc_tintuc.php";
+include "mail/sendMail.php";
 // include "model/user.php";
 $ds_bds = loadall_bds();
 $bds_new = loadall_bds_home();
@@ -122,9 +123,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 if (empty($error)) {
                     $thongbao = "Bạn đã gửi yêu cầu liên hệ thành công !";
                 }
+
+                
             }
-
-
             include 'view/contact.php';
             break;
         case 'listtuvan':
@@ -145,48 +146,51 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $linkbdschitiet = 'index.php?act=batdongsanchitiet&idbds=' . $id_bds;
                 header('location:' . $linkbdschitiet);
             }
-
             break;
         case 'dangky':
             require 'view/account/validate.php';
             if (isset($_POST['dangky']) && ($_POST['dangky'])) {
-                if (empty($_POST['hoten'])) {
+                $email = $_POST['email'];
+                $hoten = $_POST['hoten'];
+                $user = $_POST['user'];
+                $tel = $_POST['tel'];
+                $pass = md5($_POST['pass']);
+                $repass = md5($_POST['repass']);
+                $checkemail = check_email($email);
+
+                if (empty($hoten)) {
                     $error['hoten'] = "Không được bỏ trống họ tên";
                 }
 
-                if (empty($_POST['user'])) {
+                if (empty($user)) {
                     $error['user'] = "Không được bỏ trống tên đăng nhập";
                 }
 
-                if (empty($_POST['email'])) {
+                if (empty($email)) {
                     $error['email'] = "Không được bỏ trống email";
-                } else if (!is_email($_POST['email'])) {
+                } else if (!is_email($email)) {
                     $error['email'] = "Định dạng email không đúng";
+                } else if ($checkemail) {
+                    $error['email'] = "Email đã được dùng để đăng ký tài khoản khác. Vui lòng chọn một email khác";
                 }
 
-                if (empty($_POST['pass'])) {
+                if (empty($pass)) {
                     $error['pass'] = "Bạn chưa nhập vào mật khẩu";
                 }
 
-                if (empty($_POST['repass'])) {
+                if (empty($repass)) {
                     $error['repass'] = "Không được bỏ trống nhập lại mật khẩu";
-                } else if ($_POST['repass'] != $_POST['pass']) {
+                } else if ($repass != $pass) {
                     $error['repass'] = "Nhập lại mật khẩu không chính xác";
                 }
 
-                if (empty($_POST['tel'])) {
+                if (empty($tel)) {
                     $error['tel'] = "Không được bỏ trống số điện thoại";
-                } else if (!is_tel($_POST['tel'])) {
+                } else if (!is_tel($tel)) {
                     $error['tel'] = "Định dạng số điện thoại không phù hợp";
                 }
 
                 if (empty($error)) {
-                    $email = $_POST['email'];
-                    $hoten = $_POST['hoten'];
-                    $user = $_POST['user'];
-                    $tel = $_POST['tel'];
-                    $pass = md5($_POST['pass']);
-                    $repass = md5($_POST['repass']);
                     $thongbao = "";
                     if ($pass == $repass) {
                         insert_account($email, $hoten, $tel, $user, $pass);
@@ -252,7 +256,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case 'edit_taikhoan':
             if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
                 $user = $_POST['user'];
-                $pass = $_POST['pass'];
+                $pass = md5($_POST['pass']);
                 $email = $_POST['email'];
                 $address = $_POST['address'];
                 $tel = $_POST['tel'];
@@ -265,13 +269,46 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "view/account/edit_taikhoan.php";
             break;
         case 'quenmk':
-            if (isset($_POST['gui']) && ($_POST['gui'])) {
+            require 'view/account/validate.php';
+            if (isset($_POST['gui'])) {
+                if (isset($_SESSION['user'])) {
+                    $test = $_SESSION['user'];
+                    extract($_SESSION['user']);
+                }
+                $error = array();
+                $thongbao = "";
                 $email = $_POST['email'];
-                $checkemail = checkemail($email);
-                if (is_array($checkemail)) {
-                    $thongbao = "Mật khẩu của bạn là: " . $checkemail['pass'];
-                } else {
-                    $thongbao = "Email không tồn tại.";
+                $checkemail = check_email($email);
+                if ($email == '') {
+                    $thongbao = 'Không được để trống email';
+                } else if (!is_email($email)) {
+                    $thongbao = "Định dạng email không đúng";
+                } else if (!$checkemail) {
+                    $thongbao = "Tài khoản không tồn tại";
+                }
+
+                if (empty($error)) {
+                    $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                    function generate_string($input, $strength = 16)
+                    {
+                        $input_length = strlen($input);
+                        $random_string = '';
+                        for ($i = 0; $i < $strength; $i++) {
+                            $random_character = $input[mt_rand(0, $input_length - 1)];
+                            $random_string .= $random_character;
+                        }
+                        return $random_string;
+                    }
+                    $password = generate_string($permitted_chars, 8);
+                    //    $code = substr(rand(0, 999999) . 0, 6);
+                    $title = "Lấy lại mật khẩu";
+                    $content = "Mật khẩu mới của bạn là: <span style = 'color:grren'>" . $password . "</span>";
+                    guiMailBDS($title, $content, $email);
+                    if ($checkemail) {
+                        $passkh = md5($password);
+                        update_mk($passkh, $email);
+                        $thongbao = "Một mật khẩu mới đã được gửi cho bạn. Vui lòng kiểm tra email !";
+                    }
                 }
             }
             include "view/account/quenmk.php";

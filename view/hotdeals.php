@@ -43,18 +43,7 @@ include "view/header.php";
                 endforeach; ?>
                 <!-- /Car Listing -->
 
-                <!-- Pagination -->
-                <div class="pagination-wrapper">
-                    <ul class="pagination">
-                        <li class="disabled"><a href="#"><i class="fa fa-angle-double-left"></i>Trước</a></li>
-                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">Tiếp theo<i class="fa fa-angle-double-right"></i></a></li>
-                    </ul>
-                </div>
-                <!-- /Pagination -->
+                
 
             </div>
             <!-- /CONTENT -->
@@ -114,7 +103,7 @@ include "view/header.php";
                         <h5 class="widget-title-sub">+0793-576-765</h5>
                         <p><a href="mailto:support@supportcenter.com">support@supportcenter.com</a></p>
                         <div class="button">
-                            <a href="#" class="btn btn-block btn-theme btn-theme-dark">Support Center</a>
+                            <a href="index.php?act=contact" class="btn btn-block btn-theme btn-theme-dark">Trung tâm hỗ trợ</a>
                         </div>
                     </div>
                 </div>

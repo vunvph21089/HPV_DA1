@@ -103,7 +103,7 @@ include "view/header.php";
                         <div class="outer required">
                             <div class="form-group af-inner">
                                 <label for="subject">Địa chỉ</label>
-                                <input type="text" name="address" value="<?= $diachi ?>" id="subject" placeholder="Mật khẩu" value="" size="30" data-toggle="tooltip" title="Subject is required" class="form-control placeholder" required />
+                                <input type="text" name="address" value="<?= $diachi ?>" id="subject" placeholder="Địa chỉ" value="" size="30" data-toggle="tooltip" title="Subject is required" class="form-control placeholder" required />
                             </div>
                         </div>
 
