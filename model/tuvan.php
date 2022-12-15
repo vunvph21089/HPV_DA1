@@ -36,7 +36,7 @@ function loadAll_bds_tuvan($kyw = "",$stt = "")
     if ($stt!="") {
         $sql.=" and trangthai= '".$stt."'";
     }
-    $sql .= " ORDER BY id ";
+    $sql .= " ORDER BY id DESC";
     $list_bds_tuvan = pdo_query($sql);
     return $list_bds_tuvan;
 }
