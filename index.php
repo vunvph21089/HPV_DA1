@@ -133,7 +133,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
 
         case 'tuvan':
-            var_dump($_POST['tuvan']);
+
             if (isset($_POST['tuvan']) && $_POST['tuvan']) {
                 $id_user = $_POST['id_login'];
                 $note_user = $_POST['note_user'];
@@ -144,14 +144,14 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $time_yeucau = date('h:i:sa d/m/Y');
 
                 if (empty($note_user)) {
-                    $thongbao = 'Bạn chưa nhập vào lời nhắn';
+                    $linkbdschitiet = 'index.php?act=batdongsanchitiet&idbds=' . $id_bds;
+                    header('location:' . $linkbdschitiet);
                 }
 
-                if (empty($error)) {
+                else {
                     insert_bds_tuvan($id_user, $note_user, $id_bds, $time_yeucau);
                     $linkbdschitiet = 'index.php?act=batdongsanchitiet&idbds=' . $id_bds;
                     header('location:' . $linkbdschitiet);
-                    $thongbao = "Bạn đã yêu cầu tư vấn thành công!";
                 }
             }
             break;

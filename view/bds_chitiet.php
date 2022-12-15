@@ -73,12 +73,12 @@ include "view/header.php";
                         </dl>
 
                         <h6 class="thongbao">
-                                <?php
-                                if (isset($thongbao) && ($thongbao != "")) {
-                                    echo $thongbao;
-                                }
-                                ?>
-                            </h6>
+                            <?php
+                            if (isset($thongbao) && ($thongbao != "")) {
+                                echo $thongbao;
+                            }
+                            ?>
+                        </h6>
                         <div class="button">
                             <?php
                             if (isset($_SESSION['user'])) {
@@ -119,7 +119,9 @@ include "view/header.php";
                                             <div class="modal-footer">
                                                 <div class="hstack gap-2 justify-content-end">
                                                     <!-- <button type="submit" name="tuvan" class="btn btn-block btn-theme btn-theme-dark" id="add-btn">Gửi</button> -->
-                                                    <a href=""> <input type="submit" name="tuvan" class="btn btn-block btn-theme btn-theme-dark" id="add-btn" value="gửi"></a>
+                                                    <?php
+                                                    ?>
+                                                    <a href=""> <input type="submit" name="tuvan" class="btn btn-block btn-theme btn-theme-dark" id="add-btn" value="gửi" onclick="done()"></a>
                                                 </div>
                                             </div>
                                             <?php
@@ -150,6 +152,10 @@ include "view/header.php";
 
                 function hidemodal() {
                     document.getElementById('modal').style.display = 'none';
+                }
+
+                function done() {
+                    swal("Đăng ký thành công!", "Bạn đã đăng ký tư vấn thành công!", "success");
                 }
             </script>
 
