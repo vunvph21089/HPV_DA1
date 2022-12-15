@@ -10,7 +10,25 @@ include "../model/dbConfig.php";
 include "../model/tuvan.php";
 session_start();
 
+if (isset($_SESSION['user']) &&  ($_SESSION['user']['id_role'] != 1)) {
+    $_SESSION['khong_co_quyen'] = 'Bạn không có quyền truy cập';
+    header('location: ../index.php?act=dangnhap');
+    die;
+}else if($_SESSION['user'] == NULL){
+    $_SESSION['khong_co_quyen'] = 'Bạn không có quyền truy cập';
+    header('location: ../index.php?act=dangnhap');
+    die;
+}
+
 include "header.php";
+
+
+// if (checkAdminLogin() == false) {
+//     $_SESSION['khong_co_quyen'] = 'Bạn không có quyền truy cập';
+//     header('location: ../index.php?act=dangnhap');
+//     die;
+// }
+
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {
@@ -219,7 +237,7 @@ if (isset($_GET['act'])) {
             } else {
                 $id_role = "";
             }
-            $listuser = loadAll_user($iduser,$id_role);
+            $listuser = loadAll_user($iduser, $id_role);
             include "user/list.php";
             break;
         case 'deleteuser':
@@ -344,7 +362,7 @@ if (isset($_GET['act'])) {
             } else {
                 $id_user = "";
             }
-            $listtintuc = loadAll_tintuc($kyw,$id_dm_tintuc,$id_user);
+            $listtintuc = loadAll_tintuc($kyw, $id_dm_tintuc, $id_user);
             include "tintuc/list.php";
             break;
         case 'deletetintuc':

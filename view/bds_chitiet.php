@@ -72,13 +72,14 @@ include "view/header.php";
                             <dd><?= $ngaydang ?></dd>
                         </dl>
 
+                        <h6 class="thongbao">
+                                <?php
+                                if (isset($thongbao) && ($thongbao != "")) {
+                                    echo $thongbao;
+                                }
+                                ?>
+                            </h6>
                         <div class="button">
-                            <?php
-                            if (isset($thongbao) && ($thongbao != "")) {
-                                echo $thongbao;
-                            } ?>
-
-
                             <?php
                             if (isset($_SESSION['user'])) {
                                 $id_login = $_SESSION['user'];
@@ -109,7 +110,6 @@ include "view/header.php";
                                                     <input type="text" name="user" value="<?= $id_login['user'] ?>" id="customername-field" disabled class="form-control" placeholder="Nhập vào họ tên" />
 
                                                 </div>
-                                                
 
                                                 <div class="mb-3">
                                                     <label for="phone-field" class="form-label">Lời nhắn</label>
@@ -119,7 +119,6 @@ include "view/header.php";
                                             <div class="modal-footer">
                                                 <div class="hstack gap-2 justify-content-end">
                                                     <!-- <button type="submit" name="tuvan" class="btn btn-block btn-theme btn-theme-dark" id="add-btn">Gửi</button> -->
-
                                                     <a href=""> <input type="submit" name="tuvan" class="btn btn-block btn-theme btn-theme-dark" id="add-btn" value="gửi"></a>
                                                 </div>
                                             </div>
@@ -135,7 +134,7 @@ include "view/header.php";
                             <?php
                             } else {
                                 echo '
-                                <a href="index.php?act=dangnhap&url='.$url_bds.'" class="btn btn-block btn-theme btn-theme-dark" onclick="modal()">Đăng nhập để tư vấn</a>
+                                <a href="index.php?act=dangnhap&url=' . $url_bds . '" class="btn btn-block btn-theme btn-theme-dark" onclick="modal()">Đăng nhập để tư vấn</a>
                                 <div align="center"><p style="color:red;font-size:18px;margin-top:10px">Bạn cần đăng nhập để đăng ký tư vấn !</p></div>';
                             }
                             ?>

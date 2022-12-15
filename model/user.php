@@ -44,4 +44,10 @@
         $listtacgia=pdo_query($sql);
         return $listtacgia;
     } 
+    function checkAdminLogin(){
+        if (isset($_SESSION['user']) && ($_SESSION['user']['id_role'] == 1)) {
+            return true;
+        }
+        return false;
+    }
 ?>

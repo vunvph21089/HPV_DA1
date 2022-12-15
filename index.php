@@ -123,8 +123,6 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 if (empty($error)) {
                     $thongbao = "Bạn đã gửi yêu cầu liên hệ thành công !";
                 }
-
-                
             }
             include 'view/contact.php';
             break;
@@ -135,16 +133,26 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
 
         case 'tuvan':
+            var_dump($_POST['tuvan']);
             if (isset($_POST['tuvan']) && $_POST['tuvan']) {
                 $id_user = $_POST['id_login'];
                 $note_user = $_POST['note_user'];
+                $thongbao = "";
+                $error = array();
                 $id_bds = $_POST['id_bds'];
                 date_default_timezone_set("Asia/Ho_Chi_Minh");
                 $time_yeucau = date('h:i:sa d/m/Y');
-                insert_bds_tuvan($id_user, $note_user, $id_bds, $time_yeucau);
-                $thongbaotuvan = 1;
-                $linkbdschitiet = 'index.php?act=batdongsanchitiet&idbds=' . $id_bds;
-                header('location:' . $linkbdschitiet);
+
+                if (empty($note_user)) {
+                    $thongbao = 'Bạn chưa nhập vào lời nhắn';
+                }
+
+                if (empty($error)) {
+                    insert_bds_tuvan($id_user, $note_user, $id_bds, $time_yeucau);
+                    $linkbdschitiet = 'index.php?act=batdongsanchitiet&idbds=' . $id_bds;
+                    header('location:' . $linkbdschitiet);
+                    $thongbao = "Bạn đã yêu cầu tư vấn thành công!";
+                }
             }
             break;
         case 'dangky':
@@ -203,6 +211,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "view/account/register.php";
             break;
         case 'dangnhap':
+            
             $url_bds = $_GET;
             if (isset($_GET['url'])) {
                 setcookie('url_bds', $_GET['url'], time() + 3600);
@@ -227,7 +236,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                             $_SESSION['user'] = $checkuser;
                             if ($_SESSION['user']['id_role'] == 1) {
                                 header('location:admin/index.php');
-                            } else {
+                            }else {
                                 header('location:' . $_COOKIE['url_bds'] . '&idbds=' . $_COOKIE['id_bds']);
                                 setcookie("url_bds", "", time() - 3600);
                                 setcookie("id_bds", "", time() - 3600);
@@ -242,7 +251,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                             $_SESSION['user'] = $checkuser;
                             if ($_SESSION['user']['id_role'] == 1) {
                                 header('location:admin/index.php');
-                            } else {
+                            }else if($_SESSION['user']['id_role'] == 2){
+                                header('location:index.php?act=listtuvan');
+                            }  else {
                                 header('location:index.php');
                             }
                         } else {

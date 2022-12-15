@@ -130,8 +130,14 @@
                                                             echo $thongbao;
                                                         } ?>
                                                     </h6>
-
-                                                    <!-- <button class="btn btn-success w-100"  name="dangnhap" type="submit">Sign In</button> -->
+                                                    <h6>
+                                                    <?php 
+                                                        if(isset($_SESSION['khong_co_quyen'])){
+                                                            echo $_SESSION['khong_co_quyen'];
+                                                        }
+                                                    ?>
+                                                    </h6>
+                                                    
                                                     <input class="btn btn-success w-100" type="submit" name="dangnhap" value="Đăng nhập">
                                                 </div>
 
