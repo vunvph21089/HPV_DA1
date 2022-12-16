@@ -132,7 +132,7 @@
                                                     </h6>
                                                     <h6>
                                                     <?php 
-                                                        if(isset($_SESSION['khong_co_quyen'])){
+                                                        if(isset($_SESSION['user']) && isset($_SESSION['khong_co_quyen'])){
                                                             echo $_SESSION['khong_co_quyen'];
                                                         }
                                                     ?>

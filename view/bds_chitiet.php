@@ -46,7 +46,7 @@ include "view/header.php";
                     <div class="caption">
                         <h3 class="block-title"><span>Người đăng</span></h3>
                         <ul class="team-details">
-                            <li style="text-transform: capitalize;"><i class="fa fa-user">&nbsp;&nbsp;</i><?= $oneuser['user'] ?></li>
+                            <li style="text-transform: capitalize;"><i class="fa fa-user">&nbsp;&nbsp;</i><?= $oneuser['hoten'] ?></li>
                             <li><i class="fa fa-phone">&nbsp;&nbsp;</i><?= $oneuser['tel'] ?></li>
                             <li><i class="fa fa-envelope">&nbsp;&nbsp;</i> <a href="#"><?= $oneuser['email'] ?></a></li>
                         </ul>
@@ -119,8 +119,6 @@ include "view/header.php";
                                             <div class="modal-footer">
                                                 <div class="hstack gap-2 justify-content-end">
                                                     <!-- <button type="submit" name="tuvan" class="btn btn-block btn-theme btn-theme-dark" id="add-btn">Gửi</button> -->
-                                                    <?php
-                                                    ?>
                                                     <a href=""> <input type="submit" name="tuvan" class="btn btn-block btn-theme btn-theme-dark" id="add-btn" value="gửi" onclick="done()"></a>
                                                 </div>
                                             </div>
