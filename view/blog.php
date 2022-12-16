@@ -34,7 +34,7 @@ include "view/header.php";
                                 <a href="<?= $tt['img'] ?>" prettyPhoto"><img src="<?= $tt['img'] ?>" alt=""></a>
                             </div>
                             <div class="post-header">
-                                <h2 class="post-title"><a href="#"><?= $tt['tieude'] ?></a></h2>
+                                <h2 class="post-title"><a href="<?=$linktt?>"><?= $tt['tieude'] ?></a></h2>
                                 <div class="post-meta">By <a href="#">
                                         <?php
                                         $oneuser = loadOne_user($tt['id_user']);
